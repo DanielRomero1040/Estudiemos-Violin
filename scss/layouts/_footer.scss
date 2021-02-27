@@ -2,11 +2,63 @@
 
 /*Footer*/
 footer{
-    background-color:  $rosatema;
-    background: radial-gradient(circle, $rosatema 0%, $rosaoscuro 100%);
+    background-color:  $negro;
+    background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
     width: 100vw;
-    padding-top: 2vh;
+    height: 30vh;
+    padding-top: 9vh;
     padding-left: 5vw;
     padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $blanco;
+
+    .footer__nombre{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 10vh;
+
+        p{
+            font-size: 12px;
+        }
+        
+    }
+
+    .footer__redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 12vw;
+    height: 10vh;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 33px;
+        width: 33px;
+        border-radius: 33px;
+        background-color: $rosaoscuro;
+
+
+        svg{
+            color: #c2c0bf;            
+        }
+    }
+
+    }
+
+    
+
+    
+
+    
     
 }  

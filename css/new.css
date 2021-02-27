@@ -25,29 +25,59 @@ section.body__contenido {
   /*Primera Frase*/
   /*Segunda Frase*/ }
   section.body__contenido div.contenido__primeraFrase {
-    background-image: linear-gradient(to bottom, #0b090a, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9), #0b090a), linear-gradient(to right, #0b090a, #0b090a75, #0b090a3a, #0b090a00, #0b090a3a, #0b090a75, #0b090a), url(../image/fondofrase.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    /*background-image: linear-gradient(to bottom, 
+        $negro,
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.9), 
+        $negro), 
+        
+        linear-gradient(to right, 
+        $negro,
+        #0b090a75, 
+        #0b090a3a, 
+        #0b090a00,
+        #0b090a3a, 
+        #0b090a75, 
+        $negro), url(../image/fondofrase.jpg);
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;*/
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     width: 100vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding: 30vh 0;
-    font-size: 1.8rem;
-    font-weight: 100;
+    height: 40vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    padding: 5vh 0;
+    font-size: 1.5rem;
+    font-weight: 300;
     transition: 3s; }
+    section.body__contenido div.contenido__primeraFrase p {
+      width: 40vw; }
+    section.body__contenido div.contenido__primeraFrase .primeraFrase__autor {
+      font-size: 1.1rem; }
   section.body__contenido div.contenido__segundaFrase {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+    background-position: center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-    padding: 10px 0;
-    font-size: 1.8rem;
-    font-weight: 100; }
+    align-items: center;
+    margin-top: 15vh;
+    width: 100vw;
+    height: 70vh;
+    padding: 10vh 0;
+    font-size: 1.5rem;
+    font-weight: 300; }
+    section.body__contenido div.contenido__segundaFrase p {
+      width: 40vw; }
+    section.body__contenido div.contenido__segundaFrase .segundaFrase__autor {
+      font-size: 1.1rem; }
 
 section.contenidoContacto {
   display: flex;
@@ -82,7 +112,7 @@ div.contenido__parrafosDelContenido > p {
 /* Maps y otras variables*/
 /*Imagen Principal dentro del header*/
 header.body__index {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/imagenprincipal.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75), #0b090a), url(../image/imagenprincipal.png);
   height: 110vh;
   width: 100vw;
   background-position: center center;
@@ -161,40 +191,46 @@ header .navbar a.nav-link:hover, header span.navbar-text:hover {
 /* Maps y otras variables*/
 /*Grid seccion de experiencias index*/
 section.contenido__muestraExperiencias {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+  background-position: center center;
+  background-size: cover;
   display: grid;
-  border: #f5f3f4 1px solid;
   grid-template-columns: 2fr repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr,1fr,1fr;
   grid-gap: 2%;
-  grid-template-areas: "titulo  titulo  titulo  titulo  titulo" "video   imagen1  texto1  imagen2 texto2" "video   imagen1  texto1  imagen2 texto2" "pievid  nombre1 nombre1 nombre2 nombre2";
-  padding: 10px 15px;
-  height: 80vh;
-  width: 97vw;
-  margin-left: 1vw; }
+  grid-template-areas: "titulo  titulo  titulo  titulo  titulo" "video   imagen1  texto1  imagen2 texto2"  "pievid  nombre1 nombre1 nombre2 nombre2";
+  padding: 10px 3vw;
+  height: 100vh;
+  width: 100vw; }
   section.contenido__muestraExperiencias h1.titulo {
     grid-area: titulo;
     font-family: "Lato", sans-serif;
     font-size: 40px;
-    font-weight: 200; }
+    font-weight: 300; }
   section.contenido__muestraExperiencias iframe.video {
     grid-area: video;
-    height: 35vh;
-    width: 30vw; }
+    height: 40vh;
+    width: 33vw;
+    box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+    transition: transform 0.2s; }
   section.contenido__muestraExperiencias p.pievideo {
     grid-area: pievid;
     font-size: 25px;
-    font-weight: 200; }
+    font-weight: 300; }
   section.contenido__muestraExperiencias img.alumno1 {
     grid-area: imagen1;
     background-image: url(../image/2.png);
     background-size: cover;
-    height: 35vh;
-    width: 15vw;
-    border-radius: 10px; }
+    background-position: center center;
+    height: 40vh;
+    width: 13vw;
+    box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+    transition: transform 0.2s; }
   section.contenido__muestraExperiencias h2.nombre1 {
     grid-area: nombre1;
-    font-weight: 200;
-    font-size: 25px; }
+    font-weight: 300;
+    font-size: 25px;
+    height: 15vh; }
   section.contenido__muestraExperiencias p.texto1 {
     grid-area: texto1;
     text-align: justify; }
@@ -202,12 +238,14 @@ section.contenido__muestraExperiencias {
     grid-area: imagen2;
     background-image: url(../image/5.png);
     background-size: cover;
-    height: 35vh;
-    width: 15vw;
-    border-radius: 10px; }
+    background-position: center center;
+    height: 40vh;
+    width: 13vw;
+    box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+    transition: transform 0.2s; }
   section.contenido__muestraExperiencias h2.nombre2 {
     grid-area: nombre2;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 25px; }
   section.contenido__muestraExperiencias p.texto2 {
     grid-area: texto2;
@@ -983,12 +1021,45 @@ div.gridPartituras {
 /* Maps y otras variables*/
 /*Footer*/
 footer {
-  background-color: #e5383b;
-  background: radial-gradient(circle, #e5383b 0%, #74656c 100%);
+  background-color: #0b090a;
+  background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
   width: 100vw;
-  padding-top: 2vh;
+  height: 30vh;
+  padding-top: 9vh;
   padding-left: 5vw;
-  padding-right: 5vw; }
+  padding-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f5f3f4; }
+  footer .footer__nombre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 10vh; }
+    footer .footer__nombre p {
+      font-size: 12px; }
+  footer .footer__redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 12vw;
+    height: 10vh; }
+    footer .footer__redes div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 33px;
+      width: 33px;
+      border-radius: 33px;
+      background-color: #74656c; }
+      footer .footer__redes div svg {
+        color: #c2c0bf; }
 
 /*Variables*/
 /*Paletas de Colores*/
@@ -998,11 +1069,11 @@ footer {
 div.contenido__ondaSonora {
   display: flex;
   flex-direction: row;
-  height: 30vh;
+  height: 15vh;
   width: 20vw;
   justify-content: space-around;
   align-items: center;
-  padding: 25vh 0; }
+  padding: 5vh 0; }
 
 div.contenido__ondaSonora div {
   background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
@@ -1167,15 +1238,16 @@ div.contenido__ondaSonora div.beat12 {
 
 /*Zoom en imagenes y textos*/
 section.contenido__muestraExperiencias img.alumno1:hover {
-  transform: scale(1.05, 1.05);
-  border: inset #74656c; }
+  transform: scale(1.01, 1.01); }
 
 section.contenido__muestraExperiencias img.alumno2:hover {
-  transform: scale(1.05, 1.05);
-  border: inset #74656c; }
+  transform: scale(1.02, 1.02); }
 
 div.contenido__primeraFrase p:hover {
-  transform: scale(1.05, 1.02); }
+  transform: scale(1.01, 1.01); }
+
+iframe.video:hover {
+  transform: scale(1.01, 1.01); }
 
 /*Variables*/
 /*Paletas de Colores*/
