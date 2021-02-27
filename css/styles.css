@@ -1,0 +1,1109 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+        /*body*/
+body {
+    background-color: #0b090a;
+    color: #f5f3f4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+        /*Imagen Principal dentro del header*/
+header.index {
+    background-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.7), 
+    #0b090a), url(../image/imagenprincipal.png);
+    height: 80vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+}
+
+        /*estilos para barra de navegación con submenu*/
+header nav.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;    
+    padding: 10px 30px 0 30px;
+    background-color: #0b090a;
+    background: linear-gradient(to top, #0b090a 0%, #74656c 100%);
+    color: #f5f3f4;         
+}
+
+.barraDeNavegacion a{
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-decoration: none;
+    color: #f5f3f4;
+    transition: color 2s font-weight 2s;
+    letter-spacing: 0.1vw;     
+}
+span.navbar-text{
+    font-size: 1.2rem;
+    font-weight: 100;    
+}
+
+.logo{
+    border-radius: 500px;
+    width: 5vw;
+}
+
+
+.navbar a:hover{   
+    color: #e5383b;
+    font-weight: bold;
+}
+
+
+        /*Contenido*/
+section.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+div.primeraFrase{
+    background-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.9), 
+    #0b090a), 
+    
+    linear-gradient(to right, 
+    #0b090a,
+    #0b090a75, 
+    #0b090a3a, 
+    #0b090a00,
+    #0b090a3a, 
+    #0b090a75, 
+    #0b090a), url(../image/fondofrase.jpg);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;   
+    
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 30vh 0;
+    font-size: 1.8rem;
+    font-weight: 100;
+    transition: 3s;
+}
+
+div.primeraFrase p:hover{
+    transform: scale(1.05,1.02);
+}
+
+/* Animacion Onda Sonora*/
+
+div.ondaSonora {
+    display: flex;
+    flex-direction: row;    
+    height: 30vh;
+    width: 20vw;    
+    justify-content: space-around;
+    align-items: center;
+    padding: 25vh 0;    
+}
+
+div.ondaSonora div{   
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    justify-self: center;
+    align-self: center;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    transform: translate(0,25vh);
+    
+}
+
+@keyframes ondaSonora{
+    0% {transform: translate(0,5vh);}
+    15% {transform: translate(0,10vh);}
+    30% {transform: translate(0,17vh);}
+    45% {transform: translate(0,12vh);}
+    60% {transform: translate(0,15vh);}
+    75% {transform: translate(0,9vh);}
+    100% {transform: translate(0,6vh);}        
+}
+
+@keyframes ondaSonora2{
+    0% {transform: translate(0,3vh);}
+    15% {transform: translate(0,7vh);}
+    30% {transform: translate(0,15vh);}
+    45% {transform: translate(0,10vh);}
+    60% {transform: translate(0,14vh);}
+    75% {transform: translate(0,7vh);}
+    100% {transform: translate(0,2vh);}        
+}
+
+div.ondaSonora div.beat1{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+}
+
+div.ondaSonora div.beat2{
+    background: radial-gradient(circle, #e5383b 0%,  #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+}
+
+div.ondaSonora div.beat3{
+    background: radial-gradient(circle, #e5383b 0%,  #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+}
+
+div.ondaSonora div.beat4{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+div.ondaSonora div.beat5{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+div.ondaSonora div.beat6{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.55s;
+}
+
+div.ondaSonora div.beat7{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.48s;
+}
+
+div.ondaSonora div.beat8{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+div.ondaSonora div.beat9{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.25s;
+}
+
+div.ondaSonora div.beat10{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+}
+
+div.ondaSonora div.beat11{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+}
+
+div.ondaSonora div.beat12{
+    background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
+    width: 7px;
+    height: 7px;
+    animation-name: ondaSonora2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+}
+
+/*Grid seccion de experiencias*/
+section.muestraExperiencias {
+    display: grid;    
+    border: #f5f3f4 1px solid ;    
+    grid-template-columns: 2fr repeat( 4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulo  titulo  titulo  titulo  titulo"
+    "video   imagen1  texto1  imagen2 texto2"
+    "video   imagen1  texto1  imagen2 texto2"
+    "pievid  nombre1 nombre1 nombre2 nombre2"
+    ;
+    padding: 10px 30px;
+    height: 80vh;
+    width: 97vw;
+    margin-left: 1vw;
+}
+
+section.muestraExperiencias h1.titulo{
+    grid-area: titulo;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+section.muestraExperiencias iframe.video{
+    grid-area: video;
+    height: 35vh;
+    width: 30vw;
+}
+
+section.muestraExperiencias p.pievideo{
+    grid-area: pievid;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+section.muestraExperiencias img.alumno1{
+    grid-area: imagen1;
+    background-image: url(../image/2.png);
+    background-size: cover;    
+    height: 35vh;
+    width: 15vw;
+    border-radius: 10px;
+}
+
+section.muestraExperiencias img.alumno1:hover{
+    transform: scale(1.05 , 1.05);
+    border: inset #74656c ;   
+}
+
+section.muestraExperiencias h2.nombre1{
+    grid-area: nombre1;
+    font-weight: 200;
+    font-size: 25px;
+}
+section.muestraExperiencias p.texto1{
+    grid-area: texto1;
+    text-align: justify;
+}
+
+section.muestraExperiencias img.alumno2{
+    grid-area: imagen2;
+    background-image: url(../image/5.png);
+    background-size: cover;
+    height: 35vh;
+    width: 15vw;
+    border-radius: 10px;
+}
+
+section.muestraExperiencias img.alumno2:hover{
+    transform: scale(1.05 , 1.05);
+    border: inset #74656c ;
+}
+
+section.muestraExperiencias h2.nombre2{
+    grid-area: nombre2;
+    font-weight: 200;
+    font-size: 25px;
+}
+section.muestraExperiencias p.texto2{
+    grid-area: texto2;
+    text-align: justify;
+}
+
+div.segundaFrase{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    padding: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+
+        /* Galeria Imagenes */
+
+div.galeriaImagenes {
+    display: grid;        
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulogal titulogal titulogal"
+    "galeria1  galeria2  galeria3"
+    "pie1      pie2      pie3"
+    "galeria4  galeria5  galeria6"
+    "pie4      pie5      pie6"    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+}
+
+div.galeriaImagenes h1.titularDelContenido{
+    grid-area: titulogal;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+div.galeriaImagenes img.galeria1{
+    grid-area: galeria1;
+    background-image: url(../image/12.png);
+    background-size: cover;
+    height: 50vh;
+    width: 25vw;
+}
+
+div.galeriaImagenes p.pieDeArchivo1{
+    grid-area: pie1;
+    text-align: center;
+}
+
+div.galeriaImagenes img.galeria2{
+    grid-area: galeria2;
+    background-image: url(../image/11.png);
+    background-size: cover;
+    height: 50vh;
+    width: 25vw;
+}
+
+div.galeriaImagenes p.pieDeArchivo2{
+    grid-area: pie2;
+    text-align: center;
+}
+
+div.galeriaImagenes img.galeria3{
+    grid-area: galeria3;
+    background-image: url(../image/fondofrase.jpg);
+    background-size: cover;
+    height: 50vh;
+    width: 25vw;
+}
+
+div.galeriaImagenes p.pieDeArchivo3{
+    grid-area: pie3;
+    text-align: center;
+}
+
+div.galeriaImagenes img.galeria4{
+    grid-area: galeria4;
+    background-image: url(../image/15.png);
+    background-size: cover;
+    height: 50vh;
+    width: 25vw;
+}
+
+div.galeriaImagenes p.pieDeArchivo4{
+    grid-area: pie4;
+    text-align: center;
+}
+
+div.galeriaImagenes img.galeria5{
+    grid-area: galeria5;
+    background-image: url(../image/21.png);
+    background-size: cover;
+    height: 50vh;
+    width: 25vw;
+}
+
+div.galeriaImagenes p.pieDeArchivo5{
+    grid-area: pie5;
+    align-self: center;
+}
+
+div.galeriaImagenes img.galeria6{
+    grid-area: galeria6;
+    background-image: url(../image/23.png);
+    background-size: cover;
+    height: 50vh;
+    width: 25vw;
+}
+
+div.galeriaImagenes p.pieDeArchivo6{
+    grid-area: pie6;
+    align-self: center;
+}
+
+        /* Galeria Videos */
+
+div.galeriaVideo {
+    display: grid;        
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulogalvid titulogalvid titulogalvid"
+    "galeriavid1  galeriavid2  galeriavid3"
+    "pievideo1      pievideo2      pievideo3"
+    "galeriavid4  galeriavid5  galeriavid6"
+    "pievideo4      pievideo5      pievideo6"    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+}
+
+div.galeriaVideo h1.titularDeVideo{
+    grid-area: titulogalvid;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+div.galeriaVideo iframe.video1{
+    grid-area: galeriavid1;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.galeriaVideo p.pieDeArchivo1{
+    grid-area: pievideo1;
+    text-align: center;
+}
+
+div.galeriaVideo iframe.video2{
+    grid-area: galeriavid2;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.galeriaVideo p.pieDeArchivo2{
+    grid-area: pievideo2;
+    text-align: center;
+}
+
+div.galeriaVideo iframe.video3{
+    grid-area: galeriavid3;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.galeriaVideo p.pieDeArchivo3{
+    grid-area: pievideo3;
+    text-align: center;
+}
+
+div.galeriaVideo iframe.video4{
+    grid-area: galeriavid4;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.galeriaVideo p.pieDeArchivo4{
+    grid-area: pievideo4;
+    text-align: center;
+}
+
+div.galeriaVideo iframe.video5{
+    grid-area: galeriavid5;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.galeriaVideo p.pieDeArchivo5{
+    grid-area: pievideo5;
+    text-align: center;
+}
+
+div.galeriaVideo video.video6{
+    grid-area: galeriavid6;   
+    height: 50vh;
+    width: 30vw;
+}
+
+div.galeriaVideo p.pieDeArchivo6{
+    grid-area: pievideo6;
+    text-align: center;
+}
+
+/* Partituras */
+
+div.gridPartituras {
+    display: grid;        
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulopartitura titulopartitura titulopartitura"
+    "partitura1  partitura2  partitura3"
+    "pie1      pie2      pie3"
+    "partitura4  partitura5  partitura6"
+    "pie4      pie5      pie6"    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+}
+
+div.gridPartituras h1.titularDePartituras{
+    grid-area: titulopartitura;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+div.gridPartituras iframe.partitura1{
+    grid-area: partitura1;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.gridPartituras p.pieDeArchivo1{
+    grid-area: pie1;
+    text-align: center;
+}
+
+div.gridPartituras iframe.partitura2{
+    grid-area: partitura2;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.gridPartituras p.pieDeArchivo2{
+    grid-area: pie2;
+    text-align: center;
+}
+
+div.gridPartituras iframe.partitura3{
+    grid-area: partitura3;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.gridPartituras p.pieDeArchivo3{
+    grid-area: pie3;
+    text-align: center;
+}
+
+div.gridPartituras iframe.partitura4{
+    grid-area: partitura4;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.gridPartituras p.pieDeArchivo4{
+    grid-area: pie4;
+    text-align: center;
+}
+
+div.gridPartituras iframe.partitura5{
+    grid-area: partitura5;
+    height: 50vh;
+    width: 30vw;
+}
+
+div.gridPartituras p.pieDeArchivo5{
+    grid-area: pie5;
+    text-align: center;
+}
+
+div.gridPartituras iframe.partitura6{
+    grid-area: partitura6;   
+    height: 50vh;
+    width: 30vw;
+}
+
+div.gridPartituras p.pieDeArchivo6{
+    grid-area: pie6;
+    text-align: center;
+}
+
+        /*Footer*/
+footer{
+    background-color:  #e5383b;
+    background: radial-gradient(circle, #e5383b 0%, #0b090a 100%);
+    width: 100vw;    
+}
+
+        /* Responsive Index*/
+@media only screen and (max-width: 768px){
+
+            /*Imagen Principal dentro del header*/
+    header.index {
+        background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.7), 
+        #0b090a), url(../image/imagenprincipal.png);
+        height: 80vh;
+        width: 100vw;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .barraDeNavegacion a{
+        font-size: 1.5rem;
+        font-weight: 100;
+        text-decoration: none;
+        color: #f5f3f4;
+        transition: color 2s font-weight 2s;
+        letter-spacing: 0.1vw;     
+    }
+
+    div.primeraFrase{
+        background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.9), 
+        #0b090a), 
+        
+        linear-gradient(to right, 
+        #0b090a,
+        #0b090a75, 
+        #0b090a3a, 
+        #0b090a00,
+        #0b090a3a, 
+        #0b090a75, 
+        #0b090a), url(../image/fondofrase.jpg);
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;   
+        
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 30vh 0;
+        font-size: 1.4rem;
+        font-weight: 100;
+        transition: 3s;
+    }
+
+    section.muestraExperiencias {
+        display: grid;    
+        border: #f5f3f4 1px solid ;
+        grid-template-columns: 2fr repeat( 2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulo  titulo  titulo  "
+        "video   imagen1  texto1  "
+        "video   imagen1  texto1 "
+        "pievid  nombre1 nombre1 "
+        ;
+        padding: 10px 30px;
+        height: 80vh;
+        width: 97vw;
+        margin-left: 1vw;
+    }
+    
+    section.muestraExperiencias h1.titulo{
+        grid-area: titulo;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+    
+    section.muestraExperiencias iframe.video{
+        grid-area: video;
+        height: 35vh;
+        width: 45vw;
+    }
+    
+    section.muestraExperiencias p.pievideo{
+        grid-area: pievid;
+        font-size: 1.2rem;
+    }
+    
+    section.muestraExperiencias img.alumno1{
+        grid-area: imagen1;
+        background-image: url(../image/2.png);
+        background-size: cover;
+        background-position-x: center;   
+        height: 35vh;
+        width: 20vw;
+    }
+    
+    section.muestraExperiencias h2.nombre1{
+        grid-area: nombre1;
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+    section.muestraExperiencias p.texto1{
+        grid-area: texto1;
+        text-align: justify;
+        font-size: 0.9rem;
+    }
+    
+    section.muestraExperiencias img.alumno2{
+        grid-area: imagen2;
+        display: none;
+        background-image: url(../image/5.png);
+        background-size: cover;
+        background-position-x: center;
+        height: 35vh;
+        width: 15vw;
+    }
+    
+    section.muestraExperiencias h2.nombre2{
+        grid-area: nombre2;
+        display: none;
+        font-weight: 200;
+    }
+    section.muestraExperiencias p.texto2{
+        grid-area: texto2;
+        display: none;
+        text-align: justify;
+    }
+
+    div.segundaFrase{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+        padding: 10px 0;
+        font-size: 1.4rem;
+        font-weight: 100;
+    }
+
+
+        /* Galeria Imagenes */
+
+    div.galeriaImagenes {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulogal titulogal"
+        "galeria1   galeria2"
+        "pie1       pie2    "
+        "galeria3   galeria4"
+        "pie3       pie4    "
+        "galeria5   galeria6"
+        "pie5       pie6    "    
+        ;
+        padding: 50px 30px;
+        height: 170vh;
+        width: 97vw;
+        margin-left: 1vw;
+    }
+
+    div.galeriaImagenes h1.titularDelContenido{
+        grid-area: titulogal;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    div.galeriaImagenes img.galeria1{
+        grid-area: galeria1;
+        background-image: url(../image/12.png);
+        background-size: cover;
+        height: 35vh;
+        width: 30vw;
+    }
+
+    div.galeriaImagenes p.pieDeArchivo1{
+        grid-area: pie1;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    div.galeriaImagenes img.galeria2{
+        grid-area: galeria2;
+        background-image: url(../image/11.png);
+        background-size: cover;
+        height: 35vh;
+        width: 30vw;
+    }
+
+    div.galeriaImagenes p.pieDeArchivo2{
+        grid-area: pie2;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    div.galeriaImagenes img.galeria3{
+        grid-area: galeria3;
+        background-image: url(../image/fondofrase.jpg);
+        background-size: cover;
+        height: 35vh;
+        width: 30vw;
+    }
+
+    div.galeriaImagenes p.pieDeArchivo3{
+        grid-area: pie3;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    div.galeriaImagenes img.galeria4{
+        grid-area: galeria4;
+        background-image: url(../image/15.png);
+        background-size: cover;
+        height: 35vh;
+        width: 30vw;
+    }
+
+    div.galeriaImagenes p.pieDeArchivo4{
+        grid-area: pie4;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    div.galeriaImagenes img.galeria5{
+        grid-area: galeria5;
+        background-image: url(../image/21.png);
+        background-size: cover;
+        height: 35vh;
+        width: 30vw;
+    }
+
+    div.galeriaImagenes p.pieDeArchivo5{
+        grid-area: pie5;
+        align-self: center;
+        font-size: 1rem;
+    }
+
+    div.galeriaImagenes img.galeria6{
+        grid-area: galeria6;
+        background-image: url(../image/23.png);
+        background-size: cover;
+        height: 35vh;
+        width: 30vw;
+    }
+
+    div.galeriaImagenes p.pieDeArchivo6{
+        grid-area: pie6;
+        align-self: center;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    section.muestraExperiencias {
+        display: grid;    
+        border: #f5f3f4 1px solid ;
+        grid-template-columns:repeat( 2, 2fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulo  titulo"
+        "video   video "
+        "video   video "
+        "pievid  pievid"
+        "imagen1 texto1"
+        "imagen1 texto1"
+        "nombre1 nombre1"
+        ;
+        padding: 10px 30px;
+        height: 140vh;
+        width: 97vw;
+        margin-left: 1vw;
+    }
+    
+    section.muestraExperiencias h1.titulo{
+        grid-area: titulo;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+    
+    section.muestraExperiencias iframe.video{
+        grid-area: video;
+        height: 40vh;
+        width: 80vw;
+    }
+    
+    section.muestraExperiencias p.pievideo{
+        grid-area: pievid;
+        font-size: 1.2rem;
+    }
+    
+    section.muestraExperiencias img.alumno1{
+        grid-area: imagen1;
+        background-image: url(../image/2.png);
+        background-size: cover;
+        background-position-x: center;   
+        height: 35vh;
+        width: 48vw;
+    }
+    
+    section.muestraExperiencias h2.nombre1{
+        grid-area: nombre1;
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+    section.muestraExperiencias p.texto1{
+        grid-area: texto1;
+        text-align: justify;
+    }
+    
+    section.muestraExperiencias img.alumno2{
+        grid-area: imagen2;
+        display: none;
+        background-image: url(../image/5.png);
+        background-size: cover;
+        background-position-x: center;
+        height: 35vh;
+        width: 15vw;
+    }
+    
+    section.muestraExperiencias h2.nombre2{
+        grid-area: nombre2;
+        display: none;
+        font-weight: 200;
+    }
+    section.muestraExperiencias p.texto2{
+        grid-area: texto2;
+        display: none;
+        text-align: justify;
+    }
+
+}
+
+    /*Formulario*/
+
+form.form-group row{
+    width: 50vw;
+    padding-top: 16vh;
+    padding-bottom: 10vh;
+}
+
+
+input.btn{
+    width: 15vw;
+}
+
+div.app-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section.contenidoContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 100vh;
+    
+}
+label.app-label{
+    text-align: center;
+}
+
+section.contenidoContacto h1.titularDelContenido{    
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 200;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+
+
+        /*Seccion Sobre mi*/
+
+.carousel-inner > .carousel-item > img{
+    object-fit: scale-down;
+    height: 70vh;
+    width: 100%;
+}
+
+div.parrafosDelContenido > h1.titularDelContenido{    
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    padding-top: 8vh;
+}
+
+div.parrafosDelContenido > p{    
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: justify;
+}
+
+h5.app-modal{
+    font-family: "Roboto Condensed", sans-serif;
+    color: #0b090a;
+}
+
+p.app-pModal{    
+    font-family: "Roboto Condensed", sans-serif;
+    color: #0b090a;    
+}

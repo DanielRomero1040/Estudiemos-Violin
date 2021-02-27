@@ -1,0 +1,210 @@
+@import "utilities/variables";
+
+
+/*Grid seccion de experiencias index*/
+section.contenido__muestraExperiencias {
+    display: grid;    
+    border: $blanco 1px solid ;    
+    grid-template-columns: 2fr repeat( 4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulo  titulo  titulo  titulo  titulo"
+    "video   imagen1  texto1  imagen2 texto2"
+    "video   imagen1  texto1  imagen2 texto2"
+    "pievid  nombre1 nombre1 nombre2 nombre2"
+    ;
+    padding: 10px 15px;
+    height: 80vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+    h1.titulo{
+        grid-area: titulo;
+        font-family: $roboto;
+        font-size: 40px;
+        font-weight: 200;
+    }
+    
+    iframe.video{
+        grid-area: video;
+        height: 35vh;
+        width: 30vw;
+    }
+    
+    p.pievideo{
+        grid-area: pievid;
+        font-size: 25px;
+        font-weight: 200;
+    }
+    
+    img.alumno1{
+        grid-area: imagen1;
+        background-image: url(../image/2.png);
+        background-size: cover;    
+        height: 35vh;
+        width: 15vw;
+        border-radius: 10px;
+    }
+    
+    
+    h2.nombre1{
+        grid-area: nombre1;
+        font-weight: 200;
+        font-size: 25px;
+    }
+    p.texto1{
+        grid-area: texto1;
+        text-align: justify;
+    }
+    
+    img.alumno2{
+        grid-area: imagen2;
+        background-image: url(../image/5.png);
+        background-size: cover;
+        height: 35vh;
+        width: 15vw;
+        border-radius: 10px;
+    }
+    
+    
+    h2.nombre2{
+        grid-area: nombre2;
+        font-weight: 200;
+        font-size: 25px;
+    }
+    p.texto2{
+        grid-area: texto2;
+        text-align: justify;
+    }
+
+}
+
+/* Galeria Imagenes */
+
+div.contenido__galeriaImagenes {
+    display: grid;        
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulogal titulogal titulogal"
+    "galeria1  galeria2  galeria3"
+    "pie1      pie2      pie3"
+    "galeria4  galeria5  galeria6"
+    "pie4      pie5      pie6"    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+    h1.titularDelContenido{
+        grid-area: titulogal;
+        font-family: $roboto;
+        font-size: 40px;
+        font-weight: 200;
+    }
+        
+    @each $area,$foto in $galeria{
+        img.#{$area}{
+            grid-area: #{$area};
+            background-image: url(../image/#{$foto});
+            background-size: cover;
+            height: 50vh;
+            width: 25vw;
+        }
+    }
+    
+    @for $i from 1 through 6{
+        p.pieDeArchivo#{$i}{
+            grid-area: pie#{$i};
+            text-align: center;
+        }
+    }
+}
+
+/* Galeria Videos */
+
+div.galeriaVideo {
+    display: grid;        
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulogalvid titulogalvid titulogalvid"
+    "video1         video2      video3"
+    "pievideo1      pievideo2      pievideo3"
+    "video4         video5          video6"
+    "pievideo4      pievideo5      pievideo6"    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+    h1.titularDeVideo{
+        grid-area: titulogalvid;
+        font-family: $roboto;
+        font-size: 40px;
+        font-weight: 200;
+    }
+
+    @each $area in $areasVideos{
+        iframe.#{$area}{
+            grid-area: #{$area};
+            height: 50vh;
+            width: 30vw;                   
+        }
+    }
+
+    @for $i from 1 through 6{
+        p.pieDeArchivo#{$i}{
+            grid-area: pievideo#{$i};
+            text-align: center;
+        }
+    }
+
+}
+
+/* Partituras */
+
+div.gridPartituras {
+    display: grid;        
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulopartitura titulopartitura titulopartitura"
+    "partitura1  partitura2  partitura3"
+    "pie1      pie2      pie3"
+    "partitura4  partitura5  partitura6"
+    "pie4      pie5      pie6"    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+    h1.titularDePartituras{
+        grid-area: titulopartitura;
+        font-family: $roboto;
+        font-size: 40px;
+        font-weight: 200;
+    }
+
+    @each $partitura in $partituras {
+        iframe.#{$partitura}{
+            grid-area: #{$partitura};
+            height: 50vh;
+            width: 30vw;
+        }
+    }
+
+    @for $i from 1 through 6 {
+        p.pieDeArchivo#{$i}{
+            grid-area: pie#{$i};
+            text-align: center; 
+        }
+    }
+}

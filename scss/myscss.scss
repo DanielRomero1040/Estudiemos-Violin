@@ -1,0 +1,24 @@
+/*Imports*/
+@import "utilities/variables";
+
+@import "layouts/body";
+@import "layouts/header";
+@import "layouts/grid";
+@import "layouts/responsive";
+@import "layouts/footer";
+
+@import "components/animations";
+@import "components/components";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: $roboto;
+}
+
+
+

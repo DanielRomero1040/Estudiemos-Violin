@@ -1,0 +1,600 @@
+@import "utilities/variables";
+
+/* Responsive Index*/
+@media only screen and (max-width: 768px){
+
+    /*Imagen Principal dentro del header*/
+    header.header__index {
+    background-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.7), 
+    $negro), url(../image/imagenprincipal.png);
+    height: 80vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    }
+
+    .header__barraDeNavegacion a{
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    color: $blanco;
+    transition: color 2s font-weight 2s;
+    letter-spacing: 0.1vw;     
+    }
+
+    div.contenido__primeraFrase{
+    background-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.9), 
+    $negro), 
+
+    linear-gradient(to right, 
+    $negro,
+    #0b090a75, 
+    #0b090a3a, 
+    #0b090a00,
+    #0b090a3a, 
+    #0b090a75, 
+    $negro), url(../image/fondofrase.jpg);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;   
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 30vh 0;
+    font-size: 1.4rem;
+    font-weight: 100;
+    transition: 3s;
+    }
+
+    section.contenido__muestraExperiencias {
+    display: grid;    
+    border: $blanco 1px solid ;
+    grid-template-columns: 2fr repeat( 2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulo  titulo  titulo  "
+    "video   imagen1  texto1  "
+    "video   imagen1  texto1 "
+    "pievid  nombre1 nombre1 "
+    ;
+    padding: 10px 30px;
+    height: 80vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+        h1.titulo{
+        grid-area: titulo;
+        font-family: $roboto;
+        font-size: 1.5rem;
+        font-weight: 200;
+        }
+    
+        iframe.video{
+        grid-area: video;
+        height: 35vh;
+        width: 45vw;
+        }
+    
+        p.pievideo{
+        grid-area: pievid;
+        font-size: 1.2rem;
+        }
+    
+        img.alumno1{
+        grid-area: imagen1;
+        background-image: url(../image/2.png);
+        background-size: cover;
+        background-position-x: center;   
+        height: 35vh;
+        width: 20vw;
+        }
+    
+        h2.nombre1{
+        grid-area: nombre1;
+        font-weight: 200;
+        font-size: 1.2rem;
+        }
+        p.texto1{
+        grid-area: texto1;
+        text-align: justify;
+        font-size: 0.9rem;
+        }
+    
+        img.alumno2{
+        grid-area: imagen2;
+        display: none;
+        background-image: url(../image/5.png);
+        background-size: cover;
+        background-position-x: center;
+        height: 35vh;
+        width: 15vw;
+        }
+    
+        h2.nombre2{
+        grid-area: nombre2;
+        display: none;
+        font-weight: 200;
+        }
+        p.texto2{
+        grid-area: texto2;
+        display: none;
+        text-align: justify;
+        }
+    }
+
+    div.segundaFrase{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+        padding: 10px 0;
+        font-size: 1.4rem;
+        font-weight: 100;
+        }
+
+
+    /* responsive Galeria Imagenes */
+
+    div.contenido__galeriaImagenes {
+    display: grid;        
+    grid-template-columns: repeat( 2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulogal titulogal"
+    "galeria1   galeria2"
+    "pie1       pie2    "
+    "galeria3   galeria4"
+    "pie3       pie4    "
+    "galeria5   galeria6"
+    "pie5       pie6    "    
+    ;
+    padding: 50px 30px;
+    height: 170vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+        h1.titularDelContenido{
+        grid-area: titulogal;
+        font-family: $roboto;
+        font-size: 1.5rem;
+        font-weight: 200;
+        }
+
+        @each $area,$foto in $galeria{
+            img.#{$area}{
+                grid-area: #{$area};
+                background-image: url(../image/#{$foto});
+                background-size: cover;
+                height: 35vh;
+                width: 40vw;
+            }
+        }
+        
+        @for $i from 1 through 6{
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center;
+            }
+        }       
+    }
+
+            /* Galeria Videos */
+
+    div.galeriaVideo {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulogalvid   titulogalvid"
+        "video1         video2"
+        "pievideo1      pievideo2"
+        "video3         video4 "
+        "pievideo3      pievideo4" 
+        "video5         video6"
+        "pievideo5      pievideo6"   
+        ;
+        padding: 50px 30px;
+        height: 170vh;
+        width: 97vw;
+        margin-left: 1vw;
+
+        h1.titularDeVideo{
+            grid-area: titulogalvid;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+
+        @each $area in $areasVideos{
+            iframe.#{$area}{
+                grid-area: #{$area};
+                height: 35vh;
+                width: 40vw;                  
+            }
+        }
+
+        @for $i from 1 through 6{
+            p.pieDeArchivo#{$i}{
+                grid-area: pievideo#{$i};
+                text-align: center;
+            }
+        }
+
+    }
+
+            /* Partituras */
+
+    div.gridPartituras {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulopartitura titulopartitura"
+        "partitura1     partitura2"
+        "pie1           pie2 "
+        "partitura3     partitura4 "
+        "pie3           pie4 "
+        "partitura5     partitura6"
+        "pie5           pie6"
+        ;
+        padding: 50px 30px;
+        height: 170vh;
+        width: 97vw;
+        margin-left: 1vw;
+
+        h1.titularDePartituras{
+            grid-area: titulopartitura;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+
+        @each $partitura in $partituras {
+            iframe.#{$partitura}{
+                grid-area: #{$partitura};
+                height: 35vh;
+                width: 40vw;
+            }
+        }
+
+        @for $i from 1 through 6 {
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center; 
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    section.contenido__muestraExperiencias {
+    display: grid;    
+    border: $blanco 1px solid ;
+    grid-template-columns:repeat( 2, 2fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 2%;
+    grid-template-areas: 
+    "titulo  titulo"
+    "video   video "
+    "video   video "
+    "pievid  pievid"
+    "imagen1 texto1"
+    "imagen1 texto1"
+    "nombre1 nombre1"
+    ;
+    padding: 10px 30px;
+    height: 140vh;
+    width: 97vw;
+    margin-left: 1vw;
+
+        h1.titulo{
+        grid-area: titulo;
+        font-family: $roboto;
+        font-size: 1.5rem;
+        font-weight: 200;
+        }
+    
+        iframe.video{
+        grid-area: video;
+        height: 40vh;
+        width: 80vw;
+        }
+    
+        p.pievideo{
+        grid-area: pievid;
+        font-size: 1.2rem;
+        }
+    
+        img.alumno1{
+        grid-area: imagen1;
+        background-image: url(../image/2.png);
+        background-size: cover;
+        background-position-x: center;   
+        height: 35vh;
+        width: 48vw;
+        }
+    
+        h2.nombre1{
+        grid-area: nombre1;
+        font-weight: 200;
+        font-size: 1.2rem;
+        }
+        p.texto1{
+        grid-area: texto1;
+        text-align: justify;
+        }
+    
+        img.alumno2{
+        grid-area: imagen2;
+        display: none;
+        background-image: url(../image/5.png);
+        background-size: cover;
+        background-position-x: center;
+        height: 35vh;
+        width: 15vw;
+        }
+    
+        h2.nombre2{
+        grid-area: nombre2;
+        display: none;
+        font-weight: 200;
+        }
+        p.texto2{
+        grid-area: texto2;
+        display: none;
+        text-align: justify;
+        }
+
+    }
+
+    
+
+    /*Primera Frase*/
+    div.contenido__primeraFrase{
+        background-image: linear-gradient(to bottom, 
+        $negro,
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.9), 
+        $negro), 
+        
+        linear-gradient(to right, 
+        $negro,
+        #0b090a75, 
+        #0b090a3a, 
+        #0b090a00,
+        #0b090a3a, 
+        #0b090a75, 
+        $negro), url(../image/fondofrase.jpg);
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
+        width: 100vw;
+        
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 15vh 0;
+        font-size: 0.9rem;
+        font-weight: 100;
+        transition: 3s;        
+    }
+
+    /*Segunda Frase*/
+    div.contenido__segundaFrase{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        padding: 10px 0;
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+
+    section.contenidoContacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+        
+
+        h1.titularDelContenido{    
+            font-family: $roboto;
+            font-size: 1.9rem;
+            font-weight: 200;
+            padding-top: 8vh;
+            padding-bottom: 8vh;
+        }
+
+        div.contenidoContacto__formulario{
+            height: 100vh;
+        }
+        
+    }
+
+
+    /* responsive Galeria Imagenes */
+
+    div.contenido__galeriaImagenes {
+        display: grid;        
+        grid-template-columns: repeat( 1, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulogal"
+        "galeria1"
+        "pie1    "
+        "galeria2"
+        "pie2    "
+        "galeria3"
+        "pie3    "
+        "galeria4"
+        "pie4    "
+        "galeria5"
+        "pie5    " 
+        "galeria6"
+        "pie6    "
+        ;
+        padding: 50px 30px;
+        height: 500vh;
+        width: 97vw;
+        margin-left: 1vw;
+    
+            h1.titularDelContenido{
+            grid-area: titulogal;
+            font-family: $roboto;
+            font-size: 1.5rem;
+            font-weight: 200;
+            }
+    
+            @each $area,$foto in $galeria{
+                img.#{$area}{
+                    grid-area: #{$area};
+                    background-image: url(../image/#{$foto});
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    height: 50vh;
+                    width: 80vw;
+                }
+            }
+            
+            @for $i from 1 through 6{
+                p.pieDeArchivo#{$i}{
+                    grid-area: pie#{$i};
+                    text-align: center;
+                }
+            }       
+        }
+    
+                /* Galeria Videos */
+    
+        div.galeriaVideo {
+            display: grid;        
+            grid-template-columns: repeat( 1, 1fr);
+            grid-template-rows: repeat(13, 1fr);
+            grid-gap: 2%;
+            grid-template-areas: 
+            "titulogalvid"
+            "video1   "
+            "pievideo1"
+            "video2   "
+            "pievideo2"
+            "video3   "
+            "pievideo3" 
+            "video4   "
+            "pievideo4"
+            "video5   "
+            "pievideo5" 
+            "video6   "
+            "pievideo6"
+            ;
+            padding: 50px 30px;
+            height: 500vh;
+            width: 97vw;
+            margin-left: 1vw;
+    
+            h1.titularDeVideo{
+                grid-area: titulogalvid;
+                font-family: $roboto;
+                font-size: 40px;
+                font-weight: 200;
+            }
+    
+            @each $area in $areasVideos{
+                iframe.#{$area}{
+                    grid-area: #{$area};
+                    height: 50vh;
+                    width: 80vw;                  
+                }
+            }
+    
+            @for $i from 1 through 6{
+                p.pieDeArchivo#{$i}{
+                    grid-area: pievideo#{$i};
+                    text-align: center;
+                }
+            }
+    
+        }
+    
+                /* Partituras */
+    
+        div.gridPartituras {
+            display: grid;        
+            grid-template-columns: repeat( 1, 1fr);
+            grid-template-rows: repeat(13, 1fr);
+            grid-gap: 2%;
+            grid-template-areas: 
+            "titulopartitura"
+            "partitura1"
+            "pie1      "
+            "partitura2"
+            "pie2      "
+            "partitura3"
+            "pie3      "
+            "partitura4"
+            "pie4      "
+            "partitura5"
+            "pie5      "
+            "partitura6"
+            "pie6      "
+
+            ;
+            padding: 50px 30px;
+            height: 500vh;
+            width: 97vw;
+            margin-left: 1vw;
+    
+            h1.titularDePartituras{
+                grid-area: titulopartitura;
+                font-family: $roboto;
+                font-size: 40px;
+                font-weight: 200;
+            }
+    
+            @each $partitura in $partituras {
+                iframe.#{$partitura}{
+                    grid-area: #{$partitura};
+                    height: 50vh;
+                    width: 70vw;
+                }
+            }
+    
+            @for $i from 1 through 6 {
+                p.pieDeArchivo#{$i}{
+                    grid-area: pie#{$i};
+                    text-align: center; 
+                }
+            }
+        }
+
+}

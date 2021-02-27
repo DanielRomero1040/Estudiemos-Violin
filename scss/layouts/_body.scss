@@ -1,0 +1,106 @@
+@import "utilities/variables";
+
+/*Body*/
+body {
+    background-color: $negro;
+    color: $blanco;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*Contenido*/
+section.body__contenido{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    
+    /*Primera Frase*/
+    div.contenido__primeraFrase{
+        background-image: linear-gradient(to bottom, 
+        $negro,
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.9), 
+        $negro), 
+        
+        linear-gradient(to right, 
+        $negro,
+        #0b090a75, 
+        #0b090a3a, 
+        #0b090a00,
+        #0b090a3a, 
+        #0b090a75, 
+        $negro), url(../image/fondofrase.jpg);
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
+        width: 100vw;
+        
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 30vh 0;
+        font-size: 1.8rem;
+        font-weight: 100;
+        transition: 3s;        
+    }
+    
+    /*Segunda Frase*/
+    div.contenido__segundaFrase{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+        padding: 10px 0;
+        font-size: 1.8rem;
+        font-weight: 100;
+    } 
+    
+
+}
+
+section.contenidoContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
+    
+
+    h1.titularDelContenido{    
+        font-family: $roboto;
+        font-size: 1.9rem;
+        font-weight: 200;
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
+
+    div.contenidoContacto__formulario{
+        height: 100vh;
+    }
+    
+}
+
+/* Sobre mi*/
+
+div.contenido__parrafosDelContenido > h1.titularDelContenido{    
+    font-family: $roboto;
+    font-size: 40px;
+    font-weight: 200;
+    padding-top: 8vh;
+}
+
+div.contenido__parrafosDelContenido > p{    
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: justify;
+}

@@ -1,0 +1,47 @@
+@import "utilities/variables";
+
+/*Carrusel*/
+
+.carousel-inner > .carousel-item > img{
+    object-fit: scale-down;
+    height: 70vh;
+    width: 100%;
+}
+
+/*Modal*/
+
+h5.app-modal{
+    font-family: $roboto;
+    color: $negro;
+}
+
+p.app-pModal{    
+    font-family: $roboto;
+    color: $negro;    
+}
+
+/*Formularios*/
+
+form.form-group row{
+    width: 50vw;
+    padding-top: 16vh;
+    padding-bottom: 10vh;
+}
+
+
+input.btn{
+    width: 15vw;
+}
+
+div.app-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+label.app-label{
+    text-align: center;
+}
+
+
