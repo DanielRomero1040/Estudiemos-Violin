@@ -25,6 +25,15 @@ footer{
 
         p{
             font-size: 12px;
+            a{
+                text-decoration: none;
+                color:$blanco ;
+                transition: color 0.5s;
+            }
+
+            a:hover{
+                color: $rosaoscuro;
+            }
         }
         
     }
@@ -37,21 +46,39 @@ footer{
     width: 12vw;
     height: 10vh;
 
-    div{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 33px;
-        width: 33px;
-        border-radius: 33px;
-        background-color: $rosaoscuro;
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 33px;
+            width: 33px;
+            border-radius: 33px;
+            background-color: $rosaoscuro;
+            transition: background 0.5s;
+
+            a{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
 
 
-        svg{
-            color: #c2c0bf;            
+            svg{
+                color: #c2c0bf;
+                transition: color 0.5s;            
+            }
         }
-    }
+
+        div:hover{
+            background-color: #c2c0bf;
+            svg{
+                color: #64645c;
+            }
+        }
+
+    
 
     }
 

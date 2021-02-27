@@ -1042,6 +1042,12 @@ footer {
     height: 10vh; }
     footer .footer__nombre p {
       font-size: 12px; }
+      footer .footer__nombre p a {
+        text-decoration: none;
+        color: #f5f3f4;
+        transition: color 0.5s; }
+      footer .footer__nombre p a:hover {
+        color: #74656c; }
   footer .footer__redes {
     display: flex;
     flex-direction: row;
@@ -1057,9 +1063,20 @@ footer {
       height: 33px;
       width: 33px;
       border-radius: 33px;
-      background-color: #74656c; }
+      background-color: #74656c;
+      transition: background 0.5s; }
+      footer .footer__redes div a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
       footer .footer__redes div svg {
-        color: #c2c0bf; }
+        color: #c2c0bf;
+        transition: color 0.5s; }
+    footer .footer__redes div:hover {
+      background-color: #c2c0bf; }
+      footer .footer__redes div:hover svg {
+        color: #64645c; }
 
 /*Variables*/
 /*Paletas de Colores*/
