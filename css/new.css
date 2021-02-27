@@ -25,27 +25,6 @@ section.body__contenido {
   /*Primera Frase*/
   /*Segunda Frase*/ }
   section.body__contenido div.contenido__primeraFrase {
-    /*background-image: linear-gradient(to bottom, 
-        $negro,
-        rgba(0, 0, 0, 0.8), 
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.8), 
-        rgba(0, 0, 0, 0.9), 
-        $negro), 
-        
-        linear-gradient(to right, 
-        $negro,
-        #0b090a75, 
-        #0b090a3a, 
-        #0b090a00,
-        #0b090a3a, 
-        #0b090a75, 
-        $negro), url(../image/fondofrase.jpg);
-    
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-x: center;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,18 +72,21 @@ section.contenidoContacto {
     height: 100vh; }
 
 /* Sobre mi*/
-div.contenido__parrafosDelContenido > h1.titularDelContenido {
-  font-family: "Lato", sans-serif;
-  font-size: 40px;
-  font-weight: 200;
-  padding-top: 8vh; }
-
-div.contenido__parrafosDelContenido > p {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  text-align: justify; }
+div.contenido__parrafosDelContenido {
+  background-color: #534e51;
+  margin: 10vh 1.5vw;
+  border-radius: 20px; }
+  div.contenido__parrafosDelContenido h1.titularDelContenido {
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    padding-top: 8vh; }
+  div.contenido__parrafosDelContenido p {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: justify; }
 
 /*Variables*/
 /*Paletas de Colores*/
