@@ -90,7 +90,8 @@ header.body__contacto {
 }
 /*estilos para barra de navegación con submenu*/
 
-header{    
+header{  
+
 
     nav.navbar{
         display: flex;
@@ -110,8 +111,10 @@ header{
         font-weight: 400;
         text-decoration: none;        
         transition: all 0.8s;
-        letter-spacing: 0.1vw; 
-        visibility: visible;    
+        letter-spacing: 0.1vw;        
+        visibility: visible;
+        animation-name: fadeIn;
+        animation-duration: 3s;    
     }
     span.navbar-text{
         transition: all 0.8s;
@@ -128,6 +131,18 @@ header{
     .navbar a.nav-link:hover , span.navbar-text:hover{          
         color: rgb(241, 240, 240) !important;       
         
+    }
+
+    h1.header__titulo{
+                
+        font-size: 50px;
+        text-align: center;
+        font-weight: lighter;
+        padding-top: 60vh;
+        color:rgb(179, 173, 173) ;
+        visibility: visible;
+        animation-name: fadeIn;
+        animation-duration: 3s;
     }
 
 }

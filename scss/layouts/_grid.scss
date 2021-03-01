@@ -121,7 +121,7 @@ div.contenido__galeriaImagenes {
     width: 97vw;
     margin-left: 1vw;
 
-    h1.titularDelContenido{
+    h3.titularDelContenido{
         grid-area: titulogal;
         font-family: $roboto;
         font-size: 40px;
@@ -165,7 +165,7 @@ div.galeriaVideo {
     width: 97vw;
     margin-left: 1vw;
 
-    h1.titularDeVideo{
+    h3.titularDeVideo{
         grid-area: titulogalvid;
         font-family: $roboto;
         font-size: 40px;
@@ -208,7 +208,7 @@ div.gridPartituras {
     width: 97vw;
     margin-left: 1vw;
 
-    h1.titularDePartituras{
+    h3.titularDePartituras{
         grid-area: titulopartitura;
         font-family: $roboto;
         font-size: 40px;

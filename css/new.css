@@ -76,7 +76,7 @@ div.contenido__parrafosDelContenido {
   background-color: #534e51;
   margin: 10vh 1.5vw;
   border-radius: 20px; }
-  div.contenido__parrafosDelContenido h1.titularDelContenido {
+  div.contenido__parrafosDelContenido h3.titularDelContenido {
     font-family: "Lato", sans-serif;
     font-size: 40px;
     font-weight: 200;
@@ -152,7 +152,9 @@ header .header__barraDeNavegacion a {
   text-decoration: none;
   transition: all 0.8s;
   letter-spacing: 0.1vw;
-  visibility: visible; }
+  visibility: visible;
+  animation-name: fadeIn;
+  animation-duration: 3s; }
 
 header span.navbar-text {
   transition: all 0.8s;
@@ -166,6 +168,16 @@ header .logo {
 
 header .navbar a.nav-link:hover, header span.navbar-text:hover {
   color: #f1f0f0 !important; }
+
+header h1.header__titulo {
+  font-size: 50px;
+  text-align: center;
+  font-weight: lighter;
+  padding-top: 60vh;
+  color: #b3adad;
+  visibility: visible;
+  animation-name: fadeIn;
+  animation-duration: 3s; }
 
 /*Variables*/
 /*Paletas de Colores*/
@@ -244,7 +256,7 @@ div.contenido__galeriaImagenes {
   height: 170vh;
   width: 97vw;
   margin-left: 1vw; }
-  div.contenido__galeriaImagenes h1.titularDelContenido {
+  div.contenido__galeriaImagenes h3.titularDelContenido {
     grid-area: titulogal;
     font-family: "Lato", sans-serif;
     font-size: 40px;
@@ -315,7 +327,7 @@ div.galeriaVideo {
   height: 170vh;
   width: 97vw;
   margin-left: 1vw; }
-  div.galeriaVideo h1.titularDeVideo {
+  div.galeriaVideo h3.titularDeVideo {
     grid-area: titulogalvid;
     font-family: "Lato", sans-serif;
     font-size: 40px;
@@ -374,7 +386,7 @@ div.gridPartituras {
   height: 170vh;
   width: 97vw;
   margin-left: 1vw; }
-  div.gridPartituras h1.titularDePartituras {
+  div.gridPartituras h3.titularDePartituras {
     grid-area: titulopartitura;
     font-family: "Lato", sans-serif;
     font-size: 40px;
@@ -530,7 +542,7 @@ div.gridPartituras {
     height: 170vh;
     width: 97vw;
     margin-left: 1vw; }
-    div.contenido__galeriaImagenes h1.titularDelContenido {
+    div.contenido__galeriaImagenes h3.titularDelContenido {
       grid-area: titulogal;
       font-family: "Lato", sans-serif;
       font-size: 1.5rem;
@@ -600,7 +612,7 @@ div.gridPartituras {
     height: 170vh;
     width: 97vw;
     margin-left: 1vw; }
-    div.galeriaVideo h1.titularDeVideo {
+    div.galeriaVideo h3.titularDeVideo {
       grid-area: titulogalvid;
       font-family: "Lato", sans-serif;
       font-size: 40px;
@@ -658,7 +670,7 @@ div.gridPartituras {
     height: 170vh;
     width: 97vw;
     margin-left: 1vw; }
-    div.gridPartituras h1.titularDePartituras {
+    div.gridPartituras h3.titularDePartituras {
       grid-area: titulopartitura;
       font-family: "Lato", sans-serif;
       font-size: 40px;
@@ -790,7 +802,7 @@ div.gridPartituras {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    section.contenidoContacto h1.titularDelContenido {
+    section.contenidoContacto h3.titularDelContenido {
       font-family: "Lato", sans-serif;
       font-size: 1.9rem;
       font-weight: 200;
@@ -809,7 +821,7 @@ div.gridPartituras {
     height: 500vh;
     width: 97vw;
     margin-left: 1vw; }
-    div.contenido__galeriaImagenes h1.titularDelContenido {
+    div.contenido__galeriaImagenes h3.titularDelContenido {
       grid-area: titulogal;
       font-family: "Lato", sans-serif;
       font-size: 1.5rem;
@@ -891,7 +903,7 @@ div.gridPartituras {
     height: 500vh;
     width: 97vw;
     margin-left: 1vw; }
-    div.galeriaVideo h1.titularDeVideo {
+    div.galeriaVideo h3.titularDeVideo {
       grid-area: titulogalvid;
       font-family: "Lato", sans-serif;
       font-size: 40px;
@@ -949,7 +961,7 @@ div.gridPartituras {
     height: 500vh;
     width: 97vw;
     margin-left: 1vw; }
-    div.gridPartituras h1.titularDePartituras {
+    div.gridPartituras h3.titularDePartituras {
       grid-area: titulopartitura;
       font-family: "Lato", sans-serif;
       font-size: 40px;
