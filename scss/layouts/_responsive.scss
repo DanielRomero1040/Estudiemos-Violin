@@ -3,6 +3,14 @@
 /* Responsive Index*/
 @media only screen and (max-width: 768px){
 
+    .header__barraDeNavegacion .collapse{
+        background-color: rgba(0, 0, 0, 0.322);
+        height: 80vh;
+        width: 100vw;        
+        visibility: visible;
+        transition: all 1s;
+    }
+
     /*Imagen Principal dentro del header*/
     header.header__index {
     background-image: linear-gradient(to bottom, 
@@ -289,6 +297,15 @@
 }
 
 @media only screen and (max-width: 576px){
+
+    .header__barraDeNavegacion .collapse{
+        background-color: rgba(0, 0, 0, 0.322);
+        height: 80vh;
+        width: 100vw;        
+        visibility: visible;
+        transition: all 1s;
+    }
+
     section.contenido__muestraExperiencias {
     display: grid;    
     border: $blanco 1px solid ;

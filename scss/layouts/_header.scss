@@ -105,6 +105,11 @@ header{
         /*background: linear-gradient(to top, $negro 0%, $negro 40%,$rosaoscuro 100%);*/         
     }
     
+    .header__barraDeNavegacion buttom{
+        visibility: visible;
+    }
+
+    
     
     .header__barraDeNavegacion a{
         font-size: 1.3rem;
@@ -114,7 +119,7 @@ header{
         letter-spacing: 0.1vw;        
         visibility: visible;
         animation-name: fadeIn;
-        animation-duration: 3s;    
+        animation-duration: 2s;    
     }
     span.navbar-text{
         transition: all 0.8s;
@@ -142,7 +147,7 @@ header{
         color:rgb(179, 173, 173) ;
         visibility: visible;
         animation-name: fadeIn;
-        animation-duration: 3s;
+        animation-duration: 2s;
     }
 
 }
