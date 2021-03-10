@@ -20,7 +20,7 @@ footer{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 20vw;
+        width: 30vw;
         height: 10vh;
 
         p{
@@ -41,9 +41,9 @@ footer{
     .footer__redes{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 12vw;
+    width: 27vw;
     height: 10vh;
 
         div{
@@ -51,9 +51,9 @@ footer{
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            height: 33px;
-            width: 33px;
-            border-radius: 33px;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 2rem;
             background-color: $rosaoscuro;
             transition: background 0.5s;
 

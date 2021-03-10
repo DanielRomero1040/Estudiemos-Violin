@@ -5,8 +5,8 @@
 
     .header__barraDeNavegacion .collapse{
         background-color: rgba(0, 0, 0, 0.322);
-        height: 80vh;
-        width: 100vw;        
+        height: auto;
+        width: auto;        
         visibility: visible;
         transition: all 1s;
     }
@@ -294,16 +294,106 @@
             }
         }
     }
+        /*Footer*/
+        footer{
+            background-color:  $negro;
+            background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
+            width: 100vw;
+            height: 30vh;
+            padding-top: 9vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $blanco;
+    
+            .footer__nombre{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 30vw;
+                height: 10vh;
+    
+                p{
+                    font-size: 12px;
+                    a{
+                        text-decoration: none;
+                        color:$blanco ;
+                        transition: color 0.5s;
+                    }
+    
+                    a:hover{
+                        color: $rosaoscuro;
+                    }
+                }
+                
+            }
+    
+            .footer__redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 20vw;
+            height: 10vh;
+    
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 2rem;
+                    background-color: $rosaoscuro;
+                    transition: background 0.5s;
+    
+                    a{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+    
+                    svg{
+                        color: #c2c0bf;
+                        transition: color 0.5s;            
+                    }
+                }
+    
+                div:hover{
+                    background-color: #c2c0bf;
+                    svg{
+                        color: #64645c;
+                    }
+                }
+    
+            
+    
+            }
+    
+            
+    
+            
+    
+            
+            
+        } 
 }
 
 @media only screen and (max-width: 576px){
 
     .header__barraDeNavegacion .collapse{
         background-color: rgba(0, 0, 0, 0.322);
-        height: 80vh;
-        width: 100vw;        
+        height: auto;
+        width: auto;        
         visibility: visible;
         transition: all 1s;
+        border-radius: 5px;
     }
 
     section.contenido__muestraExperiencias {
@@ -384,11 +474,9 @@
         text-align: justify;
         }
 
-    }
+    }   
 
-    
-
-    /*Primera Frase*/
+        /*Primera Frase*/
     div.contenido__primeraFrase{
         background-image: linear-gradient(to bottom, 
         $negro,
@@ -424,7 +512,7 @@
         transition: 3s;        
     }
 
-    /*Segunda Frase*/
+        /*Segunda Frase*/
     div.contenido__segundaFrase{
         display: flex;
         flex-direction: column;
@@ -458,7 +546,7 @@
     }
 
 
-    /* responsive Galeria Imagenes */
+        /* responsive Galeria Imagenes */
 
     div.contenido__galeriaImagenes {
         display: grid;        
@@ -512,7 +600,7 @@
             }       
         }
     
-                /* Galeria Videos */
+        /* Galeria Videos */
     
         div.galeriaVideo {
             display: grid;        
@@ -563,7 +651,7 @@
     
         }
     
-                /* Partituras */
+        /* Partituras */
     
         div.gridPartituras {
             display: grid;        
@@ -614,4 +702,93 @@
             }
         }
 
+        /*Footer*/
+    footer{
+        background-color:  $negro;
+        background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
+        width: 100vw;
+        height: 30vh;
+        padding-top: 9vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $blanco;
+
+        .footer__nombre{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 10vh;
+
+            p{
+                font-size: 12px;
+                a{
+                    text-decoration: none;
+                    color:$blanco ;
+                    transition: color 0.5s;
+                }
+
+                a:hover{
+                    color: $rosaoscuro;
+                }
+            }
+            
+        }
+
+        .footer__redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+        height: 10vh;
+
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 4rem;
+                width: 2rem;
+                border-radius: 2rem;
+                background-color: $rosaoscuro;
+                transition: background 0.5s;
+
+                a{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+
+                svg{
+                    color: #c2c0bf;
+                    transition: color 0.5s;            
+                }
+            }
+
+            div:hover{
+                background-color: #c2c0bf;
+                svg{
+                    color: #64645c;
+                }
+            }
+
+        
+
+        }
+
+        
+
+        
+
+        
+        
+    } 
 }

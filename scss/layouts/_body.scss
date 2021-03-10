@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 100vw;
 }
 
 /*Contenido*/
@@ -51,7 +52,7 @@ section.body__contenido{
         rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 0.2), 
         rgba(0, 0, 0, 0.6), 
-        $negro), url(../image/imagenprincipal.png);    
+        $negro), url(../image/sobremi1.png);    
         background-position: center center;
         background-size: cover;
 
@@ -63,7 +64,7 @@ section.body__contenido{
         
         width: 100vw;
         height: 70vh;
-        padding: 10vh 0;
+        padding: 25vh 0;
         font-size: 1.5rem;
         font-weight: 300;
 
@@ -114,10 +115,7 @@ div.contenido__parrafosDelContenido{
     }
     
     p{    
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin: 5% 5%;        
         text-align: justify;
     }
 }

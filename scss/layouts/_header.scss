@@ -25,11 +25,12 @@ header.body__sobremi {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.7), 
-    $negro), url(../image/imagenprincipal.png);
+    $negro), url(../image/headersobremi.png);
     height: 110vh;
     width: 100vw;
-    background-position: center center;
+    background-position: center start;
     background-size: cover;
+    margin-bottom: 10vh;
 }
 
 header.body__galeria {
@@ -40,11 +41,12 @@ header.body__galeria {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.7), 
-    $negro), url(../image/imagenprincipal.png);
+    $negro), url(../image/headerimagenes.png);
     height: 110vh;
     width: 100vw;
     background-position: center center;
     background-size: cover;
+    margin-bottom: 10vh;
 }
 header.body__videos {
     background-image: linear-gradient(to bottom, 
@@ -54,11 +56,12 @@ header.body__videos {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.7), 
-    $negro), url(../image/imagenprincipal.png);
+    $negro), url(../image/headervideos.png);
     height: 110vh;
     width: 100vw;
     background-position: center center;
     background-size: cover;
+    margin-bottom: 10vh;
 }
 header.body__partituras {
     background-image: linear-gradient(to bottom, 
@@ -68,11 +71,12 @@ header.body__partituras {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.7), 
-    $negro), url(../image/imagenprincipal.png);
+    $negro), url(../image/headerpartituras.png);
     height: 110vh;
     width: 100vw;
     background-position: center center;
     background-size: cover;
+    margin-bottom: 10vh;
 }
 header.body__contacto {
     background-image: linear-gradient(to bottom, 
@@ -82,11 +86,12 @@ header.body__contacto {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.7), 
-    $negro), url(../image/imagenprincipal.png);
+    $negro), url(../image/headercontacto.png);
     height: 110vh;
     width: 100vw;
     background-position: center center;
     background-size: cover;
+    margin-bottom: 10vh;
 }
 /*estilos para barra de navegación con submenu*/
 
