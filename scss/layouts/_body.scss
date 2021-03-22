@@ -33,7 +33,7 @@ section.body__contenido{
         transition: 3s;
         
         p{
-            width: 40vw;
+            width: 50vw;
         }
         
         .primeraFrase__autor{
@@ -103,19 +103,21 @@ section.contenidoContacto{
 /* Sobre mi*/
 
 div.contenido__parrafosDelContenido{
-    background-color: #534e51;
-    margin: 10vh 1.5vw;
-    border-radius: 20px;
+    background-color: #534e517e;
+    margin: 10vh 10vw;
+    border-radius: 10px;
 
     h3.titularDelContenido{    
         font-family: $roboto;
         font-size: 40px;
-        font-weight: 200;
+        font-weight: 300;
         padding-top: 8vh;
     }
     
     p{    
+        font-size: 17px;
         margin: 5% 5%;        
         text-align: justify;
     }
 }
+

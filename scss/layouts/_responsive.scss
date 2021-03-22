@@ -1,6 +1,478 @@
 @import "utilities/variables";
 
 /* Responsive Index*/
+@media only screen and (max-width: 992px){
+
+
+    /*Imagen Principal dentro del header*/
+    header.header__index{
+    background-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.7), 
+    $negro), url(../image/imagenprincipal.png);
+    height: 80vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    }
+  
+
+    .header__barraDeNavegacion a{
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    color: $blanco;
+    transition: color 2s font-weight 2s;
+    letter-spacing: 0.1vw;     
+    }
+
+    section.body__contenido{ 
+        /*Primera Frase*/
+        div.contenido__primeraFrase{        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100vw;
+        height: 50vh;        
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+        padding: 5vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        transition: 3s;
+        
+        p{
+            width: 70vw;
+        }
+        
+        .primeraFrase__autor{
+            font-size: 1.1rem;
+        }
+        }        
+
+        /*Grid seccion de experiencias index*/
+        section.contenido__muestraExperiencias1 {
+            background-image: linear-gradient(to bottom ,   
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.6), 
+            $negro),
+            linear-gradient(to top,   
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.6), 
+            $negro), url(../image/imagenprincipal.png);    
+            background-position: center center;
+            background-size: cover;
+
+
+
+            display: grid;     
+            grid-template-columns: repeat( 4, 1fr);
+            grid-template-rows: 200px, 400px, 200px;
+            grid-gap: 2%;
+            grid-template-areas: 
+            "titulo     titulo  titulo  titulo"
+            "video      video   video   video"    
+            "pievid      pievid   pievid  pievid"    
+            ;
+            padding: 10px 10vw;
+            height: 120vh;
+            width: 100vw;
+            
+
+            h1.titulo{
+                grid-area: titulo;
+                font-family: $roboto;
+                font-size: 40px;
+                font-weight: 300;
+            }
+            
+            iframe.video{
+                grid-area: video;
+                height: 250px;
+                width: 450px;
+                box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+                transition: transform 0.2s;
+                justify-self: center;
+            }
+            
+            div.pieVideo{
+                grid-area: pievid;
+                font-size: 1.8rem;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                padding-right: 2vw;
+                p.siguenos{
+                    align-self: center;
+                }
+                p.pieVideo__descripcion{
+                    text-align: justify;
+                    line-height: 8vh;
+                    font-size: 1.2rem;
+                }
+                
+            }
+        }
+
+        section.contenido__muestraExperiencias2 {
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/imagenprincipal.png);    
+        background-position: center center;
+        background-size: cover;
+    
+    
+    
+        display: grid;     
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(2 , 2fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        
+        "imagen1    texto1"
+        "imagen2    texto2"
+        ;
+        margin-top: 15vh;
+        padding: 20vh 10vw;
+        height: 160vh;
+        width: 100vw;
+      
+        
+        img.alumno1{
+            grid-area: imagen1;
+            background-image: url(../image/2.png);
+            background-size: cover;
+            background-position: center center;   
+            height: 300px;
+            width: 240px;
+            box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+            transition: transform 0.2s;      
+        }
+        
+        
+        h2.nombre1{
+            grid-area: nombre1;
+            font-weight: 300;
+            font-size: 25px;
+            
+        }
+        div.texto1{
+            grid-area: texto1;
+            text-align: justify;
+            line-height: 8vh;
+            font-size: 1.3rem;
+            font-weight: 300;
+            
+        }
+        
+        img.alumno2{
+            grid-area: imagen2;
+            background-image: url(../image/5.png);
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            width: 240px;
+            box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+            transition: transform 0.2s;
+        }
+        
+        
+        h2.nombre2{
+            grid-area: nombre2;
+            font-weight: 300;
+            font-size: 25px;
+        }
+        div.texto2{
+            grid-area: texto2;
+            text-align: justify;
+            line-height: 8vh;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+    
+        }
+
+        /*Segunda Frase*/
+       div.contenido__segundaFrase{
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/bannerFrase2.png);    
+        background-position: center center;
+        background-size: cover;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-top: 15vh;
+        
+        width: 100vw;
+        height: 70vh;
+        padding: 25vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+    
+        p{
+            width: 60vw;
+        }
+    
+        .segundaFrase__autor{
+            font-size: 1.1rem;
+        }
+        }
+
+    }
+
+
+    /* responsive Galeria Imagenes */
+
+    div.contenido__galeriaImagenes {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-gap: 0;
+        grid-template-areas:    
+        "galeria1  galeria2 "    
+        "galeria3  galeria4 "    
+        "galeria5  galeria6 "  
+        ;
+        padding: 50px 100px;
+        height: 120vh;
+        width: 97vw;
+        align-self: center;
+        
+    
+        h3.titularDelContenido{
+            grid-area: titulogal;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+            
+        @each $area,$foto in $galeria{
+            div.#{$area}{
+                grid-area: #{$area};
+                background-image: url(../image/#{$foto}) no-repeat;
+                background-size: cover;
+                height: 200px;
+                width: 100%;
+                opacity: .6;
+                transition: ease .7s;
+            }
+            div.#{$area}:hover{
+                transform: scale(1.01);
+                opacity: 1;            
+            }
+        }
+        
+        @for $i from 1 through 6{
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center;
+                visibility: hidden;
+            }
+        }
+    }
+
+            /* Galeria Videos */
+
+    div.galeriaVideo {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulogalvid   titulogalvid"
+        "video1         video2"
+        "pievideo1      pievideo2"
+        "video3         video4 "
+        "pievideo3      pievideo4" 
+        "video5         video6"
+        "pievideo5      pievideo6"   
+        ;
+        padding: 50px 30px;
+        height: 170vh;
+        width: 97vw;
+        margin-left: 1vw;
+
+        h3.titularDeVideo{
+            grid-area: titulogalvid;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+
+        @each $area in $areasVideos{
+            iframe.#{$area}{
+                grid-area: #{$area};
+                height: 35vh;
+                width: 40vw;                  
+            }
+        }
+
+        @for $i from 1 through 6{
+            p.pieDeArchivo#{$i}{
+                grid-area: pievideo#{$i};
+                text-align: center;
+            }
+        }
+
+    }
+            /* Partituras */
+
+    div.gridPartituras {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        "titulopartitura titulopartitura"
+        "partitura1     partitura2"
+        "pie1           pie2 "
+        "partitura3     partitura4 "
+        "pie3           pie4 "
+        "partitura5     partitura6"
+        "pie5           pie6"
+        ;
+        padding: 50px 30px;
+        height: 170vh;
+        width: 97vw;
+        margin-left: 1vw;
+
+        h3.titularDePartituras{
+            grid-area: titulopartitura;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+
+        @each $partitura in $partituras {
+            iframe.#{$partitura}{
+                grid-area: #{$partitura};
+                height: 35vh;
+                width: 40vw;
+            }
+        }
+
+        @for $i from 1 through 6 {
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center; 
+            }
+        }
+    }
+        /*Footer*/
+        footer{
+            background-color:  $negro;
+            background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
+            width: 100vw;
+            height: 30vh;
+            padding-top: 9vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $blanco;
+    
+            .footer__nombre{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 30vw;
+                height: 10vh;
+    
+                p{
+                    font-size: 12px;
+                    a{
+                        text-decoration: none;
+                        color:$blanco ;
+                        transition: color 0.5s;
+                    }
+    
+                    a:hover{
+                        color: $rosaoscuro;
+                    }
+                }
+                
+            }
+    
+            .footer__redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 20vw;
+            height: 10vh;
+    
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 2rem;
+                    background-color: $rosaoscuro;
+                    transition: background 0.5s;
+    
+                    a{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+    
+                    svg{
+                        color: #c2c0bf;
+                        transition: color 0.5s;            
+                    }
+                }
+    
+                div:hover{
+                    background-color: #c2c0bf;
+                    svg{
+                        color: #64645c;
+                    }
+                }
+    
+            
+    
+            }
+    
+            
+    
+            
+    
+            
+            
+        } 
+}
+
+
 @media only screen and (max-width: 768px){
 
     .header__barraDeNavegacion .collapse{
@@ -11,7 +483,8 @@
         transition: all 1s;
     }
 
-    /*Imagen Principal dentro del header*/
+        /*Imagen Principal dentro del header*/
+
     header.header__index {
     background-image: linear-gradient(to bottom, 
     rgba(0, 0, 0, 0.9),
@@ -36,165 +509,262 @@
     letter-spacing: 0.1vw;     
     }
 
-    div.contenido__primeraFrase{
-    background-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.8), 
-    rgba(0, 0, 0, 0.7), 
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.8), 
-    rgba(0, 0, 0, 0.9), 
-    $negro), 
-
-    linear-gradient(to right, 
-    $negro,
-    #0b090a75, 
-    #0b090a3a, 
-    #0b090a00,
-    #0b090a3a, 
-    #0b090a75, 
-    $negro), url(../image/fondofrase.jpg);
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;   
-
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding: 30vh 0;
-    font-size: 1.4rem;
-    font-weight: 100;
-    transition: 3s;
-    }
-
-    section.contenido__muestraExperiencias {
-    display: grid;    
-    border: $blanco 1px solid ;
-    grid-template-columns: 2fr repeat( 2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: 
-    "titulo  titulo  titulo  "
-    "video   imagen1  texto1  "
-    "video   imagen1  texto1 "
-    "pievid  nombre1 nombre1 "
-    ;
-    padding: 10px 30px;
-    height: 80vh;
-    width: 97vw;
-    margin-left: 1vw;
-
-        h1.titulo{
-        grid-area: titulo;
-        font-family: $roboto;
-        font-size: 1.5rem;
-        font-weight: 200;
-        }
-    
-        iframe.video{
-        grid-area: video;
-        height: 35vh;
-        width: 45vw;
-        }
-    
-        p.pievideo{
-        grid-area: pievid;
-        font-size: 1.2rem;
-        }
-    
-        img.alumno1{
-        grid-area: imagen1;
-        background-image: url(../image/2.png);
-        background-size: cover;
-        background-position-x: center;   
-        height: 35vh;
-        width: 20vw;
-        }
-    
-        h2.nombre1{
-        grid-area: nombre1;
-        font-weight: 200;
-        font-size: 1.2rem;
-        }
-        p.texto1{
-        grid-area: texto1;
-        text-align: justify;
-        font-size: 0.9rem;
-        }
-    
-        img.alumno2{
-        grid-area: imagen2;
-        display: none;
-        background-image: url(../image/5.png);
-        background-size: cover;
-        background-position-x: center;
-        height: 35vh;
-        width: 15vw;
-        }
-    
-        h2.nombre2{
-        grid-area: nombre2;
-        display: none;
-        font-weight: 200;
-        }
-        p.texto2{
-        grid-area: texto2;
-        display: none;
-        text-align: justify;
-        }
-    }
-
-    div.segundaFrase{
+    section.body__contenido{ 
+        /*Primera Frase*/
+        div.contenido__primeraFrase{        
         display: flex;
         flex-direction: column;
-        text-align: center;
-    
-        margin-top: 20vh;
-        margin-bottom: 20vh;
-        padding: 10px 0;
-        font-size: 1.4rem;
-        font-weight: 100;
+        align-items: center; 
+        width: 100vw;
+        height: 50vh;        
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+        padding: 5vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        transition: 3s;
+        
+        p{
+            width: 70vw;
+        }
+        
+        .primeraFrase__autor{
+            font-size: 1.1rem;
+        }
+        }        
+
+        /*Grid seccion de experiencias index*/
+        section.contenido__muestraExperiencias1 {
+            background-image: linear-gradient(to bottom ,   
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.6), 
+            $negro),
+            linear-gradient(to top,   
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.6), 
+            $negro), url(../image/imagenprincipal.png);    
+            background-position: center center;
+            background-size: cover;
+
+
+
+            display: grid;     
+            grid-template-columns: repeat( 4, 1fr);
+            grid-template-rows: 200px, 400px, 200px;
+            grid-gap: 2%;
+            grid-template-areas: 
+            "titulo     titulo  titulo  titulo"
+            "video      video   video   video"    
+            "pievid      pievid   pievid  pievid"    
+            ;
+            padding: 10px 10vw;
+            height: 120vh;
+            width: 100vw;
+            
+
+            h1.titulo{
+                grid-area: titulo;
+                font-family: $roboto;
+                font-size: 40px;
+                font-weight: 300;
+            }
+            
+            iframe.video{
+                grid-area: video;
+                height: 250px;
+                width: 450px;
+                box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+                transition: transform 0.2s;
+                justify-self: center;
+            }
+            
+            div.pieVideo{
+                grid-area: pievid;
+                font-size: 1.8rem;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                padding-right: 2vw;
+                p.siguenos{
+                    align-self: center;
+                }
+                p.pieVideo__descripcion{
+                    text-align: justify;
+                    line-height: 8vh;
+                    font-size: 1.2rem;
+                }
+                
+            }
         }
 
+        section.contenido__muestraExperiencias2 {
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/imagenprincipal.png);    
+        background-position: center center;
+        background-size: cover;
+    
+    
+    
+        display: grid;     
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(2 , 2fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        
+        "imagen1    texto1"
+        "imagen2    texto2"
+        ;
+        margin-top: 15vh;
+        padding: 20vh 10vw;
+        height: 160vh;
+        width: 100vw;
+      
+        
+        img.alumno1{
+            grid-area: imagen1;
+            background-image: url(../image/2.png);
+            background-size: cover;
+            background-position: center center;   
+            height: 300px;
+            width: 240px;
+            box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+            transition: transform 0.2s;      
+        }
+        
+        
+        h2.nombre1{
+            grid-area: nombre1;
+            font-weight: 300;
+            font-size: 25px;
+            font-size: 1.2rem;
+            
+        }
+        div.texto1{
+            grid-area: texto1;
+            text-align: justify;
+            line-height: 8vh;
+            font-size: 1rem;
+            font-weight: 300;
+            
+        }
+        
+        img.alumno2{
+            grid-area: imagen2;
+            background-image: url(../image/5.png);
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            width: 240px;
+            box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+            transition: transform 0.2s;
+        }
+        
+        
+        h2.nombre2{
+            grid-area: nombre2;
+            font-weight: 300;
+            font-size: 25px;
+            font-size: 1.2rem;
+        }
+        div.texto2{
+            grid-area: texto2;
+            text-align: justify;
+            line-height: 8vh;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    
+        }
+
+        /*Segunda Frase*/
+       div.contenido__segundaFrase{
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/bannerFrase2.png);    
+        background-position: center center;
+        background-size: cover;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-top: 15vh;
+        
+        width: 100vw;
+        height: 70vh;
+        padding: 25vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+    
+        p{
+            width: 60vw;
+        }
+    
+        .segundaFrase__autor{
+            font-size: 1.1rem;
+        }
+        }
+
+    }
+
+    
+    
 
     /* responsive Galeria Imagenes */
 
     div.contenido__galeriaImagenes {
-    display: grid;        
-    grid-template-columns: repeat( 2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: 
-    "titulogal titulogal"
-    "galeria1   galeria2"
-    "pie1       pie2    "
-    "galeria3   galeria4"
-    "pie3       pie4    "
-    "galeria5   galeria6"
-    "pie5       pie6    "    
-    ;
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw;
-
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(3, 180px);
+        grid-gap: 0;
+        grid-template-areas:    
+        "galeria1  galeria2 "    
+        "galeria3  galeria4 "    
+        "galeria5  galeria6 "  
+        ;
+        padding: 50px 60px;
+        height: 120vh;
+        width: 97vw;
+        align-self: center;
+        
+    
         h3.titularDelContenido{
-        grid-area: titulogal;
-        font-family: $roboto;
-        font-size: 1.5rem;
-        font-weight: 200;
+            grid-area: titulogal;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
         }
-
+            
         @each $area,$foto in $galeria{
-            img.#{$area}{
+            div.#{$area}{
                 grid-area: #{$area};
-                background-image: url(../image/#{$foto});
+                background-image: url(../image/#{$foto}) no-repeat;
                 background-size: cover;
-                height: 35vh;
-                width: 40vw;
+                height: 180px;
+                width: 100%;
+                opacity: .6;
+                transition: ease .7s;
+            }
+            div.#{$area}:hover{
+                transform: scale(1.01);
+                opacity: 1;            
             }
         }
         
@@ -202,8 +772,9 @@
             p.pieDeArchivo#{$i}{
                 grid-area: pie#{$i};
                 text-align: center;
+                visibility: hidden;
             }
-        }       
+        }
     }
 
             /* Galeria Videos */
@@ -396,133 +967,229 @@
         border-radius: 5px;
     }
 
-    section.contenido__muestraExperiencias {
-    display: grid;    
-    border: $blanco 1px solid ;
-    grid-template-columns:repeat( 2, 2fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: 
-    "titulo  titulo"
-    "video   video "
-    "video   video "
-    "pievid  pievid"
-    "imagen1 texto1"
-    "imagen1 texto1"
-    "nombre1 nombre1"
-    ;
-    padding: 10px 30px;
-    height: 140vh;
-    width: 97vw;
-    margin-left: 1vw;
-
-        h1.titulo{
-        grid-area: titulo;
-        font-family: $roboto;
-        font-size: 1.5rem;
-        font-weight: 200;
-        }
-    
-        iframe.video{
-        grid-area: video;
-        height: 40vh;
-        width: 80vw;
-        }
-    
-        p.pievideo{
-        grid-area: pievid;
-        font-size: 1.2rem;
-        }
-    
-        img.alumno1{
-        grid-area: imagen1;
-        background-image: url(../image/2.png);
-        background-size: cover;
-        background-position-x: center;   
-        height: 35vh;
-        width: 48vw;
-        }
-    
-        h2.nombre1{
-        grid-area: nombre1;
-        font-weight: 200;
-        font-size: 1.2rem;
-        }
-        p.texto1{
-        grid-area: texto1;
-        text-align: justify;
-        }
-    
-        img.alumno2{
-        grid-area: imagen2;
-        display: none;
-        background-image: url(../image/5.png);
-        background-size: cover;
-        background-position-x: center;
-        height: 35vh;
-        width: 15vw;
-        }
-    
-        h2.nombre2{
-        grid-area: nombre2;
-        display: none;
-        font-weight: 200;
-        }
-        p.texto2{
-        grid-area: texto2;
-        display: none;
-        text-align: justify;
-        }
-
-    }   
-
+    section.body__contenido{ 
         /*Primera Frase*/
-    div.contenido__primeraFrase{
-        background-image: linear-gradient(to bottom, 
-        $negro,
-        rgba(0, 0, 0, 0.8), 
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.8), 
-        rgba(0, 0, 0, 0.9), 
-        $negro), 
-        
-        linear-gradient(to right, 
-        $negro,
-        #0b090a75, 
-        #0b090a3a, 
-        #0b090a00,
-        #0b090a3a, 
-        #0b090a75, 
-        $negro), url(../image/fondofrase.jpg);
-
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-x: center;
+        div.contenido__primeraFrase{        
         display: flex;
         flex-direction: column;
-        text-align: center; 
+        align-items: center; 
         width: 100vw;
+        height: 50vh;        
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+        padding: 5vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        transition: 3s;
         
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        padding: 15vh 0;
-        font-size: 0.9rem;
-        font-weight: 100;
-        transition: 3s;        
-    }
+        p{
+            width: 70vw;
+        }
+        
+        .primeraFrase__autor{
+            font-size: 1.1rem;
+        }
+        }        
+
+        /*Grid seccion de experiencias index*/
+        section.contenido__muestraExperiencias1 {
+            background-image: linear-gradient(to bottom ,   
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.6), 
+            $negro),
+            linear-gradient(to top,   
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.6), 
+            $negro), url(../image/imagenprincipal.png);    
+            background-position: center center;
+            background-size: cover;
+
+
+
+            display: grid;     
+            grid-template-columns: repeat( 4, 1fr);
+            grid-template-rows: 80px, 250px, 150px;
+            grid-gap: 2%;
+            grid-template-areas: 
+            "titulo     titulo  titulo  titulo"
+            "video      video   video   video"    
+            "pievid      pievid   pievid  pievid"    
+            ;
+            padding: 10px 10vw;
+            height: 130vh;
+            width: 100vw;
+            
+
+            h1.titulo{
+                grid-area: titulo;
+                font-family: $roboto;
+                font-size: 30px;
+                font-weight: 300;
+            }
+            
+            iframe.video{
+                grid-area: video;
+                height: 250px;
+                width: 450px;
+                box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+                transition: transform 0.2s;
+                justify-self: center;
+            }
+            
+            div.pieVideo{
+                grid-area: pievid;
+                font-size: 1.4rem;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                padding-right: 2vw;
+                p.siguenos{
+                    align-self: center;
+                }
+                p.pieVideo__descripcion{
+                    text-align: justify;
+                    line-height: 8vh;
+                    font-size: 1rem;
+                }
+                
+            }
+        }
+
+        section.contenido__muestraExperiencias2 {
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/imagenprincipal.png);    
+        background-position: center center;
+        background-size: cover;
+    
+    
+    
+        display: grid;     
+        grid-template-columns:  1fr;
+        grid-template-rows: repeat(4 , 2fr);
+        grid-gap: 2%;
+        grid-template-areas: 
+        
+        "imagen1"  
+        "texto1"
+        "imagen2"  
+        "texto2"
+        ;
+        margin-top: 15vh;
+        padding: 20vh 10vw;
+        height: 200vh;
+        width: 100vw;
+      
+        
+        img.alumno1{
+            grid-area: imagen1;
+            background-image: url(../image/2.png);
+            background-size: cover;
+            background-position: center center;               
+            height: 300px;
+            width: 240px;
+            box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+            transition: transform 0.2s;
+            justify-self: center;
+        }
+        
+        
+        h2.nombre1{
+            grid-area: nombre1;
+            font-weight: 300;
+            font-size: 25px;
+            font-size: 1.2rem;
+            
+        }
+        div.texto1{
+            grid-area: texto1;
+            text-align: justify;
+            line-height: 8vh;
+            font-size: 1rem;
+            font-weight: 300;            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        
+        img.alumno2{
+            grid-area: imagen2;
+            background-image: url(../image/5.png);
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            width: 240px;
+            box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
+            transition: transform 0.2s;
+            justify-self: center;
+        }
+        
+        
+        h2.nombre2{
+            grid-area: nombre2;
+            font-weight: 300;
+            font-size: 25px;
+            font-size: 1.2rem;
+        }
+        div.texto2{
+            grid-area: texto2;
+            text-align: justify;
+            line-height: 8vh;
+            font-size: 1rem;
+            font-weight: 300;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        }
 
         /*Segunda Frase*/
-    div.contenido__segundaFrase{
+       div.contenido__segundaFrase{
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/bannerFrase2.png);    
+        background-position: center center;
+        background-size: cover;
+    
         display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
         
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-        padding: 10px 0;
-        font-size: 0.8rem;
-        font-weight: 100;
+        margin-top: 15vh;
+        
+        width: 100vw;
+        height: 70vh;
+        padding: 25vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+    
+        p{
+            width: 60vw;
+        }
+    
+        .segundaFrase__autor{
+            font-size: 1.1rem;
+        }
+        }
+
     }
 
     section.contenidoContacto{
@@ -545,33 +1212,48 @@
         
     }
 
+    /* Sobre mi*/
+
+div.contenido__parrafosDelContenido{
+    background-color: #534e517e;
+    margin: 10vh 10vw;
+    border-radius: 10px;
+
+    h3.titularDelContenido{    
+        font-family: $roboto;
+        font-size: 35px;
+        font-weight: 300;
+        padding-top: 8vh;
+    }
+    
+    p{    
+        font-size: 13px;
+        margin: 5% 5%;        
+        text-align: justify;
+    }
+}
 
         /* responsive Galeria Imagenes */
 
     div.contenido__galeriaImagenes {
         display: grid;        
         grid-template-columns: repeat( 1, 1fr);
-        grid-template-rows: repeat(13, 1fr);
-        grid-gap: 2%;
+        grid-template-rows: repeat(6, 300px);
+        grid-gap: 0;
         grid-template-areas: 
-        "titulogal"
-        "galeria1"
-        "pie1    "
-        "galeria2"
-        "pie2    "
-        "galeria3"
-        "pie3    "
-        "galeria4"
-        "pie4    "
-        "galeria5"
-        "pie5    " 
+        
+        "galeria1"        
+        "galeria2"        
+        "galeria3"        
+        "galeria4"        
+        "galeria5"         
         "galeria6"
-        "pie6    "
+        
         ;
-        padding: 50px 30px;
-        height: 500vh;
+        padding: 15px 20px;
+        height: 350vh;
         width: 97vw;
-        margin-left: 1vw;
+        
     
             h3.titularDelContenido{
             grid-area: titulogal;
@@ -581,14 +1263,18 @@
             }
     
             @each $area,$foto in $galeria{
-                img.#{$area}{
+                div.#{$area}{
                     grid-area: #{$area};
-                    background-image: url(../image/#{$foto});
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    height: 50vh;
-                    width: 80vw;
+                    background-image: url(../image/#{$foto}) no-repeat;
+                    background-size: cover;
+                    height: 300px;
+                    width: 100%;                    
+                    opacity: .6;
+                    transition: ease .7s;
+                }
+                div.#{$area}:hover{
+                    transform: scale(1.01);
+                    opacity: 1;            
                 }
             }
             

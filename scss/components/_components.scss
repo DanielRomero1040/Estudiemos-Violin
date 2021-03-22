@@ -3,9 +3,45 @@
 /*Carrusel*/
 
 .carousel-inner > .carousel-item > img{
-    object-fit: scale-down;
-    height: 70vh;
-    width: 100%;
+    /*object-fit: scale-down;*/
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+}
+.carousel-inner{
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    
+}
+
+@media only screen and (max-width: 768px){
+    .carousel-inner > .carousel-item > img{
+        /*object-fit: scale-down;*/
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+    }
+    .carousel-inner{
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+        
+    }
+}
+@media only screen and (max-width: 576px){
+    .carousel-inner > .carousel-item > img{
+        /*object-fit: scale-down;*/
+        width: 95vw;
+        height: 60vh;
+        border-radius: 10px;
+    }
+    .carousel-inner{
+        width: 95vw;
+        height: 60vh;
+        border-radius: 10px;
+        
+    }
 }
 
 /*Modal*/

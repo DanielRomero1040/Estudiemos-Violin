@@ -105,9 +105,7 @@ header{
         text-align: center;    
         padding: 10px 30px 0 30px;
         background: rgba(0, 0, 0, 0.1) ;
-        visibility: hidden;
-        
-        /*background: linear-gradient(to top, $negro 0%, $negro 40%,$rosaoscuro 100%);*/         
+        visibility: hidden;                
     }
     
     .header__barraDeNavegacion buttom{
@@ -117,7 +115,7 @@ header{
     
     
     .header__barraDeNavegacion a{
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 400;
         text-decoration: none;        
         transition: all 0.8s;
@@ -128,14 +126,15 @@ header{
     }
     span.navbar-text{
         transition: all 0.8s;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 400;
         visibility: visible;  
     }
 
     .logo{
         border-radius: 500px;
-        width: 5vw;
+        width: 70px;
+        height: 70px;
     }   
     
     .navbar a.nav-link:hover , span.navbar-text:hover{          
@@ -143,16 +142,20 @@ header{
         
     }
 
+    
     h1.header__titulo{
                 
         font-size: 50px;
         text-align: center;
-        font-weight: lighter;
+        font-weight: 300;
         padding-top: 60vh;
         color:rgb(179, 173, 173) ;
         visibility: visible;
         animation-name: fadeIn;
         animation-duration: 2s;
     }
+
+
+    
 
 }

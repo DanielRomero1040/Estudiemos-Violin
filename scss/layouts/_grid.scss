@@ -154,20 +154,19 @@ section.contenido__muestraExperiencias2 {
 
 div.contenido__galeriaImagenes {
     display: grid;        
-    grid-template-columns: repeat( 3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: 
-    "titulogal titulogal titulogal"
-    "galeria1  galeria2  galeria3"
-    "pie1      pie2      pie3"
-    "galeria4  galeria5  galeria6"
-    "pie4      pie5      pie6"    
+    grid-template-columns: repeat( 2, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-gap: 0;
+    grid-template-areas:    
+    "galeria1  galeria2 "    
+    "galeria3  galeria4 "    
+    "galeria5  galeria6 "  
     ;
-    padding: 50px 30px;
-    height: 170vh;
+    padding: 50px 150px;
+    height: 180vh;
     width: 97vw;
-    margin-left: 1vw;
+    align-self: center;
+    
 
     h3.titularDelContenido{
         grid-area: titulogal;
@@ -177,12 +176,18 @@ div.contenido__galeriaImagenes {
     }
         
     @each $area,$foto in $galeria{
-        img.#{$area}{
+        div.#{$area}{
             grid-area: #{$area};
             background-image: url(../image/#{$foto});
             background-size: cover;
-            height: 50vh;
-            width: 25vw;
+            height: 300px;
+            width: 100%;
+            opacity: .6;
+            transition: ease .7s;
+        }
+        div.#{$area}:hover{
+            transform: scale(1.01);
+            opacity: 1;            
         }
     }
     
@@ -190,6 +195,7 @@ div.contenido__galeriaImagenes {
         p.pieDeArchivo#{$i}{
             grid-area: pie#{$i};
             text-align: center;
+            visibility: hidden;
         }
     }
 }
