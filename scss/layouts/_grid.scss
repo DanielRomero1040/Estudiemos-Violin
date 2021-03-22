@@ -28,7 +28,7 @@ section.contenido__muestraExperiencias1 {
     "pievid      pievid   video  video"    
     ;
     padding: 10px 10vw;
-    height: 100vh;
+    height: 600px;
     width: 100vw;
     
 
@@ -41,7 +41,7 @@ section.contenido__muestraExperiencias1 {
     
     iframe.video{
         grid-area: video;
-        height: 50vh;
+        height: 280px;
         width: 40vw;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;
@@ -93,7 +93,7 @@ section.contenido__muestraExperiencias2 {
     ;
     margin-top: 15vh;
     padding: 20vh 10vw;
-    height: 100vh;
+    height: 500px;
     width: 100vw;
   
     
@@ -102,8 +102,8 @@ section.contenido__muestraExperiencias2 {
         background-image: url(../image/2.png);
         background-size: cover;
         background-position: center center;   
-        height: 40vh;
-        width: 13vw;
+        height: 250px;
+        width: 170px;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;      
     }
@@ -128,8 +128,8 @@ section.contenido__muestraExperiencias2 {
         background-image: url(../image/5.png);
         background-size: cover;
         background-position: center center;
-        height: 40vh;
-        width: 13vw;
+        height: 250px;
+        width: 170px;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;
     }

@@ -37,7 +37,7 @@
         flex-direction: column;
         align-items: center; 
         width: 100vw;
-        height: 50vh;        
+        height: 300px;        
         margin-top: 15vh;
         margin-bottom: 15vh;
         padding: 5vh 0;
@@ -81,7 +81,7 @@
             "pievid      pievid   pievid  pievid"    
             ;
             padding: 10px 10vw;
-            height: 120vh;
+            height: 620px;
             width: 100vw;
             
 
@@ -147,7 +147,7 @@
         ;
         margin-top: 15vh;
         padding: 20vh 10vw;
-        height: 160vh;
+        height: 850px;
         width: 100vw;
       
         
@@ -227,7 +227,7 @@
         margin-top: 15vh;
         
         width: 100vw;
-        height: 70vh;
+        height: 400px;
         padding: 25vh 0;
         font-size: 1.5rem;
         font-weight: 300;
@@ -386,7 +386,7 @@
             background-color:  $negro;
             background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
             width: 100vw;
-            height: 30vh;
+            height: 180px;
             padding-top: 9vh;
             padding-left: 5vw;
             padding-right: 5vw;
@@ -476,11 +476,12 @@
 @media only screen and (max-width: 768px){
 
     .header__barraDeNavegacion .collapse{
-        background-color: rgba(0, 0, 0, 0.322);
+        background-color: rgba(0, 0, 0, 0.603);
         height: auto;
         width: auto;        
         visibility: visible;
-        transition: all 1s;
+        transition: all 0.3s;
+        border-radius: 5px;        
     }
 
         /*Imagen Principal dentro del header*/
@@ -516,7 +517,7 @@
         flex-direction: column;
         align-items: center; 
         width: 100vw;
-        height: 50vh;        
+        height: 300px;        
         margin-top: 15vh;
         margin-bottom: 15vh;
         padding: 5vh 0;
@@ -560,7 +561,7 @@
             "pievid      pievid   pievid  pievid"    
             ;
             padding: 10px 10vw;
-            height: 120vh;
+            height: 650px;
             width: 100vw;
             
 
@@ -626,7 +627,7 @@
         ;
         margin-top: 15vh;
         padding: 20vh 10vw;
-        height: 160vh;
+        height: 800px;
         width: 100vw;
       
         
@@ -708,7 +709,7 @@
         margin-top: 15vh;
         
         width: 100vw;
-        height: 70vh;
+        height: 400px;
         padding: 25vh 0;
         font-size: 1.5rem;
         font-weight: 300;
@@ -870,7 +871,7 @@
             background-color:  $negro;
             background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
             width: 100vw;
-            height: 30vh;
+            height: 180px;
             padding-top: 9vh;
             padding-left: 5vw;
             padding-right: 5vw;
@@ -959,11 +960,11 @@
 @media only screen and (max-width: 576px){
 
     .header__barraDeNavegacion .collapse{
-        background-color: rgba(0, 0, 0, 0.322);
+        background-color: rgba(0, 0, 0, 0.603);
         height: auto;
         width: auto;        
         visibility: visible;
-        transition: all 1s;
+        transition: all 0.3s;
         border-radius: 5px;
     }
 
@@ -974,7 +975,7 @@
         flex-direction: column;
         align-items: center; 
         width: 100vw;
-        height: 50vh;        
+        height: 300px;        
         margin-top: 15vh;
         margin-bottom: 15vh;
         padding: 5vh 0;
@@ -1010,7 +1011,7 @@
 
             display: grid;     
             grid-template-columns: repeat( 4, 1fr);
-            grid-template-rows: 80px, 250px, 150px;
+            grid-template-rows: 80px, 210px, 150px;
             grid-gap: 2%;
             grid-template-areas: 
             "titulo     titulo  titulo  titulo"
@@ -1018,7 +1019,7 @@
             "pievid      pievid   pievid  pievid"    
             ;
             padding: 10px 10vw;
-            height: 130vh;
+            height: 650px;
             width: 100vw;
             
 
@@ -1031,8 +1032,8 @@
             
             iframe.video{
                 grid-area: video;
-                height: 250px;
-                width: 450px;
+                height: 210px;
+                width: 80vw;
                 box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
                 transition: transform 0.2s;
                 justify-self: center;
@@ -1086,7 +1087,7 @@
         ;
         margin-top: 15vh;
         padding: 20vh 10vw;
-        height: 200vh;
+        height: 1200px;
         width: 100vw;
       
         
@@ -1176,7 +1177,7 @@
         margin-top: 15vh;
         
         width: 100vw;
-        height: 70vh;
+        height: 400px;
         padding: 25vh 0;
         font-size: 1.5rem;
         font-weight: 300;
@@ -1216,7 +1217,7 @@
 
 div.contenido__parrafosDelContenido{
     background-color: #534e517e;
-    margin: 10vh 10vw;
+    margin: 10vh 5vw;
     border-radius: 10px;
 
     h3.titularDelContenido{    
@@ -1227,7 +1228,7 @@ div.contenido__parrafosDelContenido{
     }
     
     p{    
-        font-size: 13px;
+        font-size: 15px;
         margin: 5% 5%;        
         text-align: justify;
     }
@@ -1393,7 +1394,7 @@ div.contenido__parrafosDelContenido{
         background-color:  $negro;
         background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
         width: 100vw;
-        height: 30vh;
+        height: 180px;
         padding-top: 9vh;
         padding-left: 5vw;
         padding-right: 5vw;

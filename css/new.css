@@ -30,7 +30,7 @@ section.body__contenido {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 40vh;
+    height: 250px;
     margin-top: 15vh;
     margin-bottom: 15vh;
     padding: 5vh 0;
@@ -50,7 +50,7 @@ section.body__contenido {
     align-items: center;
     margin-top: 15vh;
     width: 100vw;
-    height: 70vh;
+    height: 400px;
     padding: 25vh 0;
     font-size: 1.5rem;
     font-weight: 300; }
@@ -158,9 +158,7 @@ header .header__barraDeNavegacion a {
   text-decoration: none;
   transition: all 0.8s;
   letter-spacing: 0.1vw;
-  visibility: visible;
-  animation-name: fadeIn;
-  animation-duration: 2s; }
+  visibility: visible; }
 
 header span.navbar-text {
   transition: all 0.8s;
@@ -182,9 +180,7 @@ header h1.header__titulo {
   font-weight: 300;
   padding-top: 60vh;
   color: #b3adad;
-  visibility: visible;
-  animation-name: fadeIn;
-  animation-duration: 2s; }
+  visibility: visible; }
 
 /*Variables*/
 /*Paletas de Colores*/
@@ -201,7 +197,7 @@ section.contenido__muestraExperiencias1 {
   grid-gap: 2%;
   grid-template-areas: "titulo     titulo  titulo  titulo" "pievid      pievid   video   video"     "pievid      pievid   video  video";
   padding: 10px 10vw;
-  height: 100vh;
+  height: 600px;
   width: 100vw; }
   section.contenido__muestraExperiencias1 h1.titulo {
     grid-area: titulo;
@@ -210,7 +206,7 @@ section.contenido__muestraExperiencias1 {
     font-weight: 300; }
   section.contenido__muestraExperiencias1 iframe.video {
     grid-area: video;
-    height: 50vh;
+    height: 280px;
     width: 40vw;
     box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
     transition: transform 0.2s; }
@@ -239,15 +235,15 @@ section.contenido__muestraExperiencias2 {
   grid-template-areas: "imagen1    texto1  imagen2 texto2" "imagen1    texto1 imagen2 texto2";
   margin-top: 15vh;
   padding: 20vh 10vw;
-  height: 100vh;
+  height: 500px;
   width: 100vw; }
   section.contenido__muestraExperiencias2 img.alumno1 {
     grid-area: imagen1;
     background-image: url(../image/2.png);
     background-size: cover;
     background-position: center center;
-    height: 40vh;
-    width: 13vw;
+    height: 250px;
+    width: 170px;
     box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
     transition: transform 0.2s; }
   section.contenido__muestraExperiencias2 h2.nombre1 {
@@ -265,8 +261,8 @@ section.contenido__muestraExperiencias2 {
     background-image: url(../image/5.png);
     background-size: cover;
     background-position: center center;
-    height: 40vh;
-    width: 13vw;
+    height: 250px;
+    width: 170px;
     box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
     transition: transform 0.2s; }
   section.contenido__muestraExperiencias2 h2.nombre2 {
@@ -534,7 +530,7 @@ div.gridPartituras {
       flex-direction: column;
       align-items: center;
       width: 100vw;
-      height: 50vh;
+      height: 300px;
       margin-top: 15vh;
       margin-bottom: 15vh;
       padding: 5vh 0;
@@ -555,7 +551,7 @@ div.gridPartituras {
       grid-gap: 2%;
       grid-template-areas: "titulo     titulo  titulo  titulo" "video      video   video   video"     "pievid      pievid   pievid  pievid";
       padding: 10px 10vw;
-      height: 120vh;
+      height: 620px;
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias1 h1.titulo {
         grid-area: titulo;
@@ -593,7 +589,7 @@ div.gridPartituras {
       grid-template-areas: "imagen1    texto1" "imagen2    texto2";
       margin-top: 15vh;
       padding: 20vh 10vw;
-      height: 160vh;
+      height: 850px;
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno1 {
         grid-area: imagen1;
@@ -642,7 +638,7 @@ div.gridPartituras {
       align-items: center;
       margin-top: 15vh;
       width: 100vw;
-      height: 70vh;
+      height: 400px;
       padding: 25vh 0;
       font-size: 1.5rem;
       font-weight: 300; }
@@ -877,7 +873,7 @@ div.gridPartituras {
     background-color: #0b090a;
     background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
     width: 100vw;
-    height: 30vh;
+    height: 180px;
     padding-top: 9vh;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -933,11 +929,12 @@ div.gridPartituras {
 
 @media only screen and (max-width: 768px) {
   .header__barraDeNavegacion .collapse {
-    background-color: rgba(0, 0, 0, 0.322);
+    background-color: rgba(0, 0, 0, 0.603);
     height: auto;
     width: auto;
     visibility: visible;
-    transition: all 1s; }
+    transition: all 0.3s;
+    border-radius: 5px; }
   /*Imagen Principal dentro del header*/
   header.header__index {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/imagenprincipal.png);
@@ -961,7 +958,7 @@ div.gridPartituras {
       flex-direction: column;
       align-items: center;
       width: 100vw;
-      height: 50vh;
+      height: 300px;
       margin-top: 15vh;
       margin-bottom: 15vh;
       padding: 5vh 0;
@@ -982,7 +979,7 @@ div.gridPartituras {
       grid-gap: 2%;
       grid-template-areas: "titulo     titulo  titulo  titulo" "video      video   video   video"     "pievid      pievid   pievid  pievid";
       padding: 10px 10vw;
-      height: 120vh;
+      height: 650px;
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias1 h1.titulo {
         grid-area: titulo;
@@ -1020,7 +1017,7 @@ div.gridPartituras {
       grid-template-areas: "imagen1    texto1" "imagen2    texto2";
       margin-top: 15vh;
       padding: 20vh 10vw;
-      height: 160vh;
+      height: 800px;
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno1 {
         grid-area: imagen1;
@@ -1071,7 +1068,7 @@ div.gridPartituras {
       align-items: center;
       margin-top: 15vh;
       width: 100vw;
-      height: 70vh;
+      height: 400px;
       padding: 25vh 0;
       font-size: 1.5rem;
       font-weight: 300; }
@@ -1306,7 +1303,7 @@ div.gridPartituras {
     background-color: #0b090a;
     background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
     width: 100vw;
-    height: 30vh;
+    height: 180px;
     padding-top: 9vh;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -1362,11 +1359,11 @@ div.gridPartituras {
 
 @media only screen and (max-width: 576px) {
   .header__barraDeNavegacion .collapse {
-    background-color: rgba(0, 0, 0, 0.322);
+    background-color: rgba(0, 0, 0, 0.603);
     height: auto;
     width: auto;
     visibility: visible;
-    transition: all 1s;
+    transition: all 0.3s;
     border-radius: 5px; }
   section.body__contenido {
     /*Primera Frase*/
@@ -1377,7 +1374,7 @@ div.gridPartituras {
       flex-direction: column;
       align-items: center;
       width: 100vw;
-      height: 50vh;
+      height: 300px;
       margin-top: 15vh;
       margin-bottom: 15vh;
       padding: 5vh 0;
@@ -1394,11 +1391,11 @@ div.gridPartituras {
       background-size: cover;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 80px, 250px, 150px;
+      grid-template-rows: 80px, 210px, 150px;
       grid-gap: 2%;
       grid-template-areas: "titulo     titulo  titulo  titulo" "video      video   video   video"     "pievid      pievid   pievid  pievid";
       padding: 10px 10vw;
-      height: 130vh;
+      height: 650px;
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias1 h1.titulo {
         grid-area: titulo;
@@ -1407,8 +1404,8 @@ div.gridPartituras {
         font-weight: 300; }
       section.body__contenido section.contenido__muestraExperiencias1 iframe.video {
         grid-area: video;
-        height: 250px;
-        width: 450px;
+        height: 210px;
+        width: 80vw;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;
         justify-self: center; }
@@ -1436,7 +1433,7 @@ div.gridPartituras {
       grid-template-areas: "imagen1"   "texto1" "imagen2"   "texto2";
       margin-top: 15vh;
       padding: 20vh 10vw;
-      height: 200vh;
+      height: 1200px;
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno1 {
         grid-area: imagen1;
@@ -1495,7 +1492,7 @@ div.gridPartituras {
       align-items: center;
       margin-top: 15vh;
       width: 100vw;
-      height: 70vh;
+      height: 400px;
       padding: 25vh 0;
       font-size: 1.5rem;
       font-weight: 300; }
@@ -1518,7 +1515,7 @@ div.gridPartituras {
   /* Sobre mi*/
   div.contenido__parrafosDelContenido {
     background-color: #534e517e;
-    margin: 10vh 10vw;
+    margin: 10vh 5vw;
     border-radius: 10px; }
     div.contenido__parrafosDelContenido h3.titularDelContenido {
       font-family: "Lato", sans-serif;
@@ -1526,7 +1523,7 @@ div.gridPartituras {
       font-weight: 300;
       padding-top: 8vh; }
     div.contenido__parrafosDelContenido p {
-      font-size: 13px;
+      font-size: 15px;
       margin: 5% 5%;
       text-align: justify; }
   /* responsive Galeria Imagenes */
@@ -1749,7 +1746,7 @@ div.gridPartituras {
     background-color: #0b090a;
     background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
     width: 100vw;
-    height: 30vh;
+    height: 180px;
     padding-top: 9vh;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -1812,7 +1809,7 @@ footer {
   background-color: #0b090a;
   background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
   width: 100vw;
-  height: 30vh;
+  height: 180px;
   padding-top: 9vh;
   padding-left: 5vw;
   padding-right: 5vw;
