@@ -19,6 +19,42 @@
     background-position: center center;
     background-size: cover;
     }
+
+        /*Segunda Frase*/
+    div.contenido__segundaFrase{
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/bannerFrase2.png);    
+        background-position: center center;
+        background-size: cover;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-top: 15vh;
+        
+        width: 100vw;
+        height: 400px;
+        padding: 25vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+    
+        p{
+            width: 60vw;
+        }
+    
+        .segundaFrase__autor{
+            font-size: 1.1rem;
+        }
+    }
   
 
     .header__barraDeNavegacion a{
@@ -113,7 +149,7 @@
                 }
                 p.pieVideo__descripcion{
                     text-align: justify;
-                    line-height: 8vh;
+                    line-height: 35px;
                     font-size: 1.2rem;
                 }
                 
@@ -172,7 +208,7 @@
         div.texto1{
             grid-area: texto1;
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1.3rem;
             font-weight: 300;
             
@@ -198,15 +234,279 @@
         div.texto2{
             grid-area: texto2;
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1.3rem;
             font-weight: 300;
         }
     
         }
 
+    }
+
+    /* sobre mi */
+    div.contenido__parrafosDelContenido{
+        background-color: #534e517e;
+        width: 430px;
+        width: 700px;
+        margin: 10vh 5vw;
+        border-radius: 10px;
+
+        h3.titularDelContenido{    
+            font-family: $roboto;
+            font-size: 35px;
+            font-weight: 300;
+            padding-top: 8vh;
+        }
+        
+        p{    
+            font-size: 15px;
+            margin: 5% 5%;        
+            text-align: justify;
+        }
+    }
+
+
+    /* responsive Galeria Imagenes */
+
+    div.contenido__galeriaImagenes {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: repeat(3, 220px);
+        grid-gap: 0;
+        grid-template-areas:    
+        "galeria1  galeria2 "    
+        "galeria3  galeria4 "    
+        "galeria5  galeria6 "  
+        ;
+        padding: 50px 100px;
+        height: 750px;
+        width: 97vw;
+        align-self: center;
+        
+    
+        h3.titularDelContenido{
+            grid-area: titulogal;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+            
+        @each $area,$foto in $galeria{
+            div.#{$area}{
+                grid-area: #{$area};
+                background-image: url(../image/#{$foto}) no-repeat;
+                background-size: cover;
+                height: 220px;
+                width: 100%;
+                opacity: .6;
+                transition: ease .7s;
+            }
+            div.#{$area}:hover{
+                transform: scale(1.01);
+                opacity: 1;            
+            }
+        }
+        
+        @for $i from 1 through 6{
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center;
+                visibility: hidden;
+            }
+        }
+    }
+
+            /* Galeria Videos */
+
+    div.galeriaVideo {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: 100px ,repeat(3, 210px);
+        grid-gap: 30px;
+        grid-template-areas: 
+        "titulogalvid   titulogalvid"
+        "video1         video2"    
+        "video3         video4 "     
+        "video5         video6"       
+        ;
+        padding: 0 80px;
+        height: 820px;
+        width: 100vw;
+        margin-bottom: 100px;
+        align-self: center;
+    
+        h3.titularDeVideo{
+            grid-area: titulogalvid;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+    
+        @each $area in $areasVideos{
+            iframe.#{$area}{
+                grid-area: #{$area};
+                width: 100%;
+                height: 210px;
+                opacity: .6;
+                transition: ease .7s;                 
+            }
+    
+            iframe.#{$area}:hover{
+                transform: scale(1.01);
+                opacity: 1;            
+            }
+        } 
+    
+    }
+            /* Partituras */
+
+    div.gridPartituras {
+        display: grid;        
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: 100px,  repeat(4, 300px);
+        grid-gap: 30px;
+        grid-template-areas: 
+        "titulopartitura titulopartitura"
+        "partitura1  partitura2"
+        "pie1        pie2      "
+        "partitura3  partitura4"
+        "pie3        pie4      "    
+        ;
+        padding: 0 100px;
+        height: 850px;
+        width: 100vw;
+        margin-bottom: 100px;
+        align-self: center;
+        
+    
+        h3.titularDePartituras{
+            grid-area: titulopartitura;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
+    
+        @each $partitura in $partituras {
+            iframe.#{$partitura}{
+                grid-area: #{$partitura};
+                height: 300px;
+                width: 100%;
+                border: none;
+            }
+        }
+    
+        @for $i from 1 through 6 {
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center;
+            }
+        }
+    }
+        /*Footer*/
+    footer{
+        background-color:  $negro;
+        background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
+        width: 100vw;
+        height: 180px;
+        padding-top: 9vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $blanco;
+
+        .footer__nombre{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 10vh;
+
+            p{
+                font-size: 12px;
+                a{
+                    text-decoration: none;
+                    color:$blanco ;
+                    transition: color 0.5s;
+                }
+
+                a:hover{
+                    color: $rosaoscuro;
+                }
+            }
+            
+        }
+
+        .footer__redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+        height: 10vh;
+
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 2rem;
+                background-color: $rosaoscuro;
+                transition: background 0.5s;
+
+                a{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+
+                svg{
+                    color: #c2c0bf;
+                    transition: color 0.5s;            
+                }
+            }
+
+            div:hover{
+                background-color: #c2c0bf;
+                svg{
+                    color: #64645c;
+                }
+            }
+
+        
+
+        }
+
+        
+
+        
+
+        
+        
+    } 
+}
+
+
+@media only screen and (max-width: 767px){
+
+    .header__barraDeNavegacion .collapse{
+        background-color: rgba(0, 0, 0, 0.603);
+        height: auto;
+        width: auto;        
+        visibility: visible;
+        transition: all 0.3s;
+        border-radius: 5px;        
+    }
+
         /*Segunda Frase*/
-       div.contenido__segundaFrase{
+    div.contenido__segundaFrase{
         background-image: linear-gradient(to bottom ,   
         rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 0.2), 
@@ -239,249 +539,6 @@
         .segundaFrase__autor{
             font-size: 1.1rem;
         }
-        }
-
-    }
-
-
-    /* responsive Galeria Imagenes */
-
-    div.contenido__galeriaImagenes {
-        display: grid;        
-        grid-template-columns: repeat( 2, 1fr);
-        grid-template-rows: repeat(3, 200px);
-        grid-gap: 0;
-        grid-template-areas:    
-        "galeria1  galeria2 "    
-        "galeria3  galeria4 "    
-        "galeria5  galeria6 "  
-        ;
-        padding: 50px 100px;
-        height: 120vh;
-        width: 97vw;
-        align-self: center;
-        
-    
-        h3.titularDelContenido{
-            grid-area: titulogal;
-            font-family: $roboto;
-            font-size: 40px;
-            font-weight: 200;
-        }
-            
-        @each $area,$foto in $galeria{
-            div.#{$area}{
-                grid-area: #{$area};
-                background-image: url(../image/#{$foto}) no-repeat;
-                background-size: cover;
-                height: 200px;
-                width: 100%;
-                opacity: .6;
-                transition: ease .7s;
-            }
-            div.#{$area}:hover{
-                transform: scale(1.01);
-                opacity: 1;            
-            }
-        }
-        
-        @for $i from 1 through 6{
-            p.pieDeArchivo#{$i}{
-                grid-area: pie#{$i};
-                text-align: center;
-                visibility: hidden;
-            }
-        }
-    }
-
-            /* Galeria Videos */
-
-    div.galeriaVideo {
-        display: grid;        
-        grid-template-columns: repeat( 2, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-gap: 2%;
-        grid-template-areas: 
-        "titulogalvid   titulogalvid"
-        "video1         video2"
-        "pievideo1      pievideo2"
-        "video3         video4 "
-        "pievideo3      pievideo4" 
-        "video5         video6"
-        "pievideo5      pievideo6"   
-        ;
-        padding: 50px 30px;
-        height: 170vh;
-        width: 97vw;
-        margin-left: 1vw;
-
-        h3.titularDeVideo{
-            grid-area: titulogalvid;
-            font-family: $roboto;
-            font-size: 40px;
-            font-weight: 200;
-        }
-
-        @each $area in $areasVideos{
-            iframe.#{$area}{
-                grid-area: #{$area};
-                height: 35vh;
-                width: 40vw;                  
-            }
-        }
-
-        @for $i from 1 through 6{
-            p.pieDeArchivo#{$i}{
-                grid-area: pievideo#{$i};
-                text-align: center;
-            }
-        }
-
-    }
-            /* Partituras */
-
-    div.gridPartituras {
-        display: grid;        
-        grid-template-columns: repeat( 2, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-gap: 2%;
-        grid-template-areas: 
-        "titulopartitura titulopartitura"
-        "partitura1     partitura2"
-        "pie1           pie2 "
-        "partitura3     partitura4 "
-        "pie3           pie4 "
-        "partitura5     partitura6"
-        "pie5           pie6"
-        ;
-        padding: 50px 30px;
-        height: 170vh;
-        width: 97vw;
-        margin-left: 1vw;
-
-        h3.titularDePartituras{
-            grid-area: titulopartitura;
-            font-family: $roboto;
-            font-size: 40px;
-            font-weight: 200;
-        }
-
-        @each $partitura in $partituras {
-            iframe.#{$partitura}{
-                grid-area: #{$partitura};
-                height: 35vh;
-                width: 40vw;
-            }
-        }
-
-        @for $i from 1 through 6 {
-            p.pieDeArchivo#{$i}{
-                grid-area: pie#{$i};
-                text-align: center; 
-            }
-        }
-    }
-        /*Footer*/
-        footer{
-            background-color:  $negro;
-            background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
-            width: 100vw;
-            height: 180px;
-            padding-top: 9vh;
-            padding-left: 5vw;
-            padding-right: 5vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: $blanco;
-    
-            .footer__nombre{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                width: 30vw;
-                height: 10vh;
-    
-                p{
-                    font-size: 12px;
-                    a{
-                        text-decoration: none;
-                        color:$blanco ;
-                        transition: color 0.5s;
-                    }
-    
-                    a:hover{
-                        color: $rosaoscuro;
-                    }
-                }
-                
-            }
-    
-            .footer__redes{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: 20vw;
-            height: 10vh;
-    
-                div{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    height: 2rem;
-                    width: 2rem;
-                    border-radius: 2rem;
-                    background-color: $rosaoscuro;
-                    transition: background 0.5s;
-    
-                    a{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                    }
-    
-    
-                    svg{
-                        color: #c2c0bf;
-                        transition: color 0.5s;            
-                    }
-                }
-    
-                div:hover{
-                    background-color: #c2c0bf;
-                    svg{
-                        color: #64645c;
-                    }
-                }
-    
-            
-    
-            }
-    
-            
-    
-            
-    
-            
-            
-        } 
-}
-
-
-@media only screen and (max-width: 768px){
-
-    .header__barraDeNavegacion .collapse{
-        background-color: rgba(0, 0, 0, 0.603);
-        height: auto;
-        width: auto;        
-        visibility: visible;
-        transition: all 0.3s;
-        border-radius: 5px;        
     }
 
         /*Imagen Principal dentro del header*/
@@ -593,7 +650,7 @@
                 }
                 p.pieVideo__descripcion{
                     text-align: justify;
-                    line-height: 8vh;
+                    line-height: 35px;
                     font-size: 1.2rem;
                 }
                 
@@ -653,7 +710,7 @@
         div.texto1{
             grid-area: texto1;
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1rem;
             font-weight: 300;
             
@@ -680,52 +737,38 @@
         div.texto2{
             grid-area: texto2;
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1rem;
             font-weight: 300;
         }
     
         }
 
-        /*Segunda Frase*/
-       div.contenido__segundaFrase{
-        background-image: linear-gradient(to bottom ,   
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.6), 
-        $negro),
-        linear-gradient(to top,   
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.6), 
-        $negro), url(../image/bannerFrase2.png);    
-        background-position: center center;
-        background-size: cover;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        margin-top: 15vh;
-        
-        width: 100vw;
-        height: 400px;
-        padding: 25vh 0;
-        font-size: 1.5rem;
-        font-weight: 300;
-    
-        p{
-            width: 60vw;
-        }
-    
-        .segundaFrase__autor{
-            font-size: 1.1rem;
-        }
-        }
+
 
     }
 
-    
+        /* sobre mi */
+    div.contenido__parrafosDelContenido{
+        background-color: #534e517e;
+        width: 430px;
+        width: 550px;
+        margin: 10vh 5vw;
+        border-radius: 10px;
+
+        h3.titularDelContenido{    
+            font-family: $roboto;
+            font-size: 35px;
+            font-weight: 300;
+            padding-top: 8vh;
+        }
+        
+        p{    
+            font-size: 15px;
+            margin: 5% 5%;        
+            text-align: justify;
+        }
+    }
     
 
     /* responsive Galeria Imagenes */
@@ -741,7 +784,7 @@
         "galeria5  galeria6 "  
         ;
         padding: 50px 60px;
-        height: 120vh;
+        height: 600px;
         width: 97vw;
         align-self: center;
         
@@ -783,44 +826,42 @@
     div.galeriaVideo {
         display: grid;        
         grid-template-columns: repeat( 2, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-gap: 2%;
+        grid-template-rows: 100px ,repeat(3, 190px);
+        grid-gap: 30px;
         grid-template-areas: 
         "titulogalvid   titulogalvid"
-        "video1         video2"
-        "pievideo1      pievideo2"
-        "video3         video4 "
-        "pievideo3      pievideo4" 
-        "video5         video6"
-        "pievideo5      pievideo6"   
+        "video1         video2"    
+        "video3         video4 "     
+        "video5         video6"       
         ;
-        padding: 50px 30px;
-        height: 170vh;
-        width: 97vw;
-        margin-left: 1vw;
-
+        padding: 0 40px;
+        height: 820px;
+        width: 100vw;
+        margin-bottom: 100px;
+        align-self: center;
+    
         h3.titularDeVideo{
             grid-area: titulogalvid;
             font-family: $roboto;
             font-size: 40px;
             font-weight: 200;
         }
-
+    
         @each $area in $areasVideos{
             iframe.#{$area}{
                 grid-area: #{$area};
-                height: 35vh;
-                width: 40vw;                  
+                width: 100%;
+                height: 190px;
+                opacity: .6;
+                transition: ease .7s;                 
             }
-        }
-
-        @for $i from 1 through 6{
-            p.pieDeArchivo#{$i}{
-                grid-area: pievideo#{$i};
-                text-align: center;
+    
+            iframe.#{$area}:hover{
+                transform: scale(1.01);
+                opacity: 1;            
             }
-        }
-
+        } 
+    
     }
 
             /* Partituras */
@@ -828,133 +869,134 @@
     div.gridPartituras {
         display: grid;        
         grid-template-columns: repeat( 2, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-gap: 2%;
+        grid-template-rows: 100px,  repeat(4, 300px);
+        grid-gap: 30px;
         grid-template-areas: 
         "titulopartitura titulopartitura"
-        "partitura1     partitura2"
-        "pie1           pie2 "
-        "partitura3     partitura4 "
-        "pie3           pie4 "
-        "partitura5     partitura6"
-        "pie5           pie6"
+        "partitura1  partitura2"
+        "pie1        pie2      "
+        "partitura3  partitura4"
+        "pie3        pie4      "    
         ;
-        padding: 50px 30px;
-        height: 170vh;
-        width: 97vw;
-        margin-left: 1vw;
-
+        padding: 0 60px;
+        height: 850px;
+        width: 100vw;
+        margin-bottom: 100px;
+        align-self: center;
+        
+    
         h3.titularDePartituras{
             grid-area: titulopartitura;
             font-family: $roboto;
             font-size: 40px;
             font-weight: 200;
         }
-
+    
         @each $partitura in $partituras {
             iframe.#{$partitura}{
                 grid-area: #{$partitura};
-                height: 35vh;
-                width: 40vw;
+                height: 300px;
+                width: 100%;
+                border: none;
             }
         }
-
+    
         @for $i from 1 through 6 {
             p.pieDeArchivo#{$i}{
                 grid-area: pie#{$i};
-                text-align: center; 
+                text-align: center;
             }
         }
     }
         /*Footer*/
-        footer{
-            background-color:  $negro;
-            background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
-            width: 100vw;
-            height: 180px;
-            padding-top: 9vh;
-            padding-left: 5vw;
-            padding-right: 5vw;
+    footer{
+        background-color:  $negro;
+        background: radial-gradient(to top, $negro 0%, $rosaoscuro 100%);
+        width: 100vw;
+        height: 180px;
+        padding-top: 9vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $blanco;
+
+        .footer__nombre{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            color: $blanco;
-    
-            .footer__nombre{
+            width: 30vw;
+            height: 10vh;
+
+            p{
+                font-size: 12px;
+                a{
+                    text-decoration: none;
+                    color:$blanco ;
+                    transition: color 0.5s;
+                }
+
+                a:hover{
+                    color: $rosaoscuro;
+                }
+            }
+            
+        }
+
+        .footer__redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+        height: 10vh;
+
+            div{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                width: 30vw;
-                height: 10vh;
-    
-                p{
-                    font-size: 12px;
-                    a{
-                        text-decoration: none;
-                        color:$blanco ;
-                        transition: color 0.5s;
-                    }
-    
-                    a:hover{
-                        color: $rosaoscuro;
-                    }
-                }
-                
-            }
-    
-            .footer__redes{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: 20vw;
-            height: 10vh;
-    
-                div{
+                height: 2rem;
+                width: 2rem;
+                border-radius: 2rem;
+                background-color: $rosaoscuro;
+                transition: background 0.5s;
+
+                a{
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    height: 2rem;
-                    width: 2rem;
-                    border-radius: 2rem;
-                    background-color: $rosaoscuro;
-                    transition: background 0.5s;
-    
-                    a{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                    }
-    
-    
-                    svg{
-                        color: #c2c0bf;
-                        transition: color 0.5s;            
-                    }
                 }
-    
-                div:hover{
-                    background-color: #c2c0bf;
-                    svg{
-                        color: #64645c;
-                    }
+
+
+                svg{
+                    color: #c2c0bf;
+                    transition: color 0.5s;            
                 }
-    
-            
-    
             }
-    
-            
-    
-            
-    
-            
-            
-        } 
+
+            div:hover{
+                background-color: #c2c0bf;
+                svg{
+                    color: #64645c;
+                }
+            }
+
+        
+
+        }
+
+        
+
+        
+
+        
+        
+    } 
 }
 
 @media only screen and (max-width: 576px){
@@ -968,6 +1010,43 @@
         border-radius: 5px;
     }
 
+            /*Segunda Frase*/
+    div.contenido__segundaFrase{
+        background-image: linear-gradient(to bottom ,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro),
+        linear-gradient(to top,   
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.6), 
+        $negro), url(../image/bannerFrase2.png);    
+        background-position: center center;
+        background-size: cover;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-top: 15vh;
+        
+        width: 100vw;
+        height: 400px;
+        padding: 25vh 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+    
+        p{
+            width: 60vw;
+        }
+    
+        .segundaFrase__autor{
+            font-size: 1.1rem;
+        }
+    }
+
+    /* Home */
     section.body__contenido{ 
         /*Primera Frase*/
         div.contenido__primeraFrase{        
@@ -1051,7 +1130,7 @@
                 }
                 p.pieVideo__descripcion{
                     text-align: justify;
-                    line-height: 8vh;
+                    line-height: 35px;
                     font-size: 1rem;
                 }
                 
@@ -1114,7 +1193,7 @@
         div.texto1{
             grid-area: texto1;
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1rem;
             font-weight: 300;            
             display: flex;
@@ -1145,7 +1224,7 @@
         div.texto2{
             grid-area: texto2;
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1rem;
             font-weight: 300;
             display: flex;
@@ -1155,44 +1234,11 @@
     
         }
 
-        /*Segunda Frase*/
-       div.contenido__segundaFrase{
-        background-image: linear-gradient(to bottom ,   
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.6), 
-        $negro),
-        linear-gradient(to top,   
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.6), 
-        $negro), url(../image/bannerFrase2.png);    
-        background-position: center center;
-        background-size: cover;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        margin-top: 15vh;
-        
-        width: 100vw;
-        height: 400px;
-        padding: 25vh 0;
-        font-size: 1.5rem;
-        font-weight: 300;
-    
-        p{
-            width: 60vw;
-        }
-    
-        .segundaFrase__autor{
-            font-size: 1.1rem;
-        }
-        }
+
 
     }
 
+    /* Contacto*/
     section.contenidoContacto{
         display: flex;
         flex-direction: column;
@@ -1215,26 +1261,27 @@
 
     /* Sobre mi*/
 
-div.contenido__parrafosDelContenido{
-    background-color: #534e517e;
-    margin: 10vh 5vw;
-    border-radius: 10px;
+    div.contenido__parrafosDelContenido{
+        background-color: #534e517e;
+        width: 430px;
+        margin: 10vh 5vw;
+        border-radius: 10px;
 
-    h3.titularDelContenido{    
-        font-family: $roboto;
-        font-size: 35px;
-        font-weight: 300;
-        padding-top: 8vh;
+        h3.titularDelContenido{    
+            font-family: $roboto;
+            font-size: 35px;
+            font-weight: 300;
+            padding-top: 8vh;
+        }
+        
+        p{    
+            font-size: 15px;
+            margin: 5% 5%;        
+            text-align: justify;
+        }
     }
-    
-    p{    
-        font-size: 15px;
-        margin: 5% 5%;        
-        text-align: justify;
-    }
-}
 
-        /* responsive Galeria Imagenes */
+    /*Galeria Imagenes */
 
     div.contenido__galeriaImagenes {
         display: grid;        
@@ -1252,7 +1299,7 @@ div.contenido__parrafosDelContenido{
         
         ;
         padding: 15px 20px;
-        height: 350vh;
+        height: 1830px;
         width: 97vw;
         
     
@@ -1266,12 +1313,12 @@ div.contenido__parrafosDelContenido{
             @each $area,$foto in $galeria{
                 div.#{$area}{
                     grid-area: #{$area};
-                    background-image: url(../image/#{$foto}) no-repeat;
+                    background-image:  url(../image/#{$foto}) no-repeat;
                     background-size: cover;
                     height: 300px;
                     width: 100%;                    
                     opacity: .6;
-                    transition: ease .7s;
+                    transition: ease .7s;                    
                 }
                 div.#{$area}:hover{
                     transform: scale(1.01);
@@ -1287,107 +1334,100 @@ div.contenido__parrafosDelContenido{
             }       
         }
     
-        /* Galeria Videos */
+    /* Galeria Videos */
     
-        div.galeriaVideo {
-            display: grid;        
-            grid-template-columns: repeat( 1, 1fr);
-            grid-template-rows: repeat(13, 1fr);
-            grid-gap: 2%;
-            grid-template-areas: 
-            "titulogalvid"
-            "video1   "
-            "pievideo1"
-            "video2   "
-            "pievideo2"
-            "video3   "
-            "pievideo3" 
-            "video4   "
-            "pievideo4"
-            "video5   "
-            "pievideo5" 
-            "video6   "
-            "pievideo6"
-            ;
-            padding: 50px 30px;
-            height: 500vh;
-            width: 97vw;
-            margin-left: 1vw;
+    div.galeriaVideo {
+        display: grid;        
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px ,repeat(6, 220px);
+        grid-gap: 30px;
+        grid-template-areas: 
+        "titulogalvid"
+        "video1"
+        "video2"    
+        "video3"
+        "video4"     
+        "video5"
+        "video6"       
+        ;
+        padding: 0 40px;
+        height: 1600px;
+        width: 100vw;
+        margin-bottom: 100px;
+        align-self: center;
     
-            h3.titularDeVideo{
-                grid-area: titulogalvid;
-                font-family: $roboto;
-                font-size: 40px;
-                font-weight: 200;
-            }
-    
-            @each $area in $areasVideos{
-                iframe.#{$area}{
-                    grid-area: #{$area};
-                    height: 50vh;
-                    width: 80vw;                  
-                }
-            }
-    
-            @for $i from 1 through 6{
-                p.pieDeArchivo#{$i}{
-                    grid-area: pievideo#{$i};
-                    text-align: center;
-                }
-            }
-    
+        h3.titularDeVideo{
+            grid-area: titulogalvid;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
         }
+    
+        @each $area in $areasVideos{
+            iframe.#{$area}{
+                grid-area: #{$area};
+                width: 100%;
+                height: 220px;
+                opacity: .6;
+                transition: ease .7s;                 
+            }
+    
+            iframe.#{$area}:hover{
+                transform: scale(1.01);
+                opacity: 1;            
+            }
+        } 
+    
+    }
     
         /* Partituras */
     
-        div.gridPartituras {
-            display: grid;        
-            grid-template-columns: repeat( 1, 1fr);
-            grid-template-rows: repeat(13, 1fr);
-            grid-gap: 2%;
-            grid-template-areas: 
-            "titulopartitura"
-            "partitura1"
-            "pie1      "
-            "partitura2"
-            "pie2      "
-            "partitura3"
-            "pie3      "
-            "partitura4"
-            "pie4      "
-            "partitura5"
-            "pie5      "
-            "partitura6"
-            "pie6      "
-
-            ;
-            padding: 50px 30px;
-            height: 500vh;
-            width: 97vw;
-            margin-left: 1vw;
+    div.gridPartituras {
+        display: grid;        
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px,  repeat(8, 300px);
+        grid-gap: 30px;
+        grid-template-areas: 
+        "titulopartitura"
+        "partitura1"
+        "pie1"
+        "partitura2"
+        "pie2"
+        "partitura3"
+        "pie3" 
+        "partitura4"
+        "pie4"
+        ;
+        padding: 0 50px;
+        height: 1650px;
+        width: 100vw;
+        margin-bottom: 100px;
+        align-self: center;
+        
     
-            h3.titularDePartituras{
-                grid-area: titulopartitura;
-                font-family: $roboto;
-                font-size: 40px;
-                font-weight: 200;
-            }
+        h3.titularDePartituras{
+            grid-area: titulopartitura;
+            font-family: $roboto;
+            font-size: 40px;
+            font-weight: 200;
+        }
     
-            @each $partitura in $partituras {
-                iframe.#{$partitura}{
-                    grid-area: #{$partitura};
-                    height: 50vh;
-                    width: 70vw;
-                }
-            }
-    
-            @for $i from 1 through 6 {
-                p.pieDeArchivo#{$i}{
-                    grid-area: pie#{$i};
-                    text-align: center; 
-                }
+        @each $partitura in $partituras {
+            iframe.#{$partitura}{
+                grid-area: #{$partitura};
+                height: 300px;
+                width: 100%;
+                border: none;
             }
         }
+    
+        @for $i from 1 through 6 {
+            p.pieDeArchivo#{$i}{
+                grid-area: pie#{$i};
+                text-align: center;
+            }
+        }
+    }
 
         /*Footer*/
     footer{

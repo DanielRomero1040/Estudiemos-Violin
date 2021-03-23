@@ -45,7 +45,7 @@
                 <div class="container-fluid">
                     <div class="row col-sm-4 col-md-4 col-lg-4 align-items-center justify-content-start wow animate__animated animate__fadeIn">
                         <a href="../index.html" class="navbar-brand col-lg-3 col-md-4 mr-1 pr-1"><img class="logo" src="../image/Estudiemosviolin LOGO.png" alt="logo"></a>
-                        <a href="../index.html" class="menu__brand col-lg-8 col-md-7 ml-1 pl-1"><span class="navbar-text" >Estudiemos Violin</span></a>
+                        <a href="../index.html" class="menu__brand col-lg-8 col-md-7 ml-2 pl-2"><span class="navbar-text" >Estudiemos Violin</span></a>
                     </div>
                     <ul class="navbar-nav row col-sm-8 col-md-8 col-lg-8 justify-content-end wow animate__animated animate__fadeIn animate__slow animated">
                         
@@ -73,25 +73,45 @@
     </header>
 
     <section class="contenido contenidoContacto">
+        <div class="contenidoContacto__formulario row  wow animate__animated animate__slideInUp">
+            <div class="col-md-12">
+                <form  role="form" class="formulario d-sm-flex flex-column align-items-center" action="" method="post">
+                    <div class="row d-sm-flex flex-row justify-content-around align-items-center pt-3">
+                        <div class="form-group col-md-6">
+                            <input class="form-control nombre" type="text" placeholder="Nombre" required minlength="3" maxlength="15">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input class="form-control email" type="email" placeholder="email" required minlength="7" maxlength="20">
+                        </div>
+                    </div>
+                    <div class=" form-group row d-sm-flex flex-column align-items-center">
+                        <textarea name="Comentarios" id="" class="form-control col-md-11" cols="30" rows="5" placeholder="Comentarios" required minlength="5" maxlength="100"></textarea>
+                    </div>
+                    <div class="capt flex-column align-items-center"> 
+                        <h2 type="text" id="mainCaptcha"></h2>
+                        <p><input value="Refrescar Código" type="button" id="refresh" onclick="Captcha();"/></p>            <input type="text" id="txtInput"/>    
+                        <input id="Button1" type="button" value="Validar" onclick="alert(ValidCaptcha());"/>
+                    </div>
+                    
+                    <button type="submit" onclick="ValidaWeb()" class="btn btn-danger pull-right">ENVIAR</button>
+                </form>
+            </div>
+        </div>
         <div class="contenidoContacto__formulario">
-            <h3 class="titularDelContenido">Contacto con Estudiemos Violin</h3>
+            
             <form>
                 <!-- Formulario para correo-->
                 <!-- Nombre -->
                 <div class="form-group row">
-                    <div class="col-md-6">
-                    <label for="nombre" class="col-form-label"> Nombre del Representante </label>
-                    <input type="text" value="" name="nombre" class="form-control">
-                    </div>
-                    <div class="col-md-6">
-                    <label for="apellido" class="col-form-label"> Apellido </label>
-                    <input type="text" value="" name="apellido" class="form-control">
+                    <div class="row form-group">                    
+                        <input type="text" value="" name="nombre" class="form-control" placeholder="Nombre del Representante" required minlength="3" maxlength="15">                                        
+                        <input type="text" value="" name="apellido" class="form-control" placeholder="Apellido del Representante" required minlength="3" maxlength="15">
                     </div>
                 
                 
                 
                     <!-- Email -->
-                    <div class="col-12">
+                    <div class="form-group col-12">
                     <label for="email" class="col-form-label app-label"> E-mail </label>
                     <input type="email" value="" placeholder="nombre@ejemplo.com" name="email" class="form-control" id="exampleInputEmail1">
                     </div>

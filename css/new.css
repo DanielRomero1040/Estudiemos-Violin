@@ -59,6 +59,24 @@ section.body__contenido {
     section.body__contenido div.contenido__segundaFrase .segundaFrase__autor {
       font-size: 1.1rem; }
 
+div.contenido__segundaFrase {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
+  width: 100vw;
+  height: 400px;
+  padding: 25vh 0;
+  font-size: 1.5rem;
+  font-weight: 300; }
+  div.contenido__segundaFrase p {
+    width: 40vw; }
+  div.contenido__segundaFrase .segundaFrase__autor {
+    font-size: 1.1rem; }
+
 section.contenidoContacto {
   display: flex;
   flex-direction: column;
@@ -221,7 +239,7 @@ section.contenido__muestraExperiencias1 {
       align-self: flex-end; }
     section.contenido__muestraExperiencias1 div.pieVideo p.pieVideo__descripcion {
       text-align: justify;
-      line-height: 8vh;
+      line-height: 35px;
       font-size: 1.2rem; }
 
 section.contenido__muestraExperiencias2 {
@@ -253,7 +271,7 @@ section.contenido__muestraExperiencias2 {
   section.contenido__muestraExperiencias2 div.texto1 {
     grid-area: texto1;
     text-align: justify;
-    line-height: 8vh;
+    line-height: 35px;
     font-size: 1.2rem;
     font-weight: 300; }
   section.contenido__muestraExperiencias2 img.alumno2 {
@@ -272,7 +290,7 @@ section.contenido__muestraExperiencias2 {
   section.contenido__muestraExperiencias2 div.texto2 {
     grid-area: texto2;
     text-align: justify;
-    line-height: 8vh;
+    line-height: 35px;
     font-size: 1.2rem;
     font-weight: 300; }
 
@@ -284,7 +302,7 @@ div.contenido__galeriaImagenes {
   grid-gap: 0;
   grid-template-areas: "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 ";
   padding: 50px 150px;
-  height: 180vh;
+  height: 1000px;
   width: 97vw;
   align-self: center; }
   div.contenido__galeriaImagenes h3.titularDelContenido {
@@ -386,14 +404,15 @@ div.contenido__galeriaImagenes {
 /* Galeria Videos */
 div.galeriaVideo {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 2%;
-  grid-template-areas: "titulogalvid titulogalvid titulogalvid" "video1         video2      video3" "pievideo1      pievideo2      pievideo3" "video4         video5          video6" "pievideo4      pievideo5      pievideo6";
-  padding: 50px 30px;
-  height: 170vh;
-  width: 97vw;
-  margin-left: 1vw; }
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px, repeat(3, 270px);
+  grid-gap: 30px;
+  grid-template-areas: "titulogalvid   titulogalvid" "video1         video2"     "video3         video4 "      "video5         video6";
+  padding: 0 100px;
+  height: 1000px;
+  width: 100vw;
+  margin-bottom: 100px;
+  align-self: center; }
   div.galeriaVideo h3.titularDeVideo {
     grid-area: titulogalvid;
     font-family: "Lato", sans-serif;
@@ -401,58 +420,71 @@ div.galeriaVideo {
     font-weight: 200; }
   div.galeriaVideo iframe.video1 {
     grid-area: video1;
-    height: 50vh;
-    width: 30vw; }
+    width: 100%;
+    height: 270px;
+    opacity: .6;
+    transition: ease .7s; }
+  div.galeriaVideo iframe.video1:hover {
+    transform: scale(1.01);
+    opacity: 1; }
   div.galeriaVideo iframe.video2 {
     grid-area: video2;
-    height: 50vh;
-    width: 30vw; }
+    width: 100%;
+    height: 270px;
+    opacity: .6;
+    transition: ease .7s; }
+  div.galeriaVideo iframe.video2:hover {
+    transform: scale(1.01);
+    opacity: 1; }
   div.galeriaVideo iframe.video3 {
     grid-area: video3;
-    height: 50vh;
-    width: 30vw; }
+    width: 100%;
+    height: 270px;
+    opacity: .6;
+    transition: ease .7s; }
+  div.galeriaVideo iframe.video3:hover {
+    transform: scale(1.01);
+    opacity: 1; }
   div.galeriaVideo iframe.video4 {
     grid-area: video4;
-    height: 50vh;
-    width: 30vw; }
+    width: 100%;
+    height: 270px;
+    opacity: .6;
+    transition: ease .7s; }
+  div.galeriaVideo iframe.video4:hover {
+    transform: scale(1.01);
+    opacity: 1; }
   div.galeriaVideo iframe.video5 {
     grid-area: video5;
-    height: 50vh;
-    width: 30vw; }
+    width: 100%;
+    height: 270px;
+    opacity: .6;
+    transition: ease .7s; }
+  div.galeriaVideo iframe.video5:hover {
+    transform: scale(1.01);
+    opacity: 1; }
   div.galeriaVideo iframe.video6 {
     grid-area: video6;
-    height: 50vh;
-    width: 30vw; }
-  div.galeriaVideo p.pieDeArchivo1 {
-    grid-area: pievideo1;
-    text-align: center; }
-  div.galeriaVideo p.pieDeArchivo2 {
-    grid-area: pievideo2;
-    text-align: center; }
-  div.galeriaVideo p.pieDeArchivo3 {
-    grid-area: pievideo3;
-    text-align: center; }
-  div.galeriaVideo p.pieDeArchivo4 {
-    grid-area: pievideo4;
-    text-align: center; }
-  div.galeriaVideo p.pieDeArchivo5 {
-    grid-area: pievideo5;
-    text-align: center; }
-  div.galeriaVideo p.pieDeArchivo6 {
-    grid-area: pievideo6;
-    text-align: center; }
+    width: 100%;
+    height: 270px;
+    opacity: .6;
+    transition: ease .7s; }
+  div.galeriaVideo iframe.video6:hover {
+    transform: scale(1.01);
+    opacity: 1; }
 
 /* Partituras */
 div.gridPartituras {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 2%;
-  grid-template-areas: "titulopartitura titulopartitura titulopartitura" "partitura1  partitura2  partitura3" "pie1      pie2      pie3" "partitura4  partitura5  partitura6" "pie4      pie5      pie6";
-  padding: 50px 30px;
-  height: 170vh;
-  width: 97vw;
-  margin-left: 1vw; }
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px, repeat(4, 300px);
+  grid-gap: 30px;
+  grid-template-areas: "titulopartitura titulopartitura" "partitura1  partitura2" "pie1        pie2      " "partitura3  partitura4" "pie3        pie4      ";
+  padding: 0 150px;
+  height: 850px;
+  width: 100vw;
+  margin-bottom: 100px;
+  align-self: center; }
   div.gridPartituras h3.titularDePartituras {
     grid-area: titulopartitura;
     font-family: "Lato", sans-serif;
@@ -460,28 +492,34 @@ div.gridPartituras {
     font-weight: 200; }
   div.gridPartituras iframe.partitura1 {
     grid-area: partitura1;
-    height: 50vh;
-    width: 30vw; }
+    height: 300px;
+    width: 100%;
+    border: none; }
   div.gridPartituras iframe.partitura2 {
     grid-area: partitura2;
-    height: 50vh;
-    width: 30vw; }
+    height: 300px;
+    width: 100%;
+    border: none; }
   div.gridPartituras iframe.partitura3 {
     grid-area: partitura3;
-    height: 50vh;
-    width: 30vw; }
+    height: 300px;
+    width: 100%;
+    border: none; }
   div.gridPartituras iframe.partitura4 {
     grid-area: partitura4;
-    height: 50vh;
-    width: 30vw; }
+    height: 300px;
+    width: 100%;
+    border: none; }
   div.gridPartituras iframe.partitura5 {
     grid-area: partitura5;
-    height: 50vh;
-    width: 30vw; }
+    height: 300px;
+    width: 100%;
+    border: none; }
   div.gridPartituras iframe.partitura6 {
     grid-area: partitura6;
-    height: 50vh;
-    width: 30vw; }
+    height: 300px;
+    width: 100%;
+    border: none; }
   div.gridPartituras p.pieDeArchivo1 {
     grid-area: pie1;
     text-align: center; }
@@ -514,6 +552,24 @@ div.gridPartituras {
     width: 100vw;
     background-position: center center;
     background-size: cover; }
+  /*Segunda Frase*/
+  div.contenido__segundaFrase {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    width: 100vw;
+    height: 400px;
+    padding: 25vh 0;
+    font-size: 1.5rem;
+    font-weight: 300; }
+    div.contenido__segundaFrase p {
+      width: 60vw; }
+    div.contenido__segundaFrase .segundaFrase__autor {
+      font-size: 1.1rem; }
   .header__barraDeNavegacion a {
     font-size: 1.5rem;
     font-weight: 100;
@@ -523,8 +579,7 @@ div.gridPartituras {
     letter-spacing: 0.1vw; }
   section.body__contenido {
     /*Primera Frase*/
-    /*Grid seccion de experiencias index*/
-    /*Segunda Frase*/ }
+    /*Grid seccion de experiencias index*/ }
     section.body__contenido div.contenido__primeraFrase {
       display: flex;
       flex-direction: column;
@@ -576,7 +631,7 @@ div.gridPartituras {
           align-self: center; }
         section.body__contenido section.contenido__muestraExperiencias1 div.pieVideo p.pieVideo__descripcion {
           text-align: justify;
-          line-height: 8vh;
+          line-height: 35px;
           font-size: 1.2rem; }
     section.body__contenido section.contenido__muestraExperiencias2 {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
@@ -607,7 +662,7 @@ div.gridPartituras {
       section.body__contenido section.contenido__muestraExperiencias2 div.texto1 {
         grid-area: texto1;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1.3rem;
         font-weight: 300; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno2 {
@@ -626,35 +681,34 @@ div.gridPartituras {
       section.body__contenido section.contenido__muestraExperiencias2 div.texto2 {
         grid-area: texto2;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1.3rem;
         font-weight: 300; }
-    section.body__contenido div.contenido__segundaFrase {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
-      background-position: center center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15vh;
-      width: 100vw;
-      height: 400px;
-      padding: 25vh 0;
-      font-size: 1.5rem;
-      font-weight: 300; }
-      section.body__contenido div.contenido__segundaFrase p {
-        width: 60vw; }
-      section.body__contenido div.contenido__segundaFrase .segundaFrase__autor {
-        font-size: 1.1rem; }
+  /* sobre mi */
+  div.contenido__parrafosDelContenido {
+    background-color: #534e517e;
+    width: 430px;
+    width: 700px;
+    margin: 10vh 5vw;
+    border-radius: 10px; }
+    div.contenido__parrafosDelContenido h3.titularDelContenido {
+      font-family: "Lato", sans-serif;
+      font-size: 35px;
+      font-weight: 300;
+      padding-top: 8vh; }
+    div.contenido__parrafosDelContenido p {
+      font-size: 15px;
+      margin: 5% 5%;
+      text-align: justify; }
   /* responsive Galeria Imagenes */
   div.contenido__galeriaImagenes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 220px);
     grid-gap: 0;
     grid-template-areas: "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 ";
     padding: 50px 100px;
-    height: 120vh;
+    height: 750px;
     width: 97vw;
     align-self: center; }
     div.contenido__galeriaImagenes h3.titularDelContenido {
@@ -666,7 +720,7 @@ div.gridPartituras {
       grid-area: galeria1;
       background-image: url(../image/12.png) no-repeat;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
@@ -677,7 +731,7 @@ div.gridPartituras {
       grid-area: galeria2;
       background-image: url(../image/11.png) no-repeat;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
@@ -688,7 +742,7 @@ div.gridPartituras {
       grid-area: galeria3;
       background-image: url(../image/fondofrase.jpg) no-repeat;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
@@ -699,7 +753,7 @@ div.gridPartituras {
       grid-area: galeria4;
       background-image: url(../image/15.png) no-repeat;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
@@ -710,7 +764,7 @@ div.gridPartituras {
       grid-area: galeria5;
       background-image: url(../image/21.png) no-repeat;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
@@ -721,7 +775,7 @@ div.gridPartituras {
       grid-area: galeria6;
       background-image: url(../image/23.png) no-repeat;
       background-size: cover;
-      height: 200px;
+      height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
@@ -756,13 +810,14 @@ div.gridPartituras {
   div.galeriaVideo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: "titulogalvid   titulogalvid" "video1         video2" "pievideo1      pievideo2" "video3         video4 " "pievideo3      pievideo4"  "video5         video6" "pievideo5      pievideo6";
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw; }
+    grid-template-rows: 100px, repeat(3, 210px);
+    grid-gap: 30px;
+    grid-template-areas: "titulogalvid   titulogalvid" "video1         video2"     "video3         video4 "      "video5         video6";
+    padding: 0 80px;
+    height: 820px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center; }
     div.galeriaVideo h3.titularDeVideo {
       grid-area: titulogalvid;
       font-family: "Lato", sans-serif;
@@ -770,57 +825,70 @@ div.gridPartituras {
       font-weight: 200; }
     div.galeriaVideo iframe.video1 {
       grid-area: video1;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 210px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video1:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video2 {
       grid-area: video2;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 210px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video2:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video3 {
       grid-area: video3;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 210px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video3:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video4 {
       grid-area: video4;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 210px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video4:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video5 {
       grid-area: video5;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 210px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video5:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video6 {
       grid-area: video6;
-      height: 35vh;
-      width: 40vw; }
-    div.galeriaVideo p.pieDeArchivo1 {
-      grid-area: pievideo1;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo2 {
-      grid-area: pievideo2;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo3 {
-      grid-area: pievideo3;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo4 {
-      grid-area: pievideo4;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo5 {
-      grid-area: pievideo5;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo6 {
-      grid-area: pievideo6;
-      text-align: center; }
+      width: 100%;
+      height: 210px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video6:hover {
+      transform: scale(1.01);
+      opacity: 1; }
   /* Partituras */
   div.gridPartituras {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: "titulopartitura titulopartitura" "partitura1     partitura2" "pie1           pie2 " "partitura3     partitura4 " "pie3           pie4 " "partitura5     partitura6" "pie5           pie6";
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw; }
+    grid-template-rows: 100px, repeat(4, 300px);
+    grid-gap: 30px;
+    grid-template-areas: "titulopartitura titulopartitura" "partitura1  partitura2" "pie1        pie2      " "partitura3  partitura4" "pie3        pie4      ";
+    padding: 0 100px;
+    height: 850px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center; }
     div.gridPartituras h3.titularDePartituras {
       grid-area: titulopartitura;
       font-family: "Lato", sans-serif;
@@ -828,28 +896,34 @@ div.gridPartituras {
       font-weight: 200; }
     div.gridPartituras iframe.partitura1 {
       grid-area: partitura1;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura2 {
       grid-area: partitura2;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura3 {
       grid-area: partitura3;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura4 {
       grid-area: partitura4;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura5 {
       grid-area: partitura5;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura6 {
       grid-area: partitura6;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras p.pieDeArchivo1 {
       grid-area: pie1;
       text-align: center; }
@@ -927,7 +1001,7 @@ div.gridPartituras {
         footer .footer__redes div:hover svg {
           color: #64645c; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .header__barraDeNavegacion .collapse {
     background-color: rgba(0, 0, 0, 0.603);
     height: auto;
@@ -935,6 +1009,24 @@ div.gridPartituras {
     visibility: visible;
     transition: all 0.3s;
     border-radius: 5px; }
+  /*Segunda Frase*/
+  div.contenido__segundaFrase {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    width: 100vw;
+    height: 400px;
+    padding: 25vh 0;
+    font-size: 1.5rem;
+    font-weight: 300; }
+    div.contenido__segundaFrase p {
+      width: 60vw; }
+    div.contenido__segundaFrase .segundaFrase__autor {
+      font-size: 1.1rem; }
   /*Imagen Principal dentro del header*/
   header.header__index {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/imagenprincipal.png);
@@ -951,8 +1043,7 @@ div.gridPartituras {
     letter-spacing: 0.1vw; }
   section.body__contenido {
     /*Primera Frase*/
-    /*Grid seccion de experiencias index*/
-    /*Segunda Frase*/ }
+    /*Grid seccion de experiencias index*/ }
     section.body__contenido div.contenido__primeraFrase {
       display: flex;
       flex-direction: column;
@@ -1004,7 +1095,7 @@ div.gridPartituras {
           align-self: center; }
         section.body__contenido section.contenido__muestraExperiencias1 div.pieVideo p.pieVideo__descripcion {
           text-align: justify;
-          line-height: 8vh;
+          line-height: 35px;
           font-size: 1.2rem; }
     section.body__contenido section.contenido__muestraExperiencias2 {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
@@ -1036,7 +1127,7 @@ div.gridPartituras {
       section.body__contenido section.contenido__muestraExperiencias2 div.texto1 {
         grid-area: texto1;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1rem;
         font-weight: 300; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno2 {
@@ -1056,26 +1147,25 @@ div.gridPartituras {
       section.body__contenido section.contenido__muestraExperiencias2 div.texto2 {
         grid-area: texto2;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1rem;
         font-weight: 300; }
-    section.body__contenido div.contenido__segundaFrase {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
-      background-position: center center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15vh;
-      width: 100vw;
-      height: 400px;
-      padding: 25vh 0;
-      font-size: 1.5rem;
-      font-weight: 300; }
-      section.body__contenido div.contenido__segundaFrase p {
-        width: 60vw; }
-      section.body__contenido div.contenido__segundaFrase .segundaFrase__autor {
-        font-size: 1.1rem; }
+  /* sobre mi */
+  div.contenido__parrafosDelContenido {
+    background-color: #534e517e;
+    width: 430px;
+    width: 550px;
+    margin: 10vh 5vw;
+    border-radius: 10px; }
+    div.contenido__parrafosDelContenido h3.titularDelContenido {
+      font-family: "Lato", sans-serif;
+      font-size: 35px;
+      font-weight: 300;
+      padding-top: 8vh; }
+    div.contenido__parrafosDelContenido p {
+      font-size: 15px;
+      margin: 5% 5%;
+      text-align: justify; }
   /* responsive Galeria Imagenes */
   div.contenido__galeriaImagenes {
     display: grid;
@@ -1084,7 +1174,7 @@ div.gridPartituras {
     grid-gap: 0;
     grid-template-areas: "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 ";
     padding: 50px 60px;
-    height: 120vh;
+    height: 600px;
     width: 97vw;
     align-self: center; }
     div.contenido__galeriaImagenes h3.titularDelContenido {
@@ -1186,13 +1276,14 @@ div.gridPartituras {
   div.galeriaVideo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: "titulogalvid   titulogalvid" "video1         video2" "pievideo1      pievideo2" "video3         video4 " "pievideo3      pievideo4"  "video5         video6" "pievideo5      pievideo6";
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw; }
+    grid-template-rows: 100px, repeat(3, 190px);
+    grid-gap: 30px;
+    grid-template-areas: "titulogalvid   titulogalvid" "video1         video2"     "video3         video4 "      "video5         video6";
+    padding: 0 40px;
+    height: 820px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center; }
     div.galeriaVideo h3.titularDeVideo {
       grid-area: titulogalvid;
       font-family: "Lato", sans-serif;
@@ -1200,57 +1291,70 @@ div.gridPartituras {
       font-weight: 200; }
     div.galeriaVideo iframe.video1 {
       grid-area: video1;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 190px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video1:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video2 {
       grid-area: video2;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 190px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video2:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video3 {
       grid-area: video3;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 190px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video3:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video4 {
       grid-area: video4;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 190px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video4:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video5 {
       grid-area: video5;
-      height: 35vh;
-      width: 40vw; }
+      width: 100%;
+      height: 190px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video5:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video6 {
       grid-area: video6;
-      height: 35vh;
-      width: 40vw; }
-    div.galeriaVideo p.pieDeArchivo1 {
-      grid-area: pievideo1;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo2 {
-      grid-area: pievideo2;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo3 {
-      grid-area: pievideo3;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo4 {
-      grid-area: pievideo4;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo5 {
-      grid-area: pievideo5;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo6 {
-      grid-area: pievideo6;
-      text-align: center; }
+      width: 100%;
+      height: 190px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video6:hover {
+      transform: scale(1.01);
+      opacity: 1; }
   /* Partituras */
   div.gridPartituras {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: "titulopartitura titulopartitura" "partitura1     partitura2" "pie1           pie2 " "partitura3     partitura4 " "pie3           pie4 " "partitura5     partitura6" "pie5           pie6";
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw; }
+    grid-template-rows: 100px, repeat(4, 300px);
+    grid-gap: 30px;
+    grid-template-areas: "titulopartitura titulopartitura" "partitura1  partitura2" "pie1        pie2      " "partitura3  partitura4" "pie3        pie4      ";
+    padding: 0 60px;
+    height: 850px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center; }
     div.gridPartituras h3.titularDePartituras {
       grid-area: titulopartitura;
       font-family: "Lato", sans-serif;
@@ -1258,28 +1362,34 @@ div.gridPartituras {
       font-weight: 200; }
     div.gridPartituras iframe.partitura1 {
       grid-area: partitura1;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura2 {
       grid-area: partitura2;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura3 {
       grid-area: partitura3;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura4 {
       grid-area: partitura4;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura5 {
       grid-area: partitura5;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura6 {
       grid-area: partitura6;
-      height: 35vh;
-      width: 40vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras p.pieDeArchivo1 {
       grid-area: pie1;
       text-align: center; }
@@ -1365,10 +1475,28 @@ div.gridPartituras {
     visibility: visible;
     transition: all 0.3s;
     border-radius: 5px; }
+  /*Segunda Frase*/
+  div.contenido__segundaFrase {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    width: 100vw;
+    height: 400px;
+    padding: 25vh 0;
+    font-size: 1.5rem;
+    font-weight: 300; }
+    div.contenido__segundaFrase p {
+      width: 60vw; }
+    div.contenido__segundaFrase .segundaFrase__autor {
+      font-size: 1.1rem; }
+  /* Home */
   section.body__contenido {
     /*Primera Frase*/
-    /*Grid seccion de experiencias index*/
-    /*Segunda Frase*/ }
+    /*Grid seccion de experiencias index*/ }
     section.body__contenido div.contenido__primeraFrase {
       display: flex;
       flex-direction: column;
@@ -1420,7 +1548,7 @@ div.gridPartituras {
           align-self: center; }
         section.body__contenido section.contenido__muestraExperiencias1 div.pieVideo p.pieVideo__descripcion {
           text-align: justify;
-          line-height: 8vh;
+          line-height: 35px;
           font-size: 1rem; }
     section.body__contenido section.contenido__muestraExperiencias2 {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
@@ -1453,7 +1581,7 @@ div.gridPartituras {
       section.body__contenido section.contenido__muestraExperiencias2 div.texto1 {
         grid-area: texto1;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1rem;
         font-weight: 300;
         display: flex;
@@ -1477,29 +1605,13 @@ div.gridPartituras {
       section.body__contenido section.contenido__muestraExperiencias2 div.texto2 {
         grid-area: texto2;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1rem;
         font-weight: 300;
         display: flex;
         flex-direction: column;
         align-items: center; }
-    section.body__contenido div.contenido__segundaFrase {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
-      background-position: center center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15vh;
-      width: 100vw;
-      height: 400px;
-      padding: 25vh 0;
-      font-size: 1.5rem;
-      font-weight: 300; }
-      section.body__contenido div.contenido__segundaFrase p {
-        width: 60vw; }
-      section.body__contenido div.contenido__segundaFrase .segundaFrase__autor {
-        font-size: 1.1rem; }
+  /* Contacto*/
   section.contenidoContacto {
     display: flex;
     flex-direction: column;
@@ -1515,6 +1627,7 @@ div.gridPartituras {
   /* Sobre mi*/
   div.contenido__parrafosDelContenido {
     background-color: #534e517e;
+    width: 430px;
     margin: 10vh 5vw;
     border-radius: 10px; }
     div.contenido__parrafosDelContenido h3.titularDelContenido {
@@ -1526,7 +1639,7 @@ div.gridPartituras {
       font-size: 15px;
       margin: 5% 5%;
       text-align: justify; }
-  /* responsive Galeria Imagenes */
+  /*Galeria Imagenes */
   div.contenido__galeriaImagenes {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1534,7 +1647,7 @@ div.gridPartituras {
     grid-gap: 0;
     grid-template-areas: "galeria1"         "galeria2"         "galeria3"         "galeria4"         "galeria5"          "galeria6";
     padding: 15px 20px;
-    height: 350vh;
+    height: 1830px;
     width: 97vw; }
     div.contenido__galeriaImagenes h3.titularDelContenido {
       grid-area: titulogal;
@@ -1628,14 +1741,15 @@ div.gridPartituras {
   /* Galeria Videos */
   div.galeriaVideo {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: "titulogalvid" "video1   " "pievideo1" "video2   " "pievideo2" "video3   " "pievideo3"  "video4   " "pievideo4" "video5   " "pievideo5"  "video6   " "pievideo6";
-    padding: 50px 30px;
-    height: 500vh;
-    width: 97vw;
-    margin-left: 1vw; }
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px, repeat(6, 220px);
+    grid-gap: 30px;
+    grid-template-areas: "titulogalvid" "video1" "video2"     "video3" "video4"      "video5" "video6";
+    padding: 0 40px;
+    height: 1600px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center; }
     div.galeriaVideo h3.titularDeVideo {
       grid-area: titulogalvid;
       font-family: "Lato", sans-serif;
@@ -1643,57 +1757,70 @@ div.gridPartituras {
       font-weight: 200; }
     div.galeriaVideo iframe.video1 {
       grid-area: video1;
-      height: 50vh;
-      width: 80vw; }
+      width: 100%;
+      height: 220px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video1:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video2 {
       grid-area: video2;
-      height: 50vh;
-      width: 80vw; }
+      width: 100%;
+      height: 220px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video2:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video3 {
       grid-area: video3;
-      height: 50vh;
-      width: 80vw; }
+      width: 100%;
+      height: 220px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video3:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video4 {
       grid-area: video4;
-      height: 50vh;
-      width: 80vw; }
+      width: 100%;
+      height: 220px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video4:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video5 {
       grid-area: video5;
-      height: 50vh;
-      width: 80vw; }
+      width: 100%;
+      height: 220px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video5:hover {
+      transform: scale(1.01);
+      opacity: 1; }
     div.galeriaVideo iframe.video6 {
       grid-area: video6;
-      height: 50vh;
-      width: 80vw; }
-    div.galeriaVideo p.pieDeArchivo1 {
-      grid-area: pievideo1;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo2 {
-      grid-area: pievideo2;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo3 {
-      grid-area: pievideo3;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo4 {
-      grid-area: pievideo4;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo5 {
-      grid-area: pievideo5;
-      text-align: center; }
-    div.galeriaVideo p.pieDeArchivo6 {
-      grid-area: pievideo6;
-      text-align: center; }
+      width: 100%;
+      height: 220px;
+      opacity: .6;
+      transition: ease .7s; }
+    div.galeriaVideo iframe.video6:hover {
+      transform: scale(1.01);
+      opacity: 1; }
   /* Partituras */
   div.gridPartituras {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    grid-gap: 2%;
-    grid-template-areas: "titulopartitura" "partitura1" "pie1      " "partitura2" "pie2      " "partitura3" "pie3      " "partitura4" "pie4      " "partitura5" "pie5      " "partitura6" "pie6      ";
-    padding: 50px 30px;
-    height: 500vh;
-    width: 97vw;
-    margin-left: 1vw; }
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px, repeat(8, 300px);
+    grid-gap: 30px;
+    grid-template-areas: "titulopartitura" "partitura1" "pie1" "partitura2" "pie2" "partitura3" "pie3"  "partitura4" "pie4";
+    padding: 0 50px;
+    height: 1650px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center; }
     div.gridPartituras h3.titularDePartituras {
       grid-area: titulopartitura;
       font-family: "Lato", sans-serif;
@@ -1701,28 +1828,34 @@ div.gridPartituras {
       font-weight: 200; }
     div.gridPartituras iframe.partitura1 {
       grid-area: partitura1;
-      height: 50vh;
-      width: 70vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura2 {
       grid-area: partitura2;
-      height: 50vh;
-      width: 70vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura3 {
       grid-area: partitura3;
-      height: 50vh;
-      width: 70vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura4 {
       grid-area: partitura4;
-      height: 50vh;
-      width: 70vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura5 {
       grid-area: partitura5;
-      height: 50vh;
-      width: 70vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras iframe.partitura6 {
       grid-area: partitura6;
-      height: 50vh;
-      width: 70vw; }
+      height: 300px;
+      width: 100%;
+      border: none; }
     div.gridPartituras p.pieDeArchivo1 {
       grid-area: pie1;
       text-align: center; }
@@ -2070,23 +2203,23 @@ iframe.video:hover {
 @media only screen and (max-width: 768px) {
   .carousel-inner > .carousel-item > img {
     /*object-fit: scale-down;*/
-    width: 700px;
-    height: 500px;
+    width: 550px;
+    height: 400px;
     border-radius: 10px; }
   .carousel-inner {
-    width: 700px;
-    height: 500px;
+    width: 550px;
+    height: 400px;
     border-radius: 10px; } }
 
 @media only screen and (max-width: 576px) {
   .carousel-inner > .carousel-item > img {
     /*object-fit: scale-down;*/
-    width: 95vw;
-    height: 60vh;
+    width: 430px;
+    height: 300px;
     border-radius: 10px; }
   .carousel-inner {
-    width: 95vw;
-    height: 60vh;
+    width: 430px;
+    height: 300px;
     border-radius: 10px; } }
 
 /*Modal*/

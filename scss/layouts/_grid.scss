@@ -59,7 +59,7 @@ section.contenido__muestraExperiencias1 {
         }
         p.pieVideo__descripcion{
             text-align: justify;
-            line-height: 8vh;
+            line-height: 35px;
             font-size: 1.2rem;
         }
         
@@ -118,7 +118,7 @@ section.contenido__muestraExperiencias2 {
     div.texto1{
         grid-area: texto1;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1.2rem;
         font-weight: 300;
     }
@@ -143,7 +143,7 @@ section.contenido__muestraExperiencias2 {
     div.texto2{
         grid-area: texto2;
         text-align: justify;
-        line-height: 8vh;
+        line-height: 35px;
         font-size: 1.2rem;
         font-weight: 300;
     }
@@ -163,7 +163,7 @@ div.contenido__galeriaImagenes {
     "galeria5  galeria6 "  
     ;
     padding: 50px 150px;
-    height: 180vh;
+    height: 1000px;
     width: 97vw;
     align-self: center;
     
@@ -204,20 +204,20 @@ div.contenido__galeriaImagenes {
 
 div.galeriaVideo {
     display: grid;        
-    grid-template-columns: repeat( 3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 2%;
+    grid-template-columns: repeat( 2, 1fr);
+    grid-template-rows: 100px ,repeat(3, 270px);
+    grid-gap: 30px;
     grid-template-areas: 
-    "titulogalvid titulogalvid titulogalvid"
-    "video1         video2      video3"
-    "pievideo1      pievideo2      pievideo3"
-    "video4         video5          video6"
-    "pievideo4      pievideo5      pievideo6"    
+    "titulogalvid   titulogalvid"
+    "video1         video2"    
+    "video3         video4 "     
+    "video5         video6"       
     ;
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw;
+    padding: 0 100px;
+    height: 1000px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center;
 
     h3.titularDeVideo{
         grid-area: titulogalvid;
@@ -229,17 +229,17 @@ div.galeriaVideo {
     @each $area in $areasVideos{
         iframe.#{$area}{
             grid-area: #{$area};
-            height: 50vh;
-            width: 30vw;                   
+            width: 100%;
+            height: 270px;
+            opacity: .6;
+            transition: ease .7s;                 
         }
-    }
 
-    @for $i from 1 through 6{
-        p.pieDeArchivo#{$i}{
-            grid-area: pievideo#{$i};
-            text-align: center;
+        iframe.#{$area}:hover{
+            transform: scale(1.01);
+            opacity: 1;            
         }
-    }
+    } 
 
 }
 
@@ -247,20 +247,22 @@ div.galeriaVideo {
 
 div.gridPartituras {
     display: grid;        
-    grid-template-columns: repeat( 3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 2%;
+    grid-template-columns: repeat( 2, 1fr);
+    grid-template-rows: 100px,  repeat(4, 300px);
+    grid-gap: 30px;
     grid-template-areas: 
-    "titulopartitura titulopartitura titulopartitura"
-    "partitura1  partitura2  partitura3"
-    "pie1      pie2      pie3"
-    "partitura4  partitura5  partitura6"
-    "pie4      pie5      pie6"    
+    "titulopartitura titulopartitura"
+    "partitura1  partitura2"
+    "pie1        pie2      "
+    "partitura3  partitura4"
+    "pie3        pie4      "    
     ;
-    padding: 50px 30px;
-    height: 170vh;
-    width: 97vw;
-    margin-left: 1vw;
+    padding: 0 150px;
+    height: 850px;
+    width: 100vw;
+    margin-bottom: 100px;
+    align-self: center;
+    
 
     h3.titularDePartituras{
         grid-area: titulopartitura;
@@ -272,15 +274,16 @@ div.gridPartituras {
     @each $partitura in $partituras {
         iframe.#{$partitura}{
             grid-area: #{$partitura};
-            height: 50vh;
-            width: 30vw;
+            height: 300px;
+            width: 100%;
+            border: none;
         }
     }
 
     @for $i from 1 through 6 {
         p.pieDeArchivo#{$i}{
             grid-area: pie#{$i};
-            text-align: center; 
+            text-align: center;
         }
     }
 }
