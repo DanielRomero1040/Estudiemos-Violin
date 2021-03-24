@@ -1270,13 +1270,6 @@ div.gridPartituras {
       text-align: center;
       visibility: hidden; }
   /* Galeria Videos */
-  header.body__videos {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headervideos.png);
-    height: 110vh;
-    width: 100vw;
-    background-position: -900px center;
-    background-size: cover;
-    margin-bottom: 10vh; }
   div.galeriaVideo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
