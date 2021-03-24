@@ -19,8 +19,19 @@ let abrirGaleria1 = document.getElementById('abrir-popup-1'),
 
     btnCerrarPopup = document.getElementById('btn-cerrar-popup'),
     btnFotoSiguiente = document.getElementById('btn-siguiente'),
-    btnFotoAnterior = document.getElementById('btn-anterior');
+    btnFotoAnterior = document.getElementById('btn-anterior'),
+    titulo = document.getElementById('titulo'),
+    btnMenu = document.getElementById('toggler');
 
+        //Acciones al seleccionar el menu
+
+btnMenu.addEventListener('click',function(){
+    titulo.toggle();
+});
+
+$("#btnMenu").click(function(){
+    $("#titulo").toggle();
+});
 
         //Acciones al seleccionar una imagen
 abrirGaleria1.addEventListener('click', function(){

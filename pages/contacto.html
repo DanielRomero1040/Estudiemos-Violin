@@ -72,61 +72,42 @@
     
     </header>
 
-    <section class="contenido contenidoContacto">
-        <div class="contenidoContacto__formulario row  wow animate__animated animate__slideInUp">
-            <div class="col-md-12">
-                <form  role="form" class="formulario d-sm-flex flex-column align-items-center" action="" method="post">
-                    <div class="row d-sm-flex flex-row justify-content-around align-items-center pt-3">
-                        <div class="form-group col-md-6">
-                            <input class="form-control nombre" type="text" placeholder="Nombre" required minlength="3" maxlength="15">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input class="form-control email" type="email" placeholder="email" required minlength="7" maxlength="20">
-                        </div>
-                    </div>
-                    <div class=" form-group row d-sm-flex flex-column align-items-center">
-                        <textarea name="Comentarios" id="" class="form-control col-md-11" cols="30" rows="5" placeholder="Comentarios" required minlength="5" maxlength="100"></textarea>
-                    </div>
-                    <div class="capt flex-column align-items-center"> 
-                        <h2 type="text" id="mainCaptcha"></h2>
-                        <p><input value="Refrescar Código" type="button" id="refresh" onclick="Captcha();"/></p>            <input type="text" id="txtInput"/>    
-                        <input id="Button1" type="button" value="Validar" onclick="alert(ValidCaptcha());"/>
-                    </div>
-                    
-                    <button type="submit" onclick="ValidaWeb()" class="btn btn-danger pull-right">ENVIAR</button>
-                </form>
-            </div>
+    <section class="contenido contenidoContacto">  
+        <div class="unete">
+            <p>            
+                Unete a esta hermosa experiencia musical...            
+            </p>        
+            <p>
+                No dudes en contactarme!           
+            </p>
         </div>
-        <div class="contenidoContacto__formulario">
-            
-            <form>
-                <!-- Formulario para correo-->
-                <!-- Nombre -->
-                <div class="form-group row">
-                    <div class="row form-group">                    
-                        <input type="text" value="" name="nombre" class="form-control" placeholder="Nombre del Representante" required minlength="3" maxlength="15">                                        
-                        <input type="text" value="" name="apellido" class="form-control" placeholder="Apellido del Representante" required minlength="3" maxlength="15">
-                    </div>
-                
-                
-                
-                    <!-- Email -->
-                    <div class="form-group col-12">
-                    <label for="email" class="col-form-label app-label"> E-mail </label>
-                    <input type="email" value="" placeholder="nombre@ejemplo.com" name="email" class="form-control" id="exampleInputEmail1">
-                    </div>
-                </div>
 
-                <!-- Campo de Comentarios -->
-                <div class="mb-8">
-                    <label for="comentarios" class="col-form-label"> Mensaje </label>            
-                    <textarea rows="4" cols="70" name="comentarios" placeholder="Comentarios" id="exampleFormControlTextarea1"></textarea>
+        <div class="contenidoContacto__formulario container wow animate__animated animate__slideInUp">
+            
+            <form role="form" class="flex-column align-items-center " action="" method="post">                
+                
+                <div class="form-group row d-sm-flex flex-column align-items-center">                    
+                    <input type="text" value="" name="representante" class="form-control" placeholder="Nombre del Representante" required>
                 </div>
+                <div class="form-group row d-sm-flex flex-column align-items-center">                                           
+                    <input type="text" value="" name="alumno" class="form-control" placeholder="Nombre del Alumno" required minlength="3" maxlength="15">
+                </div>               
+                
+                
+                <!-- Email -->
+                <div class="form-group row d-sm-flex flex-column align-items-center">                    
+                <input type="email" value="" placeholder="nombre@ejemplo.com" name="email" class="form-control" id="exampleInputEmail1" required minlength="3" maxlength="15">
+                </div>
+                <!-- Campo de Comentarios -->
+                <div class="form-group row d-sm-flex flex-column align-items-center">                                
+                    <textarea class="form-control" rows="4" cols="70" name="comentarios" placeholder="Comentarios" id="exampleFormControlTextarea1" required minlength="5" maxlength="100"></textarea>
+                </div>         
+                
                 <div class="app-buttons">
-                    <input type="reset" value="Limpiar Formulario" class="btn btn-secondary col-md-4 col-sm-3 col-xs-2">
+                    <input type="reset" value="Limpiar Formulario" class="btn btn-secondary col-md-4 col-sm-4">
                 
                         <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success col-md-4 col-sm-3 col-xs-2" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-success col-md-4 col-sm-4" data-toggle="modal" data-target="#exampleModal">
                         Enviar Formulario
                     </button>
                 </div>
@@ -145,7 +126,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Enviar</button>
+                                <button type="submit" class="btn btn-success">Enviar</button>
                             </div>
                         </div>
                     </div>
