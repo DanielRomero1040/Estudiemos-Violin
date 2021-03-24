@@ -1141,6 +1141,13 @@ div.gridPartituras {
         font-size: 1rem;
         font-weight: 300; }
   /* sobre mi */
+  header.body__sobremi {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headersobremi.png) no-repeat;
+    height: 110vh;
+    width: 100vw;
+    background-position: -200px center;
+    background-size: cover;
+    margin-bottom: 10vh; }
   div.contenido__parrafosDelContenido {
     background-color: #534e517e;
     width: 430px;
@@ -1263,6 +1270,13 @@ div.gridPartituras {
       text-align: center;
       visibility: hidden; }
   /* Galeria Videos */
+  header.body__videos {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headervideos.png);
+    height: 110vh;
+    width: 100vw;
+    background-position: -900px center;
+    background-size: cover;
+    margin-bottom: 10vh; }
   div.galeriaVideo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1398,6 +1412,14 @@ div.gridPartituras {
     div.gridPartituras p.pieDeArchivo6 {
       grid-area: pie6;
       text-align: center; }
+  /*Contacto*/
+  header.body__contacto {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headercontacto.png) no-repeat;
+    height: 110vh;
+    width: 100vw;
+    background-position: -1100px center;
+    background-size: cover;
+    margin-bottom: 10vh; }
   /*Footer*/
   footer {
     background-color: #0b090a;
@@ -1603,6 +1625,13 @@ div.gridPartituras {
         flex-direction: column;
         align-items: center; }
   /* Contacto*/
+  header.body__contacto {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headercontacto.png) no-repeat;
+    height: 110vh;
+    width: 100vw;
+    background-position: -780px center;
+    background-size: cover;
+    margin-bottom: 10vh; }
   section.contenidoContacto {
     display: flex;
     flex-direction: column;
@@ -1623,7 +1652,8 @@ div.gridPartituras {
       background-color: #534e5183;
       border-radius: 10px; }
       section.contenidoContacto div.contenidoContacto__formulario .app-buttons button, section.contenidoContacto div.contenidoContacto__formulario .app-buttons input {
-        width: 180px; }
+        width: 180px;
+        margin: 0 5px; }
   .modal-content {
     width: 95vw; }
   /* Sobre mi*/

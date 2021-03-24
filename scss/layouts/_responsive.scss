@@ -750,6 +750,22 @@
     }
 
         /* sobre mi */
+
+    header.body__sobremi {
+        background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.7), 
+        $negro), url(../image/headersobremi.png) no-repeat;
+        height: 110vh;
+        width: 100vw;
+        background-position: -200px center;
+        background-size: cover;
+        margin-bottom: 10vh;
+    }
     div.contenido__parrafosDelContenido{
         background-color: #534e517e;
         width: 430px;
@@ -824,6 +840,21 @@
 
             /* Galeria Videos */
 
+    header.body__videos {
+        background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.7), 
+        $negro), url(../image/headervideos.png);
+        height: 110vh;
+        width: 100vw;
+        background-position: -900px center;
+        background-size: cover;
+        margin-bottom: 10vh;
+    }
     div.galeriaVideo {
         display: grid;        
         grid-template-columns: repeat( 2, 1fr);
@@ -909,6 +940,23 @@
             }
         }
     }
+        /*Contacto*/
+    header.body__contacto {
+        background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.7), 
+        $negro), url(../image/headercontacto.png) no-repeat;
+        height: 110vh;
+        width: 100vw;
+        background-position: -1100px center;
+        background-size: cover;
+        margin-bottom: 10vh;
+    }
+
         /*Footer*/
     footer{
         background-color:  $negro;
@@ -1239,6 +1287,21 @@
     }
 
     /* Contacto*/
+    header.body__contacto {
+        background-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.7), 
+        $negro), url(../image/headercontacto.png) no-repeat;
+        height: 110vh;
+        width: 100vw;
+        background-position: -780px center;
+        background-size: cover;
+        margin-bottom: 10vh;
+    }
     section.contenidoContacto{
         display: flex;
         flex-direction: column;
@@ -1267,6 +1330,7 @@
                 
                 button, input{
                     width: 180px;
+                    margin: 0 5px;
                 }
             }
           
