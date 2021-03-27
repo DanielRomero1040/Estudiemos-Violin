@@ -12,6 +12,12 @@ let abrirGaleria1 = document.getElementById('abrir-popup-1'),
     abrirGaleria4 = document.getElementById('abrir-popup-4'),
     abrirGaleria5 = document.getElementById('abrir-popup-5'),
     abrirGaleria6 = document.getElementById('abrir-popup-6'),
+    abrirGaleria7 = document.getElementById('abrir-popup-7'),
+    abrirGaleria8 = document.getElementById('abrir-popup-8'),
+    abrirGaleria9 = document.getElementById('abrir-popup-9'),
+    abrirGaleria10 = document.getElementById('abrir-popup-10'),
+    abrirGaleria11 = document.getElementById('abrir-popup-11'),
+    abrirGaleria12 = document.getElementById('abrir-popup-12'),
 
     overlay = document.getElementById('overlay'),
     popup = document.getElementById('popup'),
@@ -19,49 +25,73 @@ let abrirGaleria1 = document.getElementById('abrir-popup-1'),
 
     btnCerrarPopup = document.getElementById('btn-cerrar-popup'),
     btnFotoSiguiente = document.getElementById('btn-siguiente'),
-    btnFotoAnterior = document.getElementById('btn-anterior'),
-    titulo = document.getElementById('titulo'),
-    btnMenu = document.getElementById('toggler');
-
-        //Acciones al seleccionar el menu
-
-btnMenu.addEventListener('click',function(){
-    titulo.toggle();
-});
-
-$("#btnMenu").click(function(){
-    $("#titulo").toggle();
-});
+    btnFotoAnterior = document.getElementById('btn-anterior');
 
         //Acciones al seleccionar una imagen
 abrirGaleria1.addEventListener('click', function(){
     overlay.classList.add('active');
-    imagen.classList.add('sprite-galeria_1_full','imagen')
+    imagen.classList.add('galeria1__full','imagen')
     popup.classList.add('active');
 });
 abrirGaleria2.addEventListener('click', function(){
     overlay.classList.add('active');
-    imagen.classList.add('sprite-galeria_2_full','imagen')
+    imagen.classList.add('galeria2__full','imagen')
     popup.classList.add('active');
 });
 abrirGaleria3.addEventListener('click', function(){
     overlay.classList.add('active');
-    imagen.classList.add('sprite-galeria_3_full','imagen')
+    imagen.classList.add('galeria3__full','imagen')
     popup.classList.add('active');
 });
 abrirGaleria4.addEventListener('click', function(){
     overlay.classList.add('active');
-    imagen.classList.add('sprite-galeria_4_full','imagen')
+    imagen.classList.add('galeria4__full','imagen')
     popup.classList.add('active');
 });
 abrirGaleria5.addEventListener('click', function(){
     overlay.classList.add('active');
-    imagen.classList.add('sprite-galeria_5_full','imagen')
+    imagen.classList.add('galeria5__full','imagen')
     popup.classList.add('active');
 });
 abrirGaleria6.addEventListener('click', function(){
     overlay.classList.add('active');
-    imagen.classList.add('sprite-galeria_6_full','imagen')
+    imagen.classList.add('galeria6__full','imagen')
+    popup.classList.add('active');
+});
+
+abrirGaleria7.addEventListener('click', function(){
+    overlay.classList.add('active');
+    imagen.classList.add('galeria7__full','imagen')
+    popup.classList.add('active');
+});
+
+abrirGaleria8.addEventListener('click', function(){
+    overlay.classList.add('active');
+    imagen.classList.add('galeria8__full','imagen')
+    popup.classList.add('active');
+});
+
+abrirGaleria9.addEventListener('click', function(){
+    overlay.classList.add('active');
+    imagen.classList.add('galeria9__full','imagen')
+    popup.classList.add('active');
+});
+
+abrirGaleria10.addEventListener('click', function(){
+    overlay.classList.add('active');
+    imagen.classList.add('galeria10__full','imagen')
+    popup.classList.add('active');
+});
+
+abrirGaleria11.addEventListener('click', function(){
+    overlay.classList.add('active');
+    imagen.classList.add('galeria11__full','imagen')
+    popup.classList.add('active');
+});
+
+abrirGaleria12.addEventListener('click', function(){
+    overlay.classList.add('active');
+    imagen.classList.add('galeria12__full','imagen')
     popup.classList.add('active');
 });
 
@@ -71,89 +101,85 @@ abrirGaleria6.addEventListener('click', function(){
 btnCerrarPopup.addEventListener('click', function(){
     overlay.classList.remove('active');
     popup.classList.remove('active');
-    imagen.classList.remove('sprite-galeria_1_full','sprite-galeria_2_full','sprite-galeria_3_full','sprite-galeria_4_full','sprite-galeria_5_full','sprite-galeria_6_full','imagen')
+    imagen.classList.remove('galeria1__full','galeria2__full','galeria3__full','galeria4__full','galeria5__full','galeria6__full','galeria7__full','galeria8__full','galeria9__full','galeria10__full','galeria11__full','galeria12__full','imagen')
 });
 
 btnFotoSiguiente.addEventListener('click',function(){
-    if (imagen.classList.contains('sprite-galeria_1_full') == true) {        
-        imagen.classList.replace('sprite-galeria_1_full','sprite-galeria_2_full');
+    if (imagen.classList.contains('galeria1__full') == true) {        
+        imagen.classList.replace('galeria1__full','galeria2__full');
      } 
-     else if (imagen.classList.contains('sprite-galeria_2_full') == true) {
-        imagen.classList.replace('sprite-galeria_2_full','sprite-galeria_3_full');        
+     else if (imagen.classList.contains('galeria2__full') == true) {
+        imagen.classList.replace('galeria2__full','galeria3__full');        
      }
-     else if (imagen.classList.contains('sprite-galeria_3_full') == true) {
-        imagen.classList.replace('sprite-galeria_3_full','sprite-galeria_4_full');        
+     else if (imagen.classList.contains('galeria3__full') == true) {
+        imagen.classList.replace('galeria3__full','galeria4__full');        
      }
-     else if (imagen.classList.contains('sprite-galeria_4_full') == true) {
-        imagen.classList.replace('sprite-galeria_4_full','sprite-galeria_5_full');        
+     else if (imagen.classList.contains('galeria4__full') == true) {
+        imagen.classList.replace('galeria4__full','galeria5__full');        
      }
-     else if (imagen.classList.contains('sprite-galeria_5_full') == true) {
-        imagen.classList.replace('sprite-galeria_5_full','sprite-galeria_6_full');        
+     else if (imagen.classList.contains('galeria5__full') == true) {
+        imagen.classList.replace('galeria5__full','galeria6__full');        
      }
-     else if (imagen.classList.contains('sprite-galeria_6_full') == true) {
-        imagen.classList.replace('sprite-galeria_6_full','sprite-galeria_1_full');        
-     }    
-    
-})
-
-btnFotoAnterior.addEventListener('click',function(){
-    if (imagen.classList.contains('sprite-galeria_1_full') == true) {        
-        imagen.classList.replace('sprite-galeria_1_full','sprite-galeria_6_full');
+     else if (imagen.classList.contains('galeria6__full') == true) {
+        imagen.classList.replace('galeria6__full','galeria7__full');        
+     }
+     else if (imagen.classList.contains('galeria7__full') == true) {
+        imagen.classList.replace('galeria7__full','galeria8__full');        
      } 
-     else if (imagen.classList.contains('sprite-galeria_2_full') == true) {
-        imagen.classList.replace('sprite-galeria_2_full','sprite-galeria_1_full');        
-     }
-     else if (imagen.classList.contains('sprite-galeria_3_full') == true) {
-        imagen.classList.replace('sprite-galeria_3_full','sprite-galeria_2_full');        
-     }
-     else if (imagen.classList.contains('sprite-galeria_4_full') == true) {
-        imagen.classList.replace('sprite-galeria_4_full','sprite-galeria_3_full');        
-     }
-     else if (imagen.classList.contains('sprite-galeria_5_full') == true) {
-        imagen.classList.replace('sprite-galeria_5_full','sprite-galeria_4_full');        
-     }
-     else if (imagen.classList.contains('sprite-galeria_6_full') == true) {
-        imagen.classList.replace('sprite-galeria_6_full','sprite-galeria_5_full');        
+     else if (imagen.classList.contains('galeria8__full') == true) {
+        imagen.classList.replace('galeria8__full','galeria9__full');        
+     } 
+     else if (imagen.classList.contains('galeria9__full') == true) {
+        imagen.classList.replace('galeria9__full','galeria10__full');        
+     } 
+     else if (imagen.classList.contains('galeria10__full') == true) {
+        imagen.classList.replace('galeria10__full','galeria11__full');        
+     } 
+     else if (imagen.classList.contains('galeria11__full') == true) {
+        imagen.classList.replace('galeria11__full','galeria12__full');        
+     } 
+     else if (imagen.classList.contains('galeria12__full') == true) {
+        imagen.classList.replace('galeria12__full','galeria1__full');        
      }   
     
 })
 
-
-        // Iniciar el SmoothScroll
-var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 1500
-});
-
-        //Captcha
-
-
-        function Captcha(){
-         var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
-           'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', 
-               '0','1','2','3','4','5','6','7','8','9');
-         var i;
-         for (i=0;i<6;i++){
-             var a = alpha[Math.floor(Math.random() * alpha.length)];
-             var b = alpha[Math.floor(Math.random() * alpha.length)];
-             var c = alpha[Math.floor(Math.random() * alpha.length)];
-             var d = alpha[Math.floor(Math.random() * alpha.length)];
-             var e = alpha[Math.floor(Math.random() * alpha.length)];
-             var f = alpha[Math.floor(Math.random() * alpha.length)];
-             var g = alpha[Math.floor(Math.random() * alpha.length)];
-                          }
-             var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
-             document.getElementById("mainCaptcha").innerHTML = code
-           document.getElementById("mainCaptcha").value = code
-           }
-    function ValidCaptcha(){
-         var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
-         var string2 =         removeSpaces(document.getElementById('txtInput').value);
-         if (string1 == string2){
-                return true;
-         }else{        
-              return false;
-              }
-    }
-    function removeSpaces(string){
-         return string.split(' ').join('');
-    }
+btnFotoAnterior.addEventListener('click',function(){
+    if (imagen.classList.contains('galeria1__full') == true) {        
+        imagen.classList.replace('galeria1__full','galeria12__full');
+     } 
+     else if (imagen.classList.contains('galeria2__full') == true) {
+        imagen.classList.replace('galeria2__full','galeria1__full');        
+     }
+     else if (imagen.classList.contains('galeria3__full') == true) {
+        imagen.classList.replace('galeria3__full','galeria2__full');        
+     }
+     else if (imagen.classList.contains('galeria4__full') == true) {
+        imagen.classList.replace('galeria4__full','galeria3__full');        
+     }
+     else if (imagen.classList.contains('galeria5__full') == true) {
+        imagen.classList.replace('galeria5__full','galeria4__full');        
+     }
+     else if (imagen.classList.contains('galeria6__full') == true) {
+        imagen.classList.replace('galeria6__full','galeria5__full');        
+     }
+     else if (imagen.classList.contains('galeria7__full') == true) {
+        imagen.classList.replace('galeria7__full','galeria6__full');        
+     } 
+     else if (imagen.classList.contains('galeria8__full') == true) {
+        imagen.classList.replace('galeria8__full','galeria7__full');        
+     } 
+     else if (imagen.classList.contains('galeria9__full') == true) {
+        imagen.classList.replace('galeria9__full','galeria8__full');        
+     } 
+     else if (imagen.classList.contains('galeria10__full') == true) {
+        imagen.classList.replace('galeria10__full','galeria9__full');        
+     } 
+     else if (imagen.classList.contains('galeria11__full') == true) {
+        imagen.classList.replace('galeria11__full','galeria10__full');        
+     } 
+     else if (imagen.classList.contains('galeria12__full') == true) {
+        imagen.classList.replace('galeria12__full','galeria11__full');        
+     }   
+    
+})

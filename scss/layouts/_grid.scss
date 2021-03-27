@@ -12,7 +12,7 @@ section.contenido__muestraExperiencias1 {
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.6), 
-    $negro), url(../image/imagenprincipal.png);    
+    $negro), url(../image/imagenprincipal3.png);    
     background-position: center center;
     background-size: cover;
 
@@ -20,7 +20,7 @@ section.contenido__muestraExperiencias1 {
 
     display: grid;     
     grid-template-columns: repeat( 4, 1fr);
-    grid-template-rows: repeat(3 , 2fr);
+    grid-template-rows: 50px repeat(2 , 2fr);
     grid-gap: 2%;
     grid-template-areas: 
     "titulo     titulo  titulo  titulo"
@@ -32,11 +32,13 @@ section.contenido__muestraExperiencias1 {
     width: 100vw;
     
 
-    h1.titulo{
+    h2.titulo{
         grid-area: titulo;
         font-family: $roboto;
         font-size: 40px;
         font-weight: 300;
+        width: 80vw;
+        align-self: center;
     }
     
     iframe.video{
@@ -76,14 +78,14 @@ section.contenido__muestraExperiencias2 {
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.6), 
-    $negro), url(../image/imagenprincipal.png);    
+    $negro), url(../image/imagenprincipal2.png);    
     background-position: center center;
     background-size: cover;
 
 
 
     display: grid;     
-    grid-template-columns: repeat( 4, 1fr);
+    grid-template-columns: 1fr 2fr 1fr 2fr;
     grid-template-rows: repeat(2 , 2fr);
     grid-gap: 2%;
     grid-template-areas: 
@@ -99,7 +101,7 @@ section.contenido__muestraExperiencias2 {
     
     img.alumno1{
         grid-area: imagen1;
-        background-image: url(../image/2.png);
+        background-image: url(../image/alumna1.png);
         background-size: cover;
         background-position: center center;   
         height: 250px;
@@ -107,25 +109,20 @@ section.contenido__muestraExperiencias2 {
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;      
     }
-    
-    
-    h2.nombre1{
-        grid-area: nombre1;
-        font-weight: 300;
-        font-size: 25px;
-        
-    }
+   
+
     div.texto1{
         grid-area: texto1;
         text-align: justify;
         line-height: 35px;
         font-size: 1.2rem;
         font-weight: 300;
+        
     }
     
     img.alumno2{
         grid-area: imagen2;
-        background-image: url(../image/5.png);
+        background-image: url(../image/alumna2.png);
         background-size: cover;
         background-position: center center;
         height: 250px;
@@ -134,12 +131,7 @@ section.contenido__muestraExperiencias2 {
         transition: transform 0.2s;
     }
     
-    
-    h2.nombre2{
-        grid-area: nombre2;
-        font-weight: 300;
-        font-size: 25px;
-    }
+
     div.texto2{
         grid-area: texto2;
         text-align: justify;
@@ -155,15 +147,19 @@ section.contenido__muestraExperiencias2 {
 div.contenido__galeriaImagenes {
     display: grid;        
     grid-template-columns: repeat( 2, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: 100px repeat(6, 310px);
     grid-gap: 0;
-    grid-template-areas:    
+    grid-template-areas:
+    "titulogal titulogal"    
     "galeria1  galeria2 "    
     "galeria3  galeria4 "    
-    "galeria5  galeria6 "  
+    "galeria5  galeria6 "
+    "galeria7  galeria8"
+    "galeria9  galeria10"
+    "galeria11  galeria12"  
     ;
     padding: 50px 150px;
-    height: 1000px;
+    height: 2000px;
     width: 97vw;
     align-self: center;
     
@@ -173,6 +169,7 @@ div.contenido__galeriaImagenes {
         font-family: $roboto;
         font-size: 40px;
         font-weight: 200;
+        padding-bottom: 30px;
     }
         
     @each $area,$foto in $galeria{
@@ -180,7 +177,7 @@ div.contenido__galeriaImagenes {
             grid-area: #{$area};
             background-image: url(../image/#{$foto});
             background-size: cover;
-            height: 300px;
+            height: 310px;
             width: 100%;
             opacity: .6;
             transition: ease .7s;
@@ -190,6 +187,22 @@ div.contenido__galeriaImagenes {
             opacity: 1;            
         }
     }
+
+    @each $area,$foto in $galeria{
+        div.#{$area}__full{
+            grid-area: #{$area};
+            background-image: url(../image/#{$foto});
+            background-size: cover;
+            width: 700px;
+            height: 394px;
+
+        }
+
+    }
+
+
+
+
     
     @for $i from 1 through 6{
         p.pieDeArchivo#{$i}{
@@ -198,14 +211,102 @@ div.contenido__galeriaImagenes {
             visibility: hidden;
         }
     }
+
+    .overlay{
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+
+    .overlay.active{
+        visibility: visible;
+        z-index: 2;
+    }
+
+    .popup{
+        width: 700px;
+        height: 394px;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: 0.5s ease all;
+        
+
+
+        
+        div.imagen{
+            width: 700px;
+            height: 394px;
+            z-index: 3;
+
+            .btn-cerrar-popup{
+                
+                                
+                font-size: 16px;
+                
+                display: flex;
+                justify-content: flex-end;                
+                color: gray;
+                transition: .3s ease all;
+                text-decoration: none;
+                i{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    margin: 5px 5px 0 0;
+                    padding: 5px;
+                    width: 20px;
+                    height: 20px;
+                    
+                }
+            }
+            .btn-cerrar-popup:hover{
+                color: black;
+            }
+
+            .cambioDeFoto{
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20vh 10px;
+                #btn-anterior , #btn-siguiente{
+                    font-size: 50px;
+                    opacity: 0.8;
+                    color: $rosaoscuro;
+                    
+                }
+
+                #btn-anterior:hover , #btn-siguiente:hover{
+                    color: $rosatema;
+                }
+            }
+
+            
+        }        
+    }
+
+    .popup.active{
+        opacity: 1;
+        transform: scale(1);
+
+    }
 }
+
 
 /* Galeria Videos */
 
 div.galeriaVideo {
     display: grid;        
     grid-template-columns: repeat( 2, 1fr);
-    grid-template-rows: 100px ,repeat(3, 270px);
+    grid-template-rows: 100px repeat(3, 270px);
     grid-gap: 30px;
     grid-template-areas: 
     "titulogalvid   titulogalvid"
@@ -248,7 +349,7 @@ div.galeriaVideo {
 div.gridPartituras {
     display: grid;        
     grid-template-columns: repeat( 2, 1fr);
-    grid-template-rows: 100px,  repeat(4, 300px);
+    grid-template-rows: 100px 250px 50px 250px 50px;
     grid-gap: 30px;
     grid-template-areas: 
     "titulopartitura titulopartitura"
@@ -258,7 +359,7 @@ div.gridPartituras {
     "pie3        pie4      "    
     ;
     padding: 0 150px;
-    height: 850px;
+    height: 880px;
     width: 100vw;
     margin-bottom: 100px;
     align-self: center;
@@ -274,7 +375,7 @@ div.gridPartituras {
     @each $partitura in $partituras {
         iframe.#{$partitura}{
             grid-area: #{$partitura};
-            height: 300px;
+            height: 250px;
             width: 100%;
             border: none;
         }

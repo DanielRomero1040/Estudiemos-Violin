@@ -111,7 +111,7 @@ header.body__sobremi {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headersobremi.png);
   height: 110vh;
   width: 100vw;
-  background-position: center start;
+  background-position: center center;
   background-size: cover;
   margin-bottom: 10vh; }
 
@@ -182,13 +182,13 @@ header .logo {
 header .navbar a.nav-link:hover, header span.navbar-text:hover {
   color: #f1f0f0 !important; }
 
-header h1.header__titulo {
+h1.header__titulo {
   font-size: 50px;
   text-align: center;
   font-weight: 300;
   padding-top: 60vh;
   color: #b3adad;
-  visibility: visible; }
+  animation-duration: 3s; }
 
 /*Variables*/
 /*Paletas de Colores*/
@@ -196,22 +196,24 @@ header h1.header__titulo {
 /* Maps y otras variables*/
 /*Grid seccion de experiencias index*/
 section.contenido__muestraExperiencias1 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal3.png);
   background-position: center center;
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 2fr);
+  grid-template-rows: 50px repeat(2, 2fr);
   grid-gap: 2%;
   grid-template-areas: "titulo     titulo  titulo  titulo" "pievid      pievid   video   video"     "pievid      pievid   video  video";
   padding: 10px 10vw;
   height: 600px;
   width: 100vw; }
-  section.contenido__muestraExperiencias1 h1.titulo {
+  section.contenido__muestraExperiencias1 h2.titulo {
     grid-area: titulo;
     font-family: "Lato", sans-serif;
     font-size: 40px;
-    font-weight: 300; }
+    font-weight: 300;
+    width: 80vw;
+    align-self: center; }
   section.contenido__muestraExperiencias1 iframe.video {
     grid-area: video;
     height: 280px;
@@ -233,11 +235,11 @@ section.contenido__muestraExperiencias1 {
       font-size: 1.2rem; }
 
 section.contenido__muestraExperiencias2 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal2.png);
   background-position: center center;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 2fr 1fr 2fr;
   grid-template-rows: repeat(2, 2fr);
   grid-gap: 2%;
   grid-template-areas: "imagen1    texto1  imagen2 texto2" "imagen1    texto1 imagen2 texto2";
@@ -247,17 +249,13 @@ section.contenido__muestraExperiencias2 {
   width: 100vw; }
   section.contenido__muestraExperiencias2 img.alumno1 {
     grid-area: imagen1;
-    background-image: url(../image/2.png);
+    background-image: url(../image/alumna1.png);
     background-size: cover;
     background-position: center center;
     height: 250px;
     width: 170px;
     box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
     transition: transform 0.2s; }
-  section.contenido__muestraExperiencias2 h2.nombre1 {
-    grid-area: nombre1;
-    font-weight: 300;
-    font-size: 25px; }
   section.contenido__muestraExperiencias2 div.texto1 {
     grid-area: texto1;
     text-align: justify;
@@ -266,17 +264,13 @@ section.contenido__muestraExperiencias2 {
     font-weight: 300; }
   section.contenido__muestraExperiencias2 img.alumno2 {
     grid-area: imagen2;
-    background-image: url(../image/5.png);
+    background-image: url(../image/alumna2.png);
     background-size: cover;
     background-position: center center;
     height: 250px;
     width: 170px;
     box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
     transition: transform 0.2s; }
-  section.contenido__muestraExperiencias2 h2.nombre2 {
-    grid-area: nombre2;
-    font-weight: 300;
-    font-size: 25px; }
   section.contenido__muestraExperiencias2 div.texto2 {
     grid-area: texto2;
     text-align: justify;
@@ -288,23 +282,24 @@ section.contenido__muestraExperiencias2 {
 div.contenido__galeriaImagenes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: 100px repeat(6, 310px);
   grid-gap: 0;
-  grid-template-areas: "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 ";
+  grid-template-areas: "titulogal titulogal"     "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 " "galeria7  galeria8" "galeria9  galeria10" "galeria11  galeria12";
   padding: 50px 150px;
-  height: 1000px;
+  height: 2000px;
   width: 97vw;
   align-self: center; }
   div.contenido__galeriaImagenes h3.titularDelContenido {
     grid-area: titulogal;
     font-family: "Lato", sans-serif;
     font-size: 40px;
-    font-weight: 200; }
+    font-weight: 200;
+    padding-bottom: 30px; }
   div.contenido__galeriaImagenes div.galeria1 {
     grid-area: galeria1;
-    background-image: url(../image/12.png);
+    background-image: url(../image/galeria1.png);
     background-size: cover;
-    height: 300px;
+    height: 310px;
     width: 100%;
     opacity: .6;
     transition: ease .7s; }
@@ -313,9 +308,9 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria2 {
     grid-area: galeria2;
-    background-image: url(../image/11.png);
+    background-image: url(../image/galeria2.png);
     background-size: cover;
-    height: 300px;
+    height: 310px;
     width: 100%;
     opacity: .6;
     transition: ease .7s; }
@@ -324,9 +319,9 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria3 {
     grid-area: galeria3;
-    background-image: url(../image/fondofrase.jpg);
+    background-image: url(../image/galeria3.png);
     background-size: cover;
-    height: 300px;
+    height: 310px;
     width: 100%;
     opacity: .6;
     transition: ease .7s; }
@@ -335,9 +330,9 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria4 {
     grid-area: galeria4;
-    background-image: url(../image/15.png);
+    background-image: url(../image/galeria4.png);
     background-size: cover;
-    height: 300px;
+    height: 310px;
     width: 100%;
     opacity: .6;
     transition: ease .7s; }
@@ -346,9 +341,9 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria5 {
     grid-area: galeria5;
-    background-image: url(../image/21.png);
+    background-image: url(../image/galeria5.png);
     background-size: cover;
-    height: 300px;
+    height: 310px;
     width: 100%;
     opacity: .6;
     transition: ease .7s; }
@@ -357,15 +352,153 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria6 {
     grid-area: galeria6;
-    background-image: url(../image/23.png);
+    background-image: url(../image/galeria6.png);
     background-size: cover;
-    height: 300px;
+    height: 310px;
     width: 100%;
     opacity: .6;
     transition: ease .7s; }
   div.contenido__galeriaImagenes div.galeria6:hover {
     transform: scale(1.01);
     opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria7 {
+    grid-area: galeria7;
+    background-image: url(../image/galeria7.png);
+    background-size: cover;
+    height: 310px;
+    width: 100%;
+    opacity: .6;
+    transition: ease .7s; }
+  div.contenido__galeriaImagenes div.galeria7:hover {
+    transform: scale(1.01);
+    opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria8 {
+    grid-area: galeria8;
+    background-image: url(../image/galeria8.png);
+    background-size: cover;
+    height: 310px;
+    width: 100%;
+    opacity: .6;
+    transition: ease .7s; }
+  div.contenido__galeriaImagenes div.galeria8:hover {
+    transform: scale(1.01);
+    opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria9 {
+    grid-area: galeria9;
+    background-image: url(../image/galeria9.png);
+    background-size: cover;
+    height: 310px;
+    width: 100%;
+    opacity: .6;
+    transition: ease .7s; }
+  div.contenido__galeriaImagenes div.galeria9:hover {
+    transform: scale(1.01);
+    opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria10 {
+    grid-area: galeria10;
+    background-image: url(../image/galeria10.png);
+    background-size: cover;
+    height: 310px;
+    width: 100%;
+    opacity: .6;
+    transition: ease .7s; }
+  div.contenido__galeriaImagenes div.galeria10:hover {
+    transform: scale(1.01);
+    opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria11 {
+    grid-area: galeria11;
+    background-image: url(../image/galeria11.png);
+    background-size: cover;
+    height: 310px;
+    width: 100%;
+    opacity: .6;
+    transition: ease .7s; }
+  div.contenido__galeriaImagenes div.galeria11:hover {
+    transform: scale(1.01);
+    opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria12 {
+    grid-area: galeria12;
+    background-image: url(../image/galeria12.png);
+    background-size: cover;
+    height: 310px;
+    width: 100%;
+    opacity: .6;
+    transition: ease .7s; }
+  div.contenido__galeriaImagenes div.galeria12:hover {
+    transform: scale(1.01);
+    opacity: 1; }
+  div.contenido__galeriaImagenes div.galeria1__full {
+    grid-area: galeria1;
+    background-image: url(../image/galeria1.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria2__full {
+    grid-area: galeria2;
+    background-image: url(../image/galeria2.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria3__full {
+    grid-area: galeria3;
+    background-image: url(../image/galeria3.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria4__full {
+    grid-area: galeria4;
+    background-image: url(../image/galeria4.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria5__full {
+    grid-area: galeria5;
+    background-image: url(../image/galeria5.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria6__full {
+    grid-area: galeria6;
+    background-image: url(../image/galeria6.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria7__full {
+    grid-area: galeria7;
+    background-image: url(../image/galeria7.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria8__full {
+    grid-area: galeria8;
+    background-image: url(../image/galeria8.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria9__full {
+    grid-area: galeria9;
+    background-image: url(../image/galeria9.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria10__full {
+    grid-area: galeria10;
+    background-image: url(../image/galeria10.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria11__full {
+    grid-area: galeria11;
+    background-image: url(../image/galeria11.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
+  div.contenido__galeriaImagenes div.galeria12__full {
+    grid-area: galeria12;
+    background-image: url(../image/galeria12.png);
+    background-size: cover;
+    width: 700px;
+    height: 394px; }
   div.contenido__galeriaImagenes p.pieDeArchivo1 {
     grid-area: pie1;
     text-align: center;
@@ -390,12 +523,68 @@ div.contenido__galeriaImagenes {
     grid-area: pie6;
     text-align: center;
     visibility: hidden; }
+  div.contenido__galeriaImagenes .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden; }
+  div.contenido__galeriaImagenes .overlay.active {
+    visibility: visible;
+    z-index: 2; }
+  div.contenido__galeriaImagenes .popup {
+    width: 700px;
+    height: 394px;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: 0.5s ease all; }
+    div.contenido__galeriaImagenes .popup div.imagen {
+      width: 700px;
+      height: 394px;
+      z-index: 3; }
+      div.contenido__galeriaImagenes .popup div.imagen .btn-cerrar-popup {
+        font-size: 16px;
+        display: flex;
+        justify-content: flex-end;
+        color: gray;
+        transition: .3s ease all;
+        text-decoration: none; }
+        div.contenido__galeriaImagenes .popup div.imagen .btn-cerrar-popup i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          margin: 5px 5px 0 0;
+          padding: 5px;
+          width: 20px;
+          height: 20px; }
+      div.contenido__galeriaImagenes .popup div.imagen .btn-cerrar-popup:hover {
+        color: black; }
+      div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20vh 10px; }
+        div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-anterior, div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-siguiente {
+          font-size: 50px;
+          opacity: 0.8;
+          color: #74656c; }
+        div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-anterior:hover, div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-siguiente:hover {
+          color: #e5383b; }
+  div.contenido__galeriaImagenes .popup.active {
+    opacity: 1;
+    transform: scale(1); }
 
 /* Galeria Videos */
 div.galeriaVideo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px, repeat(3, 270px);
+  grid-template-rows: 100px repeat(3, 270px);
   grid-gap: 30px;
   grid-template-areas: "titulogalvid   titulogalvid" "video1         video2"     "video3         video4 "      "video5         video6";
   padding: 0 100px;
@@ -467,11 +656,11 @@ div.galeriaVideo {
 div.gridPartituras {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px, repeat(4, 300px);
+  grid-template-rows: 100px 250px 50px 250px 50px;
   grid-gap: 30px;
   grid-template-areas: "titulopartitura titulopartitura" "partitura1  partitura2" "pie1        pie2      " "partitura3  partitura4" "pie3        pie4      ";
   padding: 0 150px;
-  height: 850px;
+  height: 880px;
   width: 100vw;
   margin-bottom: 100px;
   align-self: center; }
@@ -482,32 +671,32 @@ div.gridPartituras {
     font-weight: 200; }
   div.gridPartituras iframe.partitura1 {
     grid-area: partitura1;
-    height: 300px;
+    height: 250px;
     width: 100%;
     border: none; }
   div.gridPartituras iframe.partitura2 {
     grid-area: partitura2;
-    height: 300px;
+    height: 250px;
     width: 100%;
     border: none; }
   div.gridPartituras iframe.partitura3 {
     grid-area: partitura3;
-    height: 300px;
+    height: 250px;
     width: 100%;
     border: none; }
   div.gridPartituras iframe.partitura4 {
     grid-area: partitura4;
-    height: 300px;
+    height: 250px;
     width: 100%;
     border: none; }
   div.gridPartituras iframe.partitura5 {
     grid-area: partitura5;
-    height: 300px;
+    height: 250px;
     width: 100%;
     border: none; }
   div.gridPartituras iframe.partitura6 {
     grid-area: partitura6;
-    height: 300px;
+    height: 250px;
     width: 100%;
     border: none; }
   div.gridPartituras p.pieDeArchivo1 {
@@ -565,7 +754,7 @@ div.gridPartituras {
     font-weight: 100;
     text-decoration: none;
     color: #f5f3f4;
-    transition: color 2s font-weight 2s;
+    transition: color 2s;
     letter-spacing: 0.1vw; }
   section.body__contenido {
     /*Primera Frase*/
@@ -576,8 +765,7 @@ div.gridPartituras {
       align-items: center;
       width: 100vw;
       height: 300px;
-      margin-top: 15vh;
-      margin-bottom: 15vh;
+      margin: 15vh 0 15vh 0;
       padding: 5vh 0;
       font-size: 1.5rem;
       font-weight: 300;
@@ -587,18 +775,18 @@ div.gridPartituras {
       section.body__contenido div.contenido__primeraFrase .primeraFrase__autor {
         font-size: 1.1rem; }
     section.body__contenido section.contenido__muestraExperiencias1 {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal3.png);
       background-position: center center;
       background-size: cover;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 200px, 400px, 200px;
+      grid-template-rows: 100px 250px 200px;
       grid-gap: 2%;
       grid-template-areas: "titulo     titulo  titulo  titulo" "video      video   video   video"     "pievid      pievid   pievid  pievid";
       padding: 10px 10vw;
       height: 620px;
       width: 100vw; }
-      section.body__contenido section.contenido__muestraExperiencias1 h1.titulo {
+      section.body__contenido section.contenido__muestraExperiencias1 h2.titulo {
         grid-area: titulo;
         font-family: "Lato", sans-serif;
         font-size: 40px;
@@ -624,11 +812,11 @@ div.gridPartituras {
           line-height: 35px;
           font-size: 1.2rem; }
     section.body__contenido section.contenido__muestraExperiencias2 {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal2.png);
       background-position: center center;
       background-size: cover;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: repeat(2, 2fr);
       grid-gap: 2%;
       grid-template-areas: "imagen1    texto1" "imagen2    texto2";
@@ -638,17 +826,13 @@ div.gridPartituras {
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno1 {
         grid-area: imagen1;
-        background-image: url(../image/2.png);
+        background-image: url(../image/alumna1.png);
         background-size: cover;
         background-position: center center;
         height: 300px;
         width: 240px;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s; }
-      section.body__contenido section.contenido__muestraExperiencias2 h2.nombre1 {
-        grid-area: nombre1;
-        font-weight: 300;
-        font-size: 25px; }
       section.body__contenido section.contenido__muestraExperiencias2 div.texto1 {
         grid-area: texto1;
         text-align: justify;
@@ -657,17 +841,13 @@ div.gridPartituras {
         font-weight: 300; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno2 {
         grid-area: imagen2;
-        background-image: url(../image/5.png);
+        background-image: url(../image/alumna2.png);
         background-size: cover;
         background-position: center center;
         height: 300px;
         width: 240px;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s; }
-      section.body__contenido section.contenido__muestraExperiencias2 h2.nombre2 {
-        grid-area: nombre2;
-        font-weight: 300;
-        font-size: 25px; }
       section.body__contenido section.contenido__muestraExperiencias2 div.texto2 {
         grid-area: texto2;
         text-align: justify;
@@ -694,11 +874,11 @@ div.gridPartituras {
   div.contenido__galeriaImagenes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 220px);
+    grid-template-rows: 100px repeat(6, 220px);
     grid-gap: 0;
-    grid-template-areas: "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 ";
+    grid-template-areas: "titulogal titulogal"     "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 " "galeria7  galeria8" "galeria9  galeria10" "galeria11  galeria12";
     padding: 50px 100px;
-    height: 750px;
+    height: 1500px;
     width: 97vw;
     align-self: center; }
     div.contenido__galeriaImagenes h3.titularDelContenido {
@@ -708,7 +888,7 @@ div.gridPartituras {
       font-weight: 200; }
     div.contenido__galeriaImagenes div.galeria1 {
       grid-area: galeria1;
-      background-image: url(../image/12.png) no-repeat;
+      background-image: url(../image/galeria1.png);
       background-size: cover;
       height: 220px;
       width: 100%;
@@ -719,7 +899,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria2 {
       grid-area: galeria2;
-      background-image: url(../image/11.png) no-repeat;
+      background-image: url(../image/galeria2.png);
       background-size: cover;
       height: 220px;
       width: 100%;
@@ -730,7 +910,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria3 {
       grid-area: galeria3;
-      background-image: url(../image/fondofrase.jpg) no-repeat;
+      background-image: url(../image/galeria3.png);
       background-size: cover;
       height: 220px;
       width: 100%;
@@ -741,7 +921,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria4 {
       grid-area: galeria4;
-      background-image: url(../image/15.png) no-repeat;
+      background-image: url(../image/galeria4.png);
       background-size: cover;
       height: 220px;
       width: 100%;
@@ -752,7 +932,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria5 {
       grid-area: galeria5;
-      background-image: url(../image/21.png) no-repeat;
+      background-image: url(../image/galeria5.png);
       background-size: cover;
       height: 220px;
       width: 100%;
@@ -763,13 +943,79 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria6 {
       grid-area: galeria6;
-      background-image: url(../image/23.png) no-repeat;
+      background-image: url(../image/galeria6.png);
       background-size: cover;
       height: 220px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
     div.contenido__galeriaImagenes div.galeria6:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria7 {
+      grid-area: galeria7;
+      background-image: url(../image/galeria7.png);
+      background-size: cover;
+      height: 220px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria7:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria8 {
+      grid-area: galeria8;
+      background-image: url(../image/galeria8.png);
+      background-size: cover;
+      height: 220px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria8:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria9 {
+      grid-area: galeria9;
+      background-image: url(../image/galeria9.png);
+      background-size: cover;
+      height: 220px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria9:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria10 {
+      grid-area: galeria10;
+      background-image: url(../image/galeria10.png);
+      background-size: cover;
+      height: 220px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria10:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria11 {
+      grid-area: galeria11;
+      background-image: url(../image/galeria11.png);
+      background-size: cover;
+      height: 220px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria11:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria12 {
+      grid-area: galeria12;
+      background-image: url(../image/galeria12.png);
+      background-size: cover;
+      height: 220px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria12:hover {
       transform: scale(1.01);
       opacity: 1; }
     div.contenido__galeriaImagenes p.pieDeArchivo1 {
@@ -800,7 +1046,7 @@ div.gridPartituras {
   div.galeriaVideo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px, repeat(3, 210px);
+    grid-template-rows: 100px repeat(3, 210px);
     grid-gap: 30px;
     grid-template-areas: "titulogalvid   titulogalvid" "video1         video2"     "video3         video4 "      "video5         video6";
     padding: 0 80px;
@@ -871,7 +1117,7 @@ div.gridPartituras {
   div.gridPartituras {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px, repeat(4, 300px);
+    grid-template-rows: 100px 250px 50px 250px 50px;
     grid-gap: 30px;
     grid-template-areas: "titulopartitura titulopartitura" "partitura1  partitura2" "pie1        pie2      " "partitura3  partitura4" "pie3        pie4      ";
     padding: 0 100px;
@@ -886,32 +1132,32 @@ div.gridPartituras {
       font-weight: 200; }
     div.gridPartituras iframe.partitura1 {
       grid-area: partitura1;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura2 {
       grid-area: partitura2;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura3 {
       grid-area: partitura3;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura4 {
       grid-area: partitura4;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura5 {
       grid-area: partitura5;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura6 {
       grid-area: partitura6;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras p.pieDeArchivo1 {
@@ -935,12 +1181,9 @@ div.gridPartituras {
   /*Footer*/
   footer {
     background-color: #0b090a;
-    background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
     width: 100vw;
     height: 180px;
-    padding-top: 9vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding: 9vh 5vw 0 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -999,6 +1242,8 @@ div.gridPartituras {
     visibility: visible;
     transition: all 0.3s;
     border-radius: 5px; }
+  nav.navbar {
+    height: 20px; }
   /*Segunda Frase*/
   div.contenido__segundaFrase {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
@@ -1029,7 +1274,7 @@ div.gridPartituras {
     font-weight: 100;
     text-decoration: none;
     color: #f5f3f4;
-    transition: color 2s font-weight 2s;
+    transition: color 2s;
     letter-spacing: 0.1vw; }
   section.body__contenido {
     /*Primera Frase*/
@@ -1040,8 +1285,7 @@ div.gridPartituras {
       align-items: center;
       width: 100vw;
       height: 300px;
-      margin-top: 15vh;
-      margin-bottom: 15vh;
+      margin: 15vh 0 15vh 0;
       padding: 5vh 0;
       font-size: 1.5rem;
       font-weight: 300;
@@ -1051,18 +1295,18 @@ div.gridPartituras {
       section.body__contenido div.contenido__primeraFrase .primeraFrase__autor {
         font-size: 1.1rem; }
     section.body__contenido section.contenido__muestraExperiencias1 {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal3.png);
       background-position: center center;
       background-size: cover;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 200px, 400px, 200px;
+      grid-template-rows: 80px 250px 150px;
       grid-gap: 2%;
       grid-template-areas: "titulo     titulo  titulo  titulo" "video      video   video   video"     "pievid      pievid   pievid  pievid";
       padding: 10px 10vw;
       height: 650px;
       width: 100vw; }
-      section.body__contenido section.contenido__muestraExperiencias1 h1.titulo {
+      section.body__contenido section.contenido__muestraExperiencias1 h2.titulo {
         grid-area: titulo;
         font-family: "Lato", sans-serif;
         font-size: 40px;
@@ -1088,11 +1332,11 @@ div.gridPartituras {
           line-height: 35px;
           font-size: 1.2rem; }
     section.body__contenido section.contenido__muestraExperiencias2 {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal2.png);
       background-position: center center;
       background-size: cover;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: repeat(2, 2fr);
       grid-gap: 2%;
       grid-template-areas: "imagen1    texto1" "imagen2    texto2";
@@ -1102,18 +1346,13 @@ div.gridPartituras {
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno1 {
         grid-area: imagen1;
-        background-image: url(../image/2.png);
+        background-image: url(../image/alumna1.png);
         background-size: cover;
         background-position: center center;
         height: 300px;
         width: 240px;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s; }
-      section.body__contenido section.contenido__muestraExperiencias2 h2.nombre1 {
-        grid-area: nombre1;
-        font-weight: 300;
-        font-size: 25px;
-        font-size: 1.2rem; }
       section.body__contenido section.contenido__muestraExperiencias2 div.texto1 {
         grid-area: texto1;
         text-align: justify;
@@ -1122,18 +1361,13 @@ div.gridPartituras {
         font-weight: 300; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno2 {
         grid-area: imagen2;
-        background-image: url(../image/5.png);
+        background-image: url(../image/alumna2.png);
         background-size: cover;
         background-position: center center;
         height: 300px;
         width: 240px;
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s; }
-      section.body__contenido section.contenido__muestraExperiencias2 h2.nombre2 {
-        grid-area: nombre2;
-        font-weight: 300;
-        font-size: 25px;
-        font-size: 1.2rem; }
       section.body__contenido section.contenido__muestraExperiencias2 div.texto2 {
         grid-area: texto2;
         text-align: justify;
@@ -1142,7 +1376,7 @@ div.gridPartituras {
         font-weight: 300; }
   /* sobre mi */
   header.body__sobremi {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headersobremi.png) no-repeat;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headersobremi.png);
     height: 110vh;
     width: 100vw;
     background-position: -200px center;
@@ -1167,21 +1401,22 @@ div.gridPartituras {
   div.contenido__galeriaImagenes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 180px);
+    grid-template-rows: 100px repeat(6, 180px);
     grid-gap: 0;
-    grid-template-areas: "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 ";
-    padding: 50px 60px;
-    height: 600px;
+    grid-template-areas: "titulogal titulogal"     "galeria1  galeria2 "     "galeria3  galeria4 "     "galeria5  galeria6 " "galeria7  galeria8" "galeria9  galeria10" "galeria11  galeria12";
+    padding: 0 60px 60px 80px;
+    height: 1200px;
     width: 97vw;
     align-self: center; }
     div.contenido__galeriaImagenes h3.titularDelContenido {
       grid-area: titulogal;
       font-family: "Lato", sans-serif;
       font-size: 40px;
-      font-weight: 200; }
+      font-weight: 200;
+      padding-bottom: 20px; }
     div.contenido__galeriaImagenes div.galeria1 {
       grid-area: galeria1;
-      background-image: url(../image/12.png) no-repeat;
+      background-image: url(../image/galeria1.png);
       background-size: cover;
       height: 180px;
       width: 100%;
@@ -1192,7 +1427,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria2 {
       grid-area: galeria2;
-      background-image: url(../image/11.png) no-repeat;
+      background-image: url(../image/galeria2.png);
       background-size: cover;
       height: 180px;
       width: 100%;
@@ -1203,7 +1438,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria3 {
       grid-area: galeria3;
-      background-image: url(../image/fondofrase.jpg) no-repeat;
+      background-image: url(../image/galeria3.png);
       background-size: cover;
       height: 180px;
       width: 100%;
@@ -1214,7 +1449,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria4 {
       grid-area: galeria4;
-      background-image: url(../image/15.png) no-repeat;
+      background-image: url(../image/galeria4.png);
       background-size: cover;
       height: 180px;
       width: 100%;
@@ -1225,7 +1460,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria5 {
       grid-area: galeria5;
-      background-image: url(../image/21.png) no-repeat;
+      background-image: url(../image/galeria5.png);
       background-size: cover;
       height: 180px;
       width: 100%;
@@ -1236,13 +1471,79 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria6 {
       grid-area: galeria6;
-      background-image: url(../image/23.png) no-repeat;
+      background-image: url(../image/galeria6.png);
       background-size: cover;
       height: 180px;
       width: 100%;
       opacity: .6;
       transition: ease .7s; }
     div.contenido__galeriaImagenes div.galeria6:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria7 {
+      grid-area: galeria7;
+      background-image: url(../image/galeria7.png);
+      background-size: cover;
+      height: 180px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria7:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria8 {
+      grid-area: galeria8;
+      background-image: url(../image/galeria8.png);
+      background-size: cover;
+      height: 180px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria8:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria9 {
+      grid-area: galeria9;
+      background-image: url(../image/galeria9.png);
+      background-size: cover;
+      height: 180px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria9:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria10 {
+      grid-area: galeria10;
+      background-image: url(../image/galeria10.png);
+      background-size: cover;
+      height: 180px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria10:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria11 {
+      grid-area: galeria11;
+      background-image: url(../image/galeria11.png);
+      background-size: cover;
+      height: 180px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria11:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria12 {
+      grid-area: galeria12;
+      background-image: url(../image/galeria12.png);
+      background-size: cover;
+      height: 180px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria12:hover {
       transform: scale(1.01);
       opacity: 1; }
     div.contenido__galeriaImagenes p.pieDeArchivo1 {
@@ -1273,7 +1574,7 @@ div.gridPartituras {
   div.galeriaVideo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px, repeat(3, 190px);
+    grid-template-rows: 100px repeat(3, 190px);
     grid-gap: 30px;
     grid-template-areas: "titulogalvid   titulogalvid" "video1         video2"     "video3         video4 "      "video5         video6";
     padding: 0 40px;
@@ -1344,7 +1645,7 @@ div.gridPartituras {
   div.gridPartituras {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px, repeat(4, 300px);
+    grid-template-rows: 100px 250px 50px 250px 50px;
     grid-gap: 30px;
     grid-template-areas: "titulopartitura titulopartitura" "partitura1  partitura2" "pie1        pie2      " "partitura3  partitura4" "pie3        pie4      ";
     padding: 0 60px;
@@ -1359,32 +1660,32 @@ div.gridPartituras {
       font-weight: 200; }
     div.gridPartituras iframe.partitura1 {
       grid-area: partitura1;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura2 {
       grid-area: partitura2;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura3 {
       grid-area: partitura3;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura4 {
       grid-area: partitura4;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura5 {
       grid-area: partitura5;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura6 {
       grid-area: partitura6;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras p.pieDeArchivo1 {
@@ -1407,21 +1708,18 @@ div.gridPartituras {
       text-align: center; }
   /*Contacto*/
   header.body__contacto {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headercontacto.png) no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headercontacto.png) no-repeat;
     height: 110vh;
     width: 100vw;
-    background-position: -1100px center;
+    background-position: center center;
     background-size: cover;
     margin-bottom: 10vh; }
   /*Footer*/
   footer {
     background-color: #0b090a;
-    background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
     width: 100vw;
     height: 180px;
-    padding-top: 9vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding: 9vh 5vw 0 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1470,7 +1768,9 @@ div.gridPartituras {
       footer .footer__redes div:hover {
         background-color: #c2c0bf; }
         footer .footer__redes div:hover svg {
-          color: #64645c; } }
+          color: #64645c; }
+  h1.header__titulo {
+    padding-top: 70vh; } }
 
 @media only screen and (max-width: 576px) {
   .header__barraDeNavegacion .collapse {
@@ -1480,6 +1780,8 @@ div.gridPartituras {
     visibility: visible;
     transition: all 0.3s;
     border-radius: 5px; }
+  nav.navbar {
+    height: 20px; }
   /*Segunda Frase*/
   div.contenido__segundaFrase {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/bannerFrase2.png);
@@ -1509,8 +1811,7 @@ div.gridPartituras {
       align-items: center;
       width: 100vw;
       height: 300px;
-      margin-top: 15vh;
-      margin-bottom: 15vh;
+      margin: 15vh 0 15vh 0;
       padding: 5vh 0;
       font-size: 1.5rem;
       font-weight: 300;
@@ -1520,18 +1821,18 @@ div.gridPartituras {
       section.body__contenido div.contenido__primeraFrase .primeraFrase__autor {
         font-size: 1.1rem; }
     section.body__contenido section.contenido__muestraExperiencias1 {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal3.png);
       background-position: center center;
       background-size: cover;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 80px, 210px, 150px;
+      grid-template-rows: 80px 210px 150px;
       grid-gap: 2%;
       grid-template-areas: "titulo     titulo  titulo  titulo" "video      video   video   video"     "pievid      pievid   pievid  pievid";
       padding: 10px 10vw;
       height: 650px;
       width: 100vw; }
-      section.body__contenido section.contenido__muestraExperiencias1 h1.titulo {
+      section.body__contenido section.contenido__muestraExperiencias1 h2.titulo {
         grid-area: titulo;
         font-family: "Lato", sans-serif;
         font-size: 30px;
@@ -1557,7 +1858,7 @@ div.gridPartituras {
           line-height: 35px;
           font-size: 1rem; }
     section.body__contenido section.contenido__muestraExperiencias2 {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), #0b090a), url(../image/imagenprincipal2.png);
       background-position: center center;
       background-size: cover;
       display: grid;
@@ -1571,7 +1872,7 @@ div.gridPartituras {
       width: 100vw; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno1 {
         grid-area: imagen1;
-        background-image: url(../image/2.png);
+        background-image: url(../image/alumna1.png);
         background-size: cover;
         background-position: center center;
         height: 300px;
@@ -1579,11 +1880,6 @@ div.gridPartituras {
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;
         justify-self: center; }
-      section.body__contenido section.contenido__muestraExperiencias2 h2.nombre1 {
-        grid-area: nombre1;
-        font-weight: 300;
-        font-size: 25px;
-        font-size: 1.2rem; }
       section.body__contenido section.contenido__muestraExperiencias2 div.texto1 {
         grid-area: texto1;
         text-align: justify;
@@ -1595,7 +1891,7 @@ div.gridPartituras {
         align-items: center; }
       section.body__contenido section.contenido__muestraExperiencias2 img.alumno2 {
         grid-area: imagen2;
-        background-image: url(../image/5.png);
+        background-image: url(../image/alumna2.png);
         background-size: cover;
         background-position: center center;
         height: 300px;
@@ -1603,11 +1899,6 @@ div.gridPartituras {
         box-shadow: 8px 8px 40px black, -8px -8px 40px black, 8px -8px 40px black, -8px 8px 40px black;
         transition: transform 0.2s;
         justify-self: center; }
-      section.body__contenido section.contenido__muestraExperiencias2 h2.nombre2 {
-        grid-area: nombre2;
-        font-weight: 300;
-        font-size: 25px;
-        font-size: 1.2rem; }
       section.body__contenido section.contenido__muestraExperiencias2 div.texto2 {
         grid-area: texto2;
         text-align: justify;
@@ -1619,24 +1910,23 @@ div.gridPartituras {
         align-items: center; }
   /* Contacto*/
   header.body__contacto {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headercontacto.png) no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), #0b090a), url(../image/headercontacto.png) no-repeat;
     height: 110vh;
     width: 100vw;
-    background-position: -780px center;
+    background-position: -600px center;
     background-size: cover;
     margin-bottom: 10vh; }
   section.contenidoContacto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 130px; }
+    padding-top: 0; }
     section.contenidoContacto .unete {
       font-family: "Lato", sans-serif;
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 40px;
-      padding-top: 10px;
-      padding-bottom: 30px;
+      padding: 10px 0 30px 0;
       width: 95vw; }
     section.contenidoContacto div.contenidoContacto__formulario {
       width: 90vw;
@@ -1668,20 +1958,21 @@ div.gridPartituras {
   div.contenido__galeriaImagenes {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 300px);
+    grid-template-rows: 100px repeat(12, 300px);
     grid-gap: 0;
-    grid-template-areas: "galeria1"         "galeria2"         "galeria3"         "galeria4"         "galeria5"          "galeria6";
-    padding: 15px 20px;
-    height: 1830px;
+    grid-template-areas: "titulogal" "galeria1"         "galeria2"         "galeria3"         "galeria4"         "galeria5"          "galeria6" "galeria7" "galeria8" "galeria9" "galeria10" "galeria11" "galeria12";
+    padding: 0 20px 20px 20px;
+    height: 3700px;
     width: 97vw; }
     div.contenido__galeriaImagenes h3.titularDelContenido {
       grid-area: titulogal;
       font-family: "Lato", sans-serif;
-      font-size: 1.5rem;
-      font-weight: 200; }
+      font-size: 40px;
+      font-weight: 200;
+      padding-bottom: 30px; }
     div.contenido__galeriaImagenes div.galeria1 {
       grid-area: galeria1;
-      background-image: url(../image/12.png) no-repeat;
+      background-image: url(../image/galeria1.png);
       background-size: cover;
       height: 300px;
       width: 100%;
@@ -1692,7 +1983,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria2 {
       grid-area: galeria2;
-      background-image: url(../image/11.png) no-repeat;
+      background-image: url(../image/galeria2.png);
       background-size: cover;
       height: 300px;
       width: 100%;
@@ -1703,7 +1994,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria3 {
       grid-area: galeria3;
-      background-image: url(../image/fondofrase.jpg) no-repeat;
+      background-image: url(../image/galeria3.png);
       background-size: cover;
       height: 300px;
       width: 100%;
@@ -1714,7 +2005,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria4 {
       grid-area: galeria4;
-      background-image: url(../image/15.png) no-repeat;
+      background-image: url(../image/galeria4.png);
       background-size: cover;
       height: 300px;
       width: 100%;
@@ -1725,7 +2016,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria5 {
       grid-area: galeria5;
-      background-image: url(../image/21.png) no-repeat;
+      background-image: url(../image/galeria5.png);
       background-size: cover;
       height: 300px;
       width: 100%;
@@ -1736,7 +2027,7 @@ div.gridPartituras {
       opacity: 1; }
     div.contenido__galeriaImagenes div.galeria6 {
       grid-area: galeria6;
-      background-image: url(../image/23.png) no-repeat;
+      background-image: url(../image/galeria6.png);
       background-size: cover;
       height: 300px;
       width: 100%;
@@ -1745,6 +2036,150 @@ div.gridPartituras {
     div.contenido__galeriaImagenes div.galeria6:hover {
       transform: scale(1.01);
       opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria7 {
+      grid-area: galeria7;
+      background-image: url(../image/galeria7.png);
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria7:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria8 {
+      grid-area: galeria8;
+      background-image: url(../image/galeria8.png);
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria8:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria9 {
+      grid-area: galeria9;
+      background-image: url(../image/galeria9.png);
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria9:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria10 {
+      grid-area: galeria10;
+      background-image: url(../image/galeria10.png);
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria10:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria11 {
+      grid-area: galeria11;
+      background-image: url(../image/galeria11.png);
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria11:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria12 {
+      grid-area: galeria12;
+      background-image: url(../image/galeria12.png);
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      opacity: .6;
+      transition: ease .7s; }
+    div.contenido__galeriaImagenes div.galeria12:hover {
+      transform: scale(1.01);
+      opacity: 1; }
+    div.contenido__galeriaImagenes div.galeria1__full {
+      grid-area: galeria1;
+      background-image: url(../image/galeria1.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria2__full {
+      grid-area: galeria2;
+      background-image: url(../image/galeria2.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria3__full {
+      grid-area: galeria3;
+      background-image: url(../image/galeria3.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria4__full {
+      grid-area: galeria4;
+      background-image: url(../image/galeria4.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria5__full {
+      grid-area: galeria5;
+      background-image: url(../image/galeria5.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria6__full {
+      grid-area: galeria6;
+      background-image: url(../image/galeria6.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria7__full {
+      grid-area: galeria7;
+      background-image: url(../image/galeria7.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria8__full {
+      grid-area: galeria8;
+      background-image: url(../image/galeria8.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria9__full {
+      grid-area: galeria9;
+      background-image: url(../image/galeria9.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria10__full {
+      grid-area: galeria10;
+      background-image: url(../image/galeria10.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria11__full {
+      grid-area: galeria11;
+      background-image: url(../image/galeria11.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria12__full {
+      grid-area: galeria12;
+      background-image: url(../image/galeria12.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
+    div.contenido__galeriaImagenes div.galeria1__full {
+      grid-area: galeria1;
+      background-image: url(../image/galeria1.png);
+      background-size: cover;
+      width: 480px;
+      height: 270px; }
     div.contenido__galeriaImagenes p.pieDeArchivo1 {
       grid-area: pie1;
       text-align: center; }
@@ -1763,11 +2198,67 @@ div.gridPartituras {
     div.contenido__galeriaImagenes p.pieDeArchivo6 {
       grid-area: pie6;
       text-align: center; }
+    div.contenido__galeriaImagenes .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden; }
+    div.contenido__galeriaImagenes .overlay.active {
+      visibility: visible;
+      z-index: 2; }
+    div.contenido__galeriaImagenes .popup {
+      width: 480px;
+      height: 270px;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: 0.5s ease all; }
+      div.contenido__galeriaImagenes .popup div.imagen {
+        width: 480px;
+        height: 270px;
+        z-index: 3; }
+        div.contenido__galeriaImagenes .popup div.imagen .btn-cerrar-popup {
+          font-size: 16px;
+          display: flex;
+          justify-content: flex-end;
+          color: gray;
+          transition: .3s ease all;
+          text-decoration: none; }
+          div.contenido__galeriaImagenes .popup div.imagen .btn-cerrar-popup i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 5px 5px 0 0;
+            padding: 5px;
+            width: 20px;
+            height: 20px; }
+        div.contenido__galeriaImagenes .popup div.imagen .btn-cerrar-popup:hover {
+          color: black; }
+        div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20vh 10px; }
+          div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-anterior, div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-siguiente {
+            font-size: 50px;
+            opacity: 0.8;
+            color: #74656c; }
+          div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-anterior:hover, div.contenido__galeriaImagenes .popup div.imagen .cambioDeFoto #btn-siguiente:hover {
+            color: #e5383b; }
+    div.contenido__galeriaImagenes .popup.active {
+      opacity: 1;
+      transform: scale(1); }
   /* Galeria Videos */
   div.galeriaVideo {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20px, repeat(6, 220px);
+    grid-template-rows: 20px repeat(6, 220px);
     grid-gap: 30px;
     grid-template-areas: "titulogalvid" "video1" "video2"     "video3" "video4"      "video5" "video6";
     padding: 0 40px;
@@ -1838,7 +2329,7 @@ div.gridPartituras {
   div.gridPartituras {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px, repeat(8, 300px);
+    grid-template-rows: 100px 250px 50px 250px 50px;
     grid-gap: 30px;
     grid-template-areas: "titulopartitura" "partitura1" "pie1" "partitura2" "pie2" "partitura3" "pie3"  "partitura4" "pie4";
     padding: 0 50px;
@@ -1853,32 +2344,32 @@ div.gridPartituras {
       font-weight: 200; }
     div.gridPartituras iframe.partitura1 {
       grid-area: partitura1;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura2 {
       grid-area: partitura2;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura3 {
       grid-area: partitura3;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura4 {
       grid-area: partitura4;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura5 {
       grid-area: partitura5;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras iframe.partitura6 {
       grid-area: partitura6;
-      height: 300px;
+      height: 250px;
       width: 100%;
       border: none; }
     div.gridPartituras p.pieDeArchivo1 {
@@ -1902,12 +2393,9 @@ div.gridPartituras {
   /*Footer*/
   footer {
     background-color: #0b090a;
-    background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
     width: 100vw;
     height: 180px;
-    padding-top: 9vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding: 9vh 5vw 0 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1956,7 +2444,9 @@ div.gridPartituras {
       footer .footer__redes div:hover {
         background-color: #c2c0bf; }
         footer .footer__redes div:hover svg {
-          color: #64645c; } }
+          color: #64645c; }
+  h1.header__titulo {
+    padding-top: 70vh; } }
 
 /*Variables*/
 /*Paletas de Colores*/
@@ -1965,12 +2455,9 @@ div.gridPartituras {
 /*Footer*/
 footer {
   background-color: #0b090a;
-  background: radial-gradient(to top, #0b090a 0%, #74656c 100%);
   width: 100vw;
   height: 180px;
-  padding-top: 9vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding: 9vh 5vw 0 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2025,177 +2512,6 @@ footer {
 /*Paletas de Colores*/
 /*Fuente tipografica*/
 /* Maps y otras variables*/
-/* Animacion Onda Sonora*/
-div.contenido__ondaSonora {
-  display: flex;
-  flex-direction: row;
-  height: 15vh;
-  width: 20vw;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5vh 0; }
-
-div.contenido__ondaSonora div {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  justify-self: center;
-  align-self: center;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  transform: translate(0, 25vh); }
-
-@keyframes ondaSonora {
-  0% {
-    transform: translate(0, 5vh); }
-  15% {
-    transform: translate(0, 10vh); }
-  30% {
-    transform: translate(0, 17vh); }
-  45% {
-    transform: translate(0, 12vh); }
-  60% {
-    transform: translate(0, 15vh); }
-  75% {
-    transform: translate(0, 9vh); }
-  100% {
-    transform: translate(0, 6vh); } }
-
-@keyframes ondaSonora2 {
-  0% {
-    transform: translate(0, 3vh); }
-  15% {
-    transform: translate(0, 7vh); }
-  30% {
-    transform: translate(0, 15vh); }
-  45% {
-    transform: translate(0, 10vh); }
-  60% {
-    transform: translate(0, 14vh); }
-  75% {
-    transform: translate(0, 7vh); }
-  100% {
-    transform: translate(0, 2vh); } }
-
-div.contenido__ondaSonora div.beat1 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.1s; }
-
-div.contenido__ondaSonora div.beat2 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.2s; }
-
-div.contenido__ondaSonora div.beat3 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.3s; }
-
-div.contenido__ondaSonora div.beat4 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.4s; }
-
-div.contenido__ondaSonora div.beat5 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.5s; }
-
-div.contenido__ondaSonora div.beat6 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.6s; }
-
-div.contenido__ondaSonora div.beat7 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.4s; }
-
-div.contenido__ondaSonora div.beat8 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.3s; }
-
-div.contenido__ondaSonora div.beat9 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.4s; }
-
-div.contenido__ondaSonora div.beat10 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.3s; }
-
-div.contenido__ondaSonora div.beat11 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.2s; }
-
-div.contenido__ondaSonora div.beat12 {
-  background: radial-gradient(circle, #e5383b 0%, #f5f3f4 100%);
-  width: 7px;
-  height: 7px;
-  animation-name: ondaSonora2;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 0.1s; }
-
 /*Zoom en imagenes y textos*/
 section.contenido__muestraExperiencias2 img.alumno1:hover {
   transform: scale(1.01, 1.01); }
