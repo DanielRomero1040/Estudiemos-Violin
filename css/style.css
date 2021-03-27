@@ -297,7 +297,7 @@ div.contenido__galeriaImagenes {
     padding-bottom: 30px; }
   div.contenido__galeriaImagenes div.galeria1 {
     grid-area: galeria1;
-    background-image: url(../image/galeria1.png);
+    background: url(../image/galeria1.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -308,7 +308,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria2 {
     grid-area: galeria2;
-    background-image: url(../image/galeria2.png);
+    background: url(../image/galeria2.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -319,7 +319,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria3 {
     grid-area: galeria3;
-    background-image: url(../image/galeria3.png);
+    background: url(../image/galeria3.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -330,7 +330,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria4 {
     grid-area: galeria4;
-    background-image: url(../image/galeria4.png);
+    background: url(../image/galeria4.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -341,7 +341,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria5 {
     grid-area: galeria5;
-    background-image: url(../image/galeria5.png);
+    background: url(../image/galeria5.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -352,7 +352,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria6 {
     grid-area: galeria6;
-    background-image: url(../image/galeria6.png);
+    background: url(../image/galeria6.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -363,7 +363,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria7 {
     grid-area: galeria7;
-    background-image: url(../image/galeria7.png);
+    background: url(../image/galeria7.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -374,7 +374,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria8 {
     grid-area: galeria8;
-    background-image: url(../image/galeria8.png);
+    background: url(../image/galeria8.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -385,7 +385,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria9 {
     grid-area: galeria9;
-    background-image: url(../image/galeria9.png);
+    background: url(../image/galeria9.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -396,7 +396,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria10 {
     grid-area: galeria10;
-    background-image: url(../image/galeria10.png);
+    background: url(../image/galeria10.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -407,7 +407,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria11 {
     grid-area: galeria11;
-    background-image: url(../image/galeria11.png);
+    background: url(../image/galeria11.png);
     background-size: cover;
     height: 310px;
     width: 100%;
@@ -418,7 +418,7 @@ div.contenido__galeriaImagenes {
     opacity: 1; }
   div.contenido__galeriaImagenes div.galeria12 {
     grid-area: galeria12;
-    background-image: url(../image/galeria12.png);
+    background: url(../image/galeria12.png);
     background-size: cover;
     height: 310px;
     width: 100%;

@@ -175,7 +175,7 @@ div.contenido__galeriaImagenes {
     @each $area,$foto in $galeria{
         div.#{$area}{
             grid-area: #{$area};
-            background-image: url(../image/#{$foto});
+            background: url(../image/#{$foto});
             background-size: cover;
             height: 310px;
             width: 100%;
